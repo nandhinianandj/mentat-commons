@@ -156,7 +156,7 @@ export async function POST(req) {
   try {
     const { action, query, question, jobDescription, apiKey } = await req.json();
     
-    const effectiveApiKey = apiKey || process.env.OPENAI_API_KEY || process.env.GEMINI_API_KEY || null;
+    const effectiveApiKey = apiKey || process.env.OPENAI_API_KEY || process.env.GEMINI_API_KEY || (process.env.OLLAMA_MODEL ? 'ollama' : null);
     
     if (action === 'query') {
       const searchQuery = query || '';
