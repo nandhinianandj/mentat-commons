@@ -274,7 +274,7 @@ async function validate() {
   console.log(`\n${BOLD}[5/5] Running Search Scoring Simulation...${RESET}`);
   // Dynamically import search logic from retrieval layer to ensure it behaves correctly
   try {
-    const { searchCKB, generateLocalRAGResponse, generateLocalSTARResponse } = await import('../lib/rag_ckb.js');
+    const { searchCKB, generateLocalRAGResponse, generateLocalSTARResponse } = await import('../lib/rag_ckb.mjs');
     
     // Simulate query 1: Technical Leadership
     const matches1 = await searchCKB('technical leadership');

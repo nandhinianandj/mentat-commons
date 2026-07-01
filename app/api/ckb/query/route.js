@@ -1,4 +1,4 @@
-import { searchCKB, generateLocalRAGResponse, generateLocalSTARResponse, callLLM, loadCKB } from '../../../../lib/rag_ckb';
+import { searchCKB, generateLocalRAGResponse, generateLocalSTARResponse, callLLM, loadCKB } from '../../../../lib/rag_ckb.mjs';
 
 // Helper to generate local resume tailoring
 function generateLocalResumeResponse(jd, matches) {
