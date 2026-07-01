@@ -89,7 +89,7 @@ export default function CareerKBPage() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('/data/career_knowledge_base.json');
+        const response = await fetch('/api/ckb/data');
         if (response.ok) {
           const data = await response.json();
           setCkbData(data);
