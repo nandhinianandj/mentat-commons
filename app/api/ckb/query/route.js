@@ -183,7 +183,7 @@ ${JSON.stringify(matches.slice(0, 5).map(m => ({ type: m.type, id: m.id, name: m
             matches: matches.slice(0, 6) 
           }), { status: 200, headers: { 'Content-Type': 'application/json' } });
         } catch (llmErr) {
-          console.error("LLM RAG query failed, falling back to local:", llmErr);
+          console.error(`LLM RAG query failed (falling back to local): ${llmErr.message}`);
           const answer = generateLocalRAGResponse(searchQuery, matches);
           return new Response(JSON.stringify({ 
             answer, 
@@ -238,7 +238,7 @@ ${JSON.stringify(matches.slice(0, 5).map(m => ({ type: m.type, id: m.id, name: m
             headers: { 'Content-Type': 'application/json' }
           });
         } catch (err) {
-          console.error("LLM Interview prep failed, falling back to local:", err);
+          console.error(`LLM Interview prep failed (falling back to local): ${err.message}`);
           const structure = generateLocalSTARResponse(interviewQuestion, matches);
           return new Response(JSON.stringify({ structure, matches: matches.slice(0, 5), warning: "LLM generation failed, showing local synthesis." }), {
             status: 200,
@@ -290,7 +290,7 @@ ${JSON.stringify(matches.slice(0, 8).map(m => ({ type: m.type, id: m.id, name: m
             headers: { 'Content-Type': 'application/json' }
           });
         } catch (err) {
-          console.error("LLM Resume tailoring failed, falling back to local:", err);
+          console.error(`LLM Resume tailoring failed (falling back to local): ${err.message}`);
           const data = generateLocalResumeResponse(jd, matches);
           return new Response(JSON.stringify({ ...data, warning: "LLM generation failed, showing local synthesis." }), {
             status: 200,
