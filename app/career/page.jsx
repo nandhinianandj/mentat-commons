@@ -78,6 +78,7 @@ export default function CareerKBPage() {
   const [interviewQuestion, setInterviewQuestion] = useState('');
   const [interviewPrep, setInterviewPrep] = useState(null);
   const [interviewLoading, setInterviewLoading] = useState(false);
+  const [apiWarning, setApiWarning] = useState('');
   
   // API Key config
   const [apiKey, setApiKey] = useState('');
@@ -139,6 +140,7 @@ export default function CareerKBPage() {
     setRagLoading(true);
     setRagResult('');
     setRagMatches([]);
+    setApiWarning('');
     
     try {
       const res = await fetch('/api/ckb/query', {
@@ -155,6 +157,7 @@ export default function CareerKBPage() {
         const data = await res.json();
         setRagResult(data.answer);
         setRagMatches(data.matches || []);
+        setApiWarning(data.warning || '');
       } else {
         const err = await res.json();
         setRagResult(`Error: ${err.error || 'Failed to retrieve responses'}`);
@@ -172,6 +175,7 @@ export default function CareerKBPage() {
     if (!jobDescription.trim()) return;
     
     setGeneratorLoading(true);
+    setApiWarning('');
     
     try {
       const res = await fetch('/api/ckb/query', {
@@ -187,6 +191,7 @@ export default function CareerKBPage() {
       if (res.ok) {
         const data = await res.json();
         setGeneratedData(data);
+        setApiWarning(data.warning || '');
       } else {
         alert("Failed to generate tailored materials.");
       }
@@ -205,6 +210,7 @@ export default function CareerKBPage() {
     
     setInterviewLoading(true);
     setInterviewPrep(null);
+    setApiWarning('');
     
     try {
       const res = await fetch('/api/ckb/query', {
@@ -220,6 +226,7 @@ export default function CareerKBPage() {
       if (res.ok) {
         const data = await res.json();
         setInterviewPrep(data.structure);
+        setApiWarning(data.warning || '');
       } else {
         alert("Failed to retrieve interview suggestions.");
       }
@@ -682,6 +689,13 @@ export default function CareerKBPage() {
                 STAR Interview Prep
               </button>
             </div>
+            
+            {apiWarning && (
+              <div className="bg-amber-950/45 border border-amber-900/60 rounded-lg p-3 text-xs text-amber-300 flex items-center gap-2 mb-5 animate-in fade-in duration-200">
+                <AlertCircle className="w-4 h-4 text-amber-500 shrink-0" />
+                <span>{apiWarning}</span>
+              </div>
+            )}
 
             {/* Assistant Mode: Search/RAG */}
             {assistantMode === 'search' && (

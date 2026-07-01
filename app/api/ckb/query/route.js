@@ -240,7 +240,7 @@ ${JSON.stringify(matches.slice(0, 5).map(m => ({ type: m.type, id: m.id, name: m
         } catch (err) {
           console.error("LLM Interview prep failed, falling back to local:", err);
           const structure = generateLocalSTARResponse(interviewQuestion, matches);
-          return new Response(JSON.stringify({ structure, matches: matches.slice(0, 5) }), {
+          return new Response(JSON.stringify({ structure, matches: matches.slice(0, 5), warning: "LLM generation failed, showing local synthesis." }), {
             status: 200,
             headers: { 'Content-Type': 'application/json' }
           });
@@ -292,7 +292,7 @@ ${JSON.stringify(matches.slice(0, 8).map(m => ({ type: m.type, id: m.id, name: m
         } catch (err) {
           console.error("LLM Resume tailoring failed, falling back to local:", err);
           const data = generateLocalResumeResponse(jd, matches);
-          return new Response(JSON.stringify(data), {
+          return new Response(JSON.stringify({ ...data, warning: "LLM generation failed, showing local synthesis." }), {
             status: 200,
             headers: { 'Content-Type': 'application/json' }
           });
