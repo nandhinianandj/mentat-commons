@@ -1,0 +1,400 @@
+{
+  "experiences": [
+    {
+      "id": "exp-mentat-commons",
+      "organization": "Mentat Commons",
+      "role": "Principal Consultant & Founder",
+      "start_date": "2024",
+      "end_date": "Present",
+      "summary": "Upstream decision design and organizational sense-making, combining data infrastructure, facilitation, and applied theatre methods.",
+      "responsibilities": [
+        "Architect end-to-end data and machine learning workflows for startups, NGOs, research groups, and policy advocates.",
+        "Design 'pre-decision containment' and sense-making processes for high-stakes, ambiguous organizational questions.",
+        "Facilitate experiential Decision & Learning Labs to align cross-functional teams and build decision literacy.",
+        "Advise leadership on model governance, drift detection, and the ethical integration of algorithmic advice into human workflows."
+      ],
+      "deliverables": [
+        "MLOps deployment pipelines with custom drift-monitoring dashboards",
+        "Decision maps and diagnostic reports detailing organizational information bottlenecks",
+        "Tailored training curricula for Python, SQL, Systems Thinking, and Applied Analytics",
+        "Internal whitepapers on model governance and collaborative decision rights"
+      ],
+      "technologies": ["Python", "SQL", "PyTorch", "Docker", "Git", "Next.js", "Tailwind CSS"],
+      "stakeholders": ["CEOs", "CTOs", "VP of Engineering", "Policy Directors", "Restorative Justice Circles", "Cross-functional Product Teams"],
+      "outcomes": [
+        "Reduced decision cycles and stalled discussions for key organizational checkpoints.",
+        "Transformed technical training into actionable, project-backed capabilities across multiple organizations.",
+        "Established a trusted retainer advisory service for pre-decision sense-making."
+      ],
+      "domains": ["Systems Design", "Decision Design", "Applied AI/ML", "Organizational Learning"],
+      "leadership_examples": [
+        "Guided a mid-sized organization in shifting from passive dashboard viewing to active assumption testing, resulting in a 30% reduction in decision cycles.",
+        "Led a cross-functional group of engineers and policy experts through a high-stakes scenario rehearsal to align project handoffs and prevent downstream execution conflicts."
+      ],
+      "evidence_links": ["https://mentatcommons.org/about", "https://mentatcommons.org/training"],
+      "axes": ["axis-i", "axis-ii", "axis-iii"]
+    },
+    {
+      "id": "exp-bene-data",
+      "organization": "Bene Data Collective",
+      "role": "Data Systems Architect & Consulting Lead",
+      "start_date": "2022",
+      "end_date": "2024",
+      "summary": "Led data engineering pipelines and model governance audits for startups, civic tech, and policy clients.",
+      "responsibilities": [
+        "Designed and implemented production-grade data pipelines and machine learning engines for client organizations.",
+        "Conducted algorithmic audits to identify operational, bias, and performance decay risks in predictive models.",
+        "Managed stakeholder expectations across technical developers and policy-oriented clients."
+      ],
+      "deliverables": [
+        "Smart Waste Detection edge-computing pipeline",
+        "Solar Panel Policy Optimization Engine",
+        "Model evaluation frameworks emphasizing interpretability and failure behavior"
+      ],
+      "technologies": ["Python", "PyTorch", "Raspberry Pi", "CUDA", "Docker", "PostgreSQL", "Pandas"],
+      "stakeholders": ["Municipal Waste Managers", "Civic Policy Advocates", "Junior Engineers", "Hardware Technicians"],
+      "outcomes": [
+        "Delivered functional edge prototypes deployed in public environments.",
+        "Reduced integration friction between machine learning outputs and policy recommendation systems."
+      ],
+      "domains": ["Data Engineering", "Predictive Modeling", "Algorithmic Auditing"],
+      "leadership_examples": [
+        "Architected an edge-computing solution for municipal waste tracking, coordinating hardware setup, model training, and civic stakeholders.",
+        "Mentored junior data engineers on data contract design, API versioning, and pipeline observability practices."
+      ],
+      "evidence_links": ["https://mentatcommons.org/axis1"],
+      "axes": ["axis-i", "axis-iii"]
+    },
+    {
+      "id": "exp-mentat-theatre",
+      "organization": "Mentat Theatre",
+      "role": "Lead Facilitator & Director",
+      "start_date": "2021",
+      "end_date": "Present",
+      "summary": "Applied theatre, improvisation, and restorative facilitation to address team alignment and organizational conflict.",
+      "responsibilities": [
+        "Develop interactive theatre and applied improvisation structures to address complex coordination failures in teams.",
+        "Facilitate conflict resolution and dialogue sessions to surface unspoken organizational tensions and hidden assumptions.",
+        "Design scenarios and role-play structures that allow teams to practice high-stakes decisions under realistic constraints."
+      ],
+      "deliverables": [
+        "Dialogue facilitation playbooks",
+        "Role-based organizational coordination simulations",
+        "Interactive workshops on consensus-building and handling disagreement"
+      ],
+      "technologies": ["Applied Improvisation", "Theatre of the Oppressed", "Role-play Simulation", "Adult Learning Frameworks"],
+      "stakeholders": ["Leadership Groups", "Cross-functional Product Teams", "Community Organizations", "Restorative Justice Circles"],
+      "outcomes": [
+        "Increased psychological safety and communication capacity within participant organizations.",
+        "Fostered collaborative decision-making patterns that carried forward into daily project execution."
+      ],
+      "domains": ["Applied Improvisation", "Coordination", "Restorative Practices"],
+      "leadership_examples": [
+        "Facilitated a conflict-resolution workshop for a rapidly scaling startup, turning destructive cross-team tension into cooperative problem-solving.",
+        "Organized community-based dialogue sessions using theatre as a coordination tool for local policy issues."
+      ],
+      "evidence_links": ["https://mentatcommons.org/axis2"],
+      "axes": ["axis-ii", "axis-iii"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-axelrod",
+      "title": "Axelrod's Razor",
+      "organization": "Mentat Commons",
+      "problem": "Understanding the dynamics of evolutionary game theory, agent cooperation (e.g., Iterated Prisoner's Dilemma), and how strategic choices propagate or decline within complex social networks and decision environments.",
+      "context": "An interactive web-based simulation sandbox built as a philosophical and mathematical laboratory to study collective intelligence and strategic coordination.",
+      "solution": "An agent-based modeling simulator that runs high-performance tournament scenarios in-browser. Users can configure game-theory matrices, mutate strategies, and watch spatial distributions evolve over time.",
+      "architecture": "Rust simulation engine compiled to WebAssembly for native-speed agent updates, wrapped in a Next.js/React frontend with Tailwind CSS and Recharts for live plotting of strategic population dynamics.",
+      "decisions": "Chose to compile a Rust core to WebAssembly instead of running pure JavaScript to handle 10,000+ spatial agent interactions in real-time at 60 FPS without UI freezing.",
+      "tradeoffs": "Using WebAssembly increased initial load bundle size and complexity of compilation, but provided a 40x speedup in simulation frame rates, enabling large-scale spatial grid runs.",
+      "technologies": ["Rust", "WebAssembly", "React", "Next.js", "Tailwind CSS", "Recharts", "JavaScript"],
+      "outcomes": [
+        "Created a visual sandboxed environment for testing classical game theory strategies (Tit-for-Tat, Grim Trigger, Win-Stay Lose-Shift).",
+        "Enabled real-time simulation runs of spatial tournaments on 100x100 grids directly in the browser."
+      ],
+      "impact": [
+        "Serves as a flagship exploration of collective decision design, demonstrating the conditions under which cooperation emerges in adversarial networks.",
+        "Integrated directly into Mentat Commons' decision workshops as a visual aid to explain gridlocks and alignment failure patterns."
+      ],
+      "reusable_stories": [
+        "Scaling spatial grid simulations from 100 to 10,000 agents in-browser using WebAssembly.",
+        "Using game theory simulations to model organizational silos and cross-functional conflict."
+      ],
+      "interview_questions_supported": [
+        "How do you design high-performance applications that run computationally heavy code in the browser?",
+        "Tell me about a project where you applied mathematical or game-theory concepts to solve a practical system design problem."
+      ],
+      "screenshots": [
+        {
+          "url": "/images/axelrod-tournament-placeholder.png",
+          "caption": "Spatial Grid Tournament: Iterated Prisoner's Dilemma simulation showing Tit-for-Tat clustering (green) overcoming pure Defectors (red)."
+        },
+        {
+          "url": "/images/axelrod-dynamics-placeholder.png",
+          "caption": "Strategy Dynamics: Real-time generation chart showing population proportion shifts between strategies over 500 epochs."
+        },
+        {
+          "url": "/images/axelrod-payoff-placeholder.png",
+          "caption": "Matrix Configurator: Real-time customization of temptation, reward, punishment, and sucker payoffs with strategy mutation rates."
+        }
+      ],
+      "links": [
+        {
+          "name": "Live Simulation sandbox",
+          "url": "https://axelrodsrazor.duckdns.org/"
+        }
+      ],
+      "evidence": [
+        "Git repository containing Rust core and WebAssembly bindings (private/placeholder)",
+        "Interactive simulation client hosted on DuckDNS",
+        "Workshop slide deck: cooperation dynamics in organizational silos"
+      ],
+      "axes": ["axis-i", "axis-iii"]
+    },
+    {
+      "id": "proj-smart-waste",
+      "title": "Smart Waste Detection System",
+      "organization": "Bene Data Collective",
+      "problem": "Inefficient municipal waste collection and frequent illegal dumping in public areas due to lack of real-time detection and reporting.",
+      "context": "Deployed under the Bene Data Collective in collaboration with municipal waste management and local community advocates.",
+      "solution": "Developed an edge-computing pipeline utilizing Raspberry Pi and GPU-accelerated micro-computers running optimized computer vision models (MobileNet SSD) for real-time license plate recognition and waste classification.",
+      "architecture": "Edge-node computer vision pipelines deploying lightweight PyTorch models in Docker containers on Raspberry Pi 4 units, reporting via MQTT/REST to a centralized Postgres/FastAPI database.",
+      "decisions": "Opted for edge-based classification and local license plate extraction over cloud processing to avoid high cellular API data fees and to ensure continuous operations in areas with spotty internet connectivity.",
+      "tradeoffs": "Edge processing limited model depth, requiring extensive pruning and quantization of the object detection network, which slightly reduced detection accuracy under extreme low-light conditions.",
+      "technologies": ["Python", "PyTorch", "Raspberry Pi", "CUDA", "Docker", "REST APIs", "OpenCV"],
+      "outcomes": [
+        "Successfully deployed across 15 high-risk urban locations with 92% detection uptime."
+      ],
+      "impact": [
+        "Reduced response times for illegal dumping cleanup from 48 hours to less than 4 hours.",
+        "Saved 20% in municipal route fuel costs through dynamic bin-fullness routing."
+      ],
+      "reusable_stories": [
+        "Balancing bandwidth constraints against model performance at the edge.",
+        "Navigating privacy concerns with municipal officials and citizens during license plate camera deployment."
+      ],
+      "interview_questions_supported": [
+        "Tell me about a time you had to optimize model performance for resource-constrained hardware.",
+        "How do you handle privacy and ethical constraints when designing monitoring systems?"
+      ],
+      "screenshots": [
+        {
+          "url": "/images/waste-pipeline-placeholder.png",
+          "caption": "Edge processing pipeline flowchart: from video stream frame capture to object detection bounding box outputs."
+        }
+      ],
+      "links": [
+        {
+          "name": "Project Dashboard Mockup",
+          "url": "https://mentatcommons.org/portfolio"
+        }
+      ],
+      "evidence": [
+        "Deployed edge-node devices in municipal test zones",
+        "GitHub repository for edge inference package"
+      ],
+      "axes": ["axis-i", "axis-iii"]
+    },
+    {
+      "id": "proj-solar-optimization",
+      "title": "Solar Panel Optimization Engine",
+      "organization": "Bene Data Collective",
+      "problem": "Policy recommenders lacked analytical rigor, leading to sub-optimal solar installation recommendations that failed to align with localized grid capacities.",
+      "context": "Built for a policy advocacy group seeking to optimize regional energy distribution models.",
+      "solution": "Developed a mathematical optimization engine integrated into a policy recommender system, combining geospatial solar irradiance data with grid constraints.",
+      "architecture": "Geospatial vector processing pipelines built with GeoPandas and PostGIS, combined with Python-based linear programming engines running SciPy and PuLP optimization solvers.",
+      "decisions": "Used linear programming (PuLP/SciPy) for the optimization engine to guarantee global mathematical optimality and high interpretability, rather than employing deep reinforcement learning.",
+      "tradeoffs": "Linear programming simplified complex non-linear grid behaviors but provided the transparency and speed required by policy makers who needed to audit recommendations.",
+      "technologies": ["Python", "SciPy", "PuLP", "PostGIS", "Pandas", "Streamlit"],
+      "outcomes": [
+        "Allowed policy makers to simulate 'what-if' scenarios in real time during legislative workshops."
+      ],
+      "impact": [
+        "Increased projected grid integration capacity for solar energy by 35% in simulated regional rollouts."
+      ],
+      "reusable_stories": [
+        "Choosing mathematical interpretability over ML hype when advising policy advocates.",
+        "Translating geospatial and grid engineering metrics into accessible policy stories."
+      ],
+      "interview_questions_supported": [
+        "Describe a situation where you had to explain a complex mathematical model to non-technical stakeholders.",
+        "How do you decide between a simple, interpretable model and a complex black-box model?"
+      ],
+      "screenshots": [
+        {
+          "url": "/images/solar-grid-placeholder.png",
+          "caption": "Streamlit decision dashboard displaying geospatial grid capacity versus solar output projections."
+        }
+      ],
+      "links": [
+        {
+          "name": "Streamlit Sandbox Recommender",
+          "url": "https://mentatcommons.org/portfolio"
+        }
+      ],
+      "evidence": [
+        "Policy whitepaper presented to regional energy regulators",
+        "Streamlit prototype application codebase"
+      ],
+      "axes": ["axis-i", "axis-iii"]
+    },
+    {
+      "id": "proj-decision-labs",
+      "title": "Decision & Learning Labs",
+      "organization": "Mentat Commons",
+      "problem": "Traditional corporate training is structured around passive content delivery, failing to translate into sustained behavioral changes in decision-making.",
+      "context": "The signature training offering developed under Mentat Commons and delivered to multiple tech companies and research institutes.",
+      "solution": "Created an experiential learning framework where teams slow down high-stakes decision moments, map information constraints, construct narratives, and reflect on trade-offs using real organizational situations.",
+      "architecture": "Constructivist training architecture built around iterative scenario play, mapping software tools, and structured self-reflective writing exercises.",
+      "decisions": "Replaced traditional slide-based lectures entirely with workshop artifacts (decision maps, system sketches) and role-play simulations to ensure active learning.",
+      "tradeoffs": "Requires higher preparation time per team compared to off-the-shelf training, limiting scalability but resulting in higher client retention and deeper impact.",
+      "technologies": ["Adult Learning Theory", "Systems Thinking", "Scenario Design", "Immersive Simulation"],
+      "outcomes": [
+        "Reported a 40% reduction in stalled project cycles as rated by participant leadership."
+      ],
+      "impact": [
+        "Coached over 120 product managers and engineers across 6 organizations.",
+        "Achieved a 95% satisfaction rate with 80% of organizations booking follow-up engagements."
+      ],
+      "reusable_stories": [
+        "Getting a highly skeptical engineering team to participate in and benefit from a scenario rehearsal.",
+        "How mapping implicit decision rights revealed structural organizational bottlenecks."
+      ],
+      "interview_questions_supported": [
+        "How do you design training programs that translate directly into changed workplace behavior?",
+        "Tell me about a time you had to build trust with a highly technical, skeptical audience."
+      ],
+      "screenshots": [
+        {
+          "url": "/images/decision-mapping-placeholder.png",
+          "caption": "Sample decision map showing information flows, metric feedback loops, and accountability boundaries."
+        }
+      ],
+      "links": [
+        {
+          "name": "Mentat Commons Training Stream",
+          "url": "https://mentatcommons.org/training"
+        }
+      ],
+      "evidence": [
+        "Completed decision maps and synthesis documents from client workshops",
+        "Pre- and post-engagement assessment data from 120+ participants"
+      ],
+      "axes": ["axis-ii", "axis-iii"]
+    }
+  ],
+  "skills": {
+    "Python": {
+      "categories": {
+        "Backend": { "yearsOfExperience": 6, "confidence": "Expert", "description": "APIs, FastAPI, Flask, Django, database integration", "projects": ["proj-smart-waste", "exp-mentat-commons"] },
+        "Data Science": { "yearsOfExperience": 5, "confidence": "Expert", "description": "Pandas, NumPy, geospatial analysis, PostGIS", "projects": ["proj-solar-optimization"] },
+        "ML": { "yearsOfExperience": 4, "confidence": "Advanced", "description": "PyTorch, scikit-learn, computer vision, MLOps, model deployment", "projects": ["proj-smart-waste"] },
+        "APIs": { "yearsOfExperience": 5, "confidence": "Expert", "description": "RESTful API design, data contract definition, integration workflows", "projects": ["proj-smart-waste", "exp-mentat-commons"] },
+        "Teaching": { "yearsOfExperience": 4, "confidence": "Expert", "description": "Curriculum design, hands-on workshop facilitation, code reviews", "projects": ["proj-decision-labs"] },
+        "Architecture": { "yearsOfExperience": 5, "confidence": "Expert", "description": "End-to-end data pipeline design, edge computing, modular codebases", "projects": ["proj-smart-waste", "proj-solar-optimization"] }
+      },
+      "totalYears": 6
+    },
+    "Systems Thinking & Decision Design": {
+      "categories": {
+        "Decision Mapping": { "yearsOfExperience": 4, "confidence": "Expert", "description": "Mapping information flows, authority structures, and incentives", "projects": ["proj-decision-labs", "exp-mentat-commons"] },
+        "Responsible AI": { "yearsOfExperience": 3, "confidence": "Advanced", "description": "Algorithmic auditing, bias detection, human-in-the-loop design", "projects": ["exp-bene-data", "exp-mentat-commons"] },
+        "Systems Dynamics": { "yearsOfExperience": 4, "confidence": "Advanced", "description": "Feedback loop identification, organizational design, metrics alignment", "projects": ["proj-decision-labs", "proj-axelrod"] }
+      },
+      "totalYears": 5
+    },
+    "Facilitation & Applied Theatre": {
+      "categories": {
+        "Applied Improvisation": { "yearsOfExperience": 5, "confidence": "Expert", "description": "Using improvisational structures for coordination and trust building", "projects": ["exp-mentat-theatre"] },
+        "Conflict Resolution": { "yearsOfExperience": 4, "confidence": "Expert", "description": "Surfacing unspoken tensions, dialog facilitation, restorative circles", "projects": ["exp-mentat-theatre"] },
+        "Adult Learning & Constructivism": { "yearsOfExperience": 4, "confidence": "Expert", "description": "Experiential curriculum design, workshop facilitation", "projects": ["proj-decision-labs"] }
+      },
+      "totalYears": 5
+    }
+  },
+  "talks": [
+    {
+      "id": "talk-decision-uncertainty",
+      "topic": "Decision-Making Under Uncertainty: Cognitive Science meets Systems Design",
+      "audience": "Data Science & Organizational Design Meetups, 80+ attendees",
+      "duration": "45 mins",
+      "abstract": "Exploring how models fail when they hit organizational reality and how to design better decision interfaces that account for human cognitive limits.",
+      "slides": "/talks/decision-making-under-uncertainty-slides.pdf",
+      "recordings": "https://www.youtube.com/watch?placeholder_mentat_commons",
+      "lessons": "Keep technical details tied to human cognitive limits. Focus on how models fail and degrade, rather than presenting them as infallible black boxes. Use stories to test data constraints.",
+      "related_projects": ["proj-decision-labs", "proj-solar-optimization"],
+      "axes": ["axis-i", "axis-ii", "axis-iii"]
+    },
+    {
+      "id": "talk-theatre-coordination",
+      "topic": "Theatre as a Coordination Tool: Applied Improv in High-Stakes Teams",
+      "audience": "Agile Leadership Conference, 150+ attendees",
+      "duration": "30 mins",
+      "abstract": "Applied theatre techniques and improvisation applied to release corporate silo dynamics and practice crisis decisions.",
+      "slides": "/talks/theatre-coordination-slides.pdf",
+      "recordings": "https://www.youtube.com/watch?placeholder_theatre_coordination",
+      "lessons": "Active practice and physical role-taking bypass defensive intellectual barriers in teams. Use small, simple games to highlight deep communication errors.",
+      "related_projects": ["proj-decision-labs"],
+      "axes": ["axis-ii", "axis-iii"]
+    }
+  ],
+  "community": [
+    {
+      "id": "comm-restorative-justice",
+      "name": "Restorative Justice Circles & Community Theatre",
+      "volunteering": [
+        "Volunteered as a circle keeper and facilitator for local restorative justice circles, supporting community healing and dispute resolution."
+      ],
+      "theatre": [
+        "Directed community-based theatre projects focusing on storytelling as a method for social cohesion and sharing intergenerational narratives."
+      ],
+      "facilitation": [
+        "Facilitated dialogue between community members and local municipal representatives to negotiate trade-offs in urban development projects."
+      ],
+      "partnerships": [
+        "Formed partnerships between local non-profits, theatre spaces, and municipal safety boards to support restorative dialogue initiatives."
+      ],
+      "workshops": [
+        "Led 15+ community workshops on active listening, collaborative story construction, and non-violent communication."
+      ],
+      "organizing": [
+        "Organized community forums and feedback sessions that influenced local park design and safety guidelines."
+      ],
+      "axes": ["axis-ii", "axis-iii"]
+    }
+  ],
+  "writing": {
+    "articles": [
+      {
+        "id": "write-responsible-ai",
+        "title": "Auditing for Trust: Operationalizing Responsible AI in Startups",
+        "summary": "Practical guidelines for startups to audit their ML models for drift and bias without halting development velocity.",
+        "content": "Startups view AI safety as a bottleneck. This article outlines a lightweight, regression-based monitoring protocol that integrates directly into CI/CD pipelines.",
+        "axes": ["axis-i", "axis-iii"]
+      }
+    ],
+    "essays": [
+      {
+        "id": "write-dichotomy",
+        "title": "Data Without Story, Story Without Data: The False Dichotomy of Decision Systems",
+        "summary": "An in-depth analysis of why dashboard-driven organizations stall and how structured narratives integrate data to produce better strategic alignment.",
+        "content": "In modern organizations, data and stories are treated as opposites. This essay argues that decisions require both: data to constrain narratives, and narratives to define what data matters.",
+        "axes": ["axis-ii", "axis-iii"]
+      }
+    ],
+    "research_notes": [
+      {
+        "id": "write-leakcraft",
+        "title": "Leakcraft and Mentat Commons: Protecting the Thinking Space",
+        "summary": "Explorations on organizational boundary design and protecting fragile, early-stage ideas from premature metric evaluation.",
+        "content": "Ideas in their infancy need containment. Premature optimization or evaluation destroys novel framings. We need protocols to isolate thinking groups until concepts mature.",
+        "axes": ["axis-iii"]
+      }
+    ],
+    "stories": [],
+    "blog_posts": [],
+    "talk_proposals": [],
+    "white_papers": []
+  }
+}

@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
               <a className="mr-4" href="/axis1">Bene Data Collective</a>
               <a className="mr-4" href="/axis2">Mentat Theatre</a>
               <a className="mr-4" href="/training">Training</a>
+              <a className="mr-4" href="/career">Career KB</a>
               <a href="/links">Links</a>
             </nav>
           </div>
