@@ -55,6 +55,7 @@ export default function CareerKBPage() {
   
   // Data State
   const [ckbData, setCkbData] = useState({ experiences: [], projects: [], skills: {}, talks: [], community: [], writing: { articles: [], essays: [], research_notes: [], stories: [], blog_posts: [], talk_proposals: [], white_papers: [] } });
+  const [graphData, setGraphData] = useState({ nodes: [], edges: [] });
   const [loadingData, setLoadingData] = useState(true);
   
   // Lightbox State
@@ -102,6 +103,12 @@ export default function CareerKBPage() {
               setSelectedNode({ type: 'project', id: data.projects[0].id, data: data.projects[0] });
             }
           }
+        }
+        
+        const graphResponse = await fetch('/api/ckb/graph');
+        if (graphResponse.ok) {
+          const gData = await graphResponse.json();
+          setGraphData(gData);
         }
       } catch (err) {
         console.error("Error loading career data:", err);
@@ -313,6 +320,20 @@ export default function CareerKBPage() {
         });
       }
       if (ckbData.writing) {
+        // Collect featured items first
+        const featuredNodes = [];
+        Object.entries(ckbData.writing).forEach(([cat, list]) => {
+          list.forEach(w => {
+            if (w.featured && matchesSearch(w.title + w.summary)) {
+              featuredNodes.push({ type: 'writing', id: w.id, label: w.title, category: '⭐ Featured Collection' });
+            }
+          });
+        });
+        if (featuredNodes.length > 0) {
+          nodes.push(...featuredNodes);
+        }
+
+        // Regular writing items
         Object.entries(ckbData.writing).forEach(([cat, list]) => {
           list.forEach(w => {
             if (matchesSearch(w.title + w.summary)) {
@@ -444,110 +465,187 @@ export default function CareerKBPage() {
     const id = node.id;
     const data = node.data;
 
-    if (node.type === 'project') {
-      // Find parent organization experience
-      const relatedExp = ckbData.experiences.find(e => e.organization === data.organization);
-      if (relatedExp) {
-        related.push({ id: relatedExp.id, type: 'experience', label: `Org: ${relatedExp.organization}` });
+    // Helper to map UI node ID to graph node ID
+    const getGraphNodeId = (nid, ntype) => {
+      if (ntype === 'writing') {
+        return nid.replace(/^write-/, '');
       }
-      
-      // Surface related talks
-      ckbData.talks.forEach(t => {
-        if (t.related_projects && t.related_projects.includes(id)) {
-          related.push({ id: t.id, type: 'talk', label: `Talk: ${t.topic}` });
+      if (ntype === 'skill') {
+        return nid.replace(/^skill-/, '').replace(/-/g, '_');
+      }
+      return nid;
+    };
+
+    const graphId = getGraphNodeId(id, node.type);
+
+    // Query nodes and edges from graphData if available
+    if (graphData && graphData.edges && graphData.edges.length > 0) {
+      const neighbors = new Set();
+      graphData.edges.forEach(edge => {
+        let neighborId = null;
+        let relation = edge.relation;
+        if (edge.source === graphId) {
+          neighborId = edge.target;
+        } else if (edge.target === graphId) {
+          neighborId = edge.source;
+        }
+
+        if (neighborId) {
+          neighbors.add(JSON.stringify({ id: neighborId, relation }));
         }
       });
-      
-      // Surface skills used
-      Object.entries(ckbData.skills).forEach(([skillName, skillData]) => {
-        let isUsed = false;
-        Object.values(skillData.categories).forEach(cat => {
-          if (cat.projects && cat.projects.includes(id)) isUsed = true;
-        });
-        if (isUsed) {
-          related.push({ id: `skill-${skillName.toLowerCase().replace(/\s+/g, '-')}`, type: 'skill', label: `Skill: ${skillName}` });
+
+      neighbors.forEach(str => {
+        const { id: nId, relation } = JSON.parse(str);
+        let matched = null;
+        let matchedType = null;
+        let matchedLabel = null;
+
+        // Try experience/project directly
+        const exp = ckbData.experiences.find(e => e.id === nId);
+        if (exp) {
+          matched = exp;
+          matchedType = 'experience';
+          matchedLabel = `${exp.role} at ${exp.organization}`;
         }
-      });
-      
-      // Surface writing mapping to same axes
-      Object.entries(ckbData.writing).forEach(([cat, list]) => {
-        list.forEach(w => {
-          const commonAxis = w.axes.some(a => data.axes.includes(a));
-          if (commonAxis && related.length < 6) {
-            related.push({ id: w.id, type: 'writing', label: `Writing: ${w.title}` });
+
+        const proj = ckbData.projects.find(p => p.id === nId);
+        if (proj) {
+          matched = proj;
+          matchedType = 'project';
+          matchedLabel = proj.title;
+        }
+
+        const talk = ckbData.talks.find(t => t.id === nId);
+        if (talk) {
+          matched = talk;
+          matchedType = 'talk';
+          matchedLabel = talk.topic;
+        }
+
+        const comm = ckbData.community.find(c => c.id === nId);
+        if (comm) {
+          matched = comm;
+          matchedType = 'community';
+          matchedLabel = comm.name;
+        }
+
+        // Try writing lists
+        if (!matched) {
+          Object.entries(ckbData.writing).forEach(([cat, list]) => {
+            const w = list.find(item => item.id === nId || item.id === `write-${nId}`);
+            if (w) {
+              matched = w;
+              matchedType = 'writing';
+              matchedLabel = w.title;
+            }
+          });
+        }
+
+        // Try skill matching
+        if (!matched && (nId.startsWith('skill_') || nId.startsWith('technology_') || nId.startsWith('concept_') || nId.startsWith('organization_'))) {
+          const cleanName = nId.replace(/^(skill_|technology_|concept_|organization_)/, '').replace(/_/g, ' ');
+          const entry = Object.entries(ckbData.skills).find(([name, _]) => name.toLowerCase() === cleanName.toLowerCase());
+          if (entry) {
+            matched = { name: entry[0], ...entry[1] };
+            matchedType = 'skill';
+            matchedLabel = entry[0];
           }
-        });
-      });
-    } 
-    
-    else if (node.type === 'experience') {
-      // Find projects under same organization
-      ckbData.projects.forEach(p => {
-        if (p.organization === data.organization) {
-          related.push({ id: p.id, type: 'project', label: `Project: ${p.title}` });
         }
-      });
-      
-      // Surface skills mapped to this experience
-      Object.entries(ckbData.skills).forEach(([skillName, skillData]) => {
-        let isUsed = false;
-        Object.values(skillData.categories).forEach(cat => {
-          if (cat.projects && cat.projects.includes(id)) isUsed = true;
-        });
-        if (isUsed) {
-          related.push({ id: `skill-${skillName.toLowerCase().replace(/\s+/g, '-')}`, type: 'skill', label: `Skill: ${skillName}` });
-        }
-      });
-    } 
-    
-    else if (node.type === 'skill') {
-      // Surface projects referencing this skill
-      const prjIds = [];
-      Object.values(data.categories).forEach(cat => {
-        (cat.projects || []).forEach(pId => {
-          if (!prjIds.includes(pId)) prjIds.push(pId);
-        });
-      });
-      
-      prjIds.forEach(pId => {
-        const p = ckbData.projects.find(proj => proj.id === pId);
-        if (p) related.push({ id: p.id, type: 'project', label: `Project: ${p.title}` });
-        
-        const e = ckbData.experiences.find(exp => exp.id === pId);
-        if (e) related.push({ id: e.id, type: 'experience', label: `Experience: ${e.role}` });
-      });
-    } 
-    
-    else if (node.type === 'talk') {
-      // Surface related projects
-      (data.related_projects || []).forEach(pId => {
-        const p = ckbData.projects.find(proj => proj.id === pId);
-        if (p) related.push({ id: p.id, type: 'project', label: `Project: ${p.title}` });
-      });
-      
-      // Surface experiences mapped to same axes
-      ckbData.experiences.forEach(e => {
-        const commonAxis = e.axes.some(a => data.axes.includes(a));
-        if (commonAxis && related.length < 5) {
-          related.push({ id: e.id, type: 'experience', label: `Experience: ${e.role}` });
+
+        if (matched) {
+          const relLabel = relation ? relation.charAt(0).toUpperCase() + relation.slice(1) + ': ' : '';
+          related.push({
+            id: matchedType === 'skill' ? `skill-${matchedLabel.toLowerCase().replace(/\s+/g, '-')}` : matched.id,
+            type: matchedType,
+            label: `${relLabel}${matchedLabel}`
+          });
         }
       });
     }
-    
-    else if (node.type === 'writing') {
-      // Surface experiences/projects mapped to same axes
-      ckbData.projects.forEach(p => {
-        const commonAxis = p.axes.some(a => data.axes.includes(a));
-        if (commonAxis && related.length < 4) {
-          related.push({ id: p.id, type: 'project', label: `Project: ${p.title}` });
+
+    // Fallback to original heuristics if no relationships found via graphData
+    if (related.length === 0) {
+      if (node.type === 'project') {
+        const relatedExp = ckbData.experiences.find(e => e.organization === data.organization);
+        if (relatedExp) {
+          related.push({ id: relatedExp.id, type: 'experience', label: `Org: ${relatedExp.organization}` });
         }
-      });
-      ckbData.experiences.forEach(e => {
-        const commonAxis = e.axes.some(a => data.axes.includes(a));
-        if (commonAxis && related.length < 6) {
-          related.push({ id: e.id, type: 'experience', label: `Experience: ${e.role}` });
-        }
-      });
+        ckbData.talks.forEach(t => {
+          if (t.related_projects && t.related_projects.includes(id)) {
+            related.push({ id: t.id, type: 'talk', label: `Talk: ${t.topic}` });
+          }
+        });
+        Object.entries(ckbData.skills).forEach(([skillName, skillData]) => {
+          let isUsed = false;
+          Object.values(skillData.categories).forEach(cat => {
+            if (cat.projects && cat.projects.includes(id)) isUsed = true;
+          });
+          if (isUsed) {
+            related.push({ id: `skill-${skillName.toLowerCase().replace(/\s+/g, '-')}`, type: 'skill', label: `Skill: ${skillName}` });
+          }
+        });
+        Object.entries(ckbData.writing).forEach(([cat, list]) => {
+          list.forEach(w => {
+            const commonAxis = w.axes.some(a => data.axes.includes(a));
+            if (commonAxis && related.length < 6) {
+              related.push({ id: w.id, type: 'writing', label: `Writing: ${w.title}` });
+            }
+          });
+        });
+      } else if (node.type === 'experience') {
+        ckbData.projects.forEach(p => {
+          if (p.organization === data.organization) {
+            related.push({ id: p.id, type: 'project', label: `Project: ${p.title}` });
+          }
+        });
+        Object.entries(ckbData.skills).forEach(([skillName, skillData]) => {
+          let isUsed = false;
+          Object.values(skillData.categories).forEach(cat => {
+            if (cat.projects && cat.projects.includes(id)) isUsed = true;
+          });
+          if (isUsed) {
+            related.push({ id: `skill-${skillName.toLowerCase().replace(/\s+/g, '-')}`, type: 'skill', label: `Skill: ${skillName}` });
+          }
+        });
+      } else if (node.type === 'skill') {
+        const prjIds = [];
+        Object.values(data.categories).forEach(cat => {
+          (cat.projects || []).forEach(pId => {
+            if (!prjIds.includes(pId)) prjIds.push(pId);
+          });
+        });
+        prjIds.forEach(pId => {
+          const p = ckbData.projects.find(proj => proj.id === pId);
+          if (p) related.push({ id: p.id, type: 'project', label: `Project: ${p.title}` });
+          const e = ckbData.experiences.find(exp => exp.id === pId);
+          if (e) related.push({ id: e.id, type: 'experience', label: `Experience: ${e.role}` });
+        });
+      } else if (node.type === 'talk') {
+        (data.related_projects || []).forEach(pId => {
+          const p = ckbData.projects.find(proj => proj.id === pId);
+          if (p) related.push({ id: p.id, type: 'project', label: `Project: ${p.title}` });
+        });
+        ckbData.experiences.forEach(e => {
+          const commonAxis = e.axes.some(a => data.axes.includes(a));
+          if (commonAxis && related.length < 5) {
+            related.push({ id: e.id, type: 'experience', label: `Experience: ${e.role}` });
+          }
+        });
+      } else if (node.type === 'writing') {
+        ckbData.projects.forEach(p => {
+          const commonAxis = p.axes.some(a => data.axes.includes(a));
+          if (commonAxis && related.length < 4) {
+            related.push({ id: p.id, type: 'project', label: `Project: ${p.title}` });
+          }
+        });
+        ckbData.experiences.forEach(e => {
+          const commonAxis = e.axes.some(a => data.axes.includes(a));
+          if (commonAxis && related.length < 6) {
+            related.push({ id: e.id, type: 'experience', label: `Experience: ${e.role}` });
+          }
+        });
+      }
     }
 
     return related;
@@ -1233,14 +1331,89 @@ export default function CareerKBPage() {
                   {/* Writing Entity Details */}
                   {selectedNode.type === 'writing' && (
                     <div className="space-y-4">
-                      <div>
-                        <span className="text-xxs font-bold uppercase text-slate-500 tracking-wider block">Synthesis Summary</span>
-                        <p className="text-xs text-slate-300 mt-1 bg-slate-950 p-3 rounded border border-slate-850 leading-relaxed italic">{selectedNode.data.summary}</p>
+                      <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded border border-slate-850 text-xxs font-mono text-slate-500">
+                        <span>Reading Time: {selectedNode.data.reading_time || '2 mins'}</span>
+                        {selectedNode.data.tags && selectedNode.data.tags.length > 0 && (
+                          <div className="flex gap-1">
+                            {selectedNode.data.tags.map(t => (
+                              <span key={t} className="bg-slate-900 border border-slate-800 text-slate-400 px-1.5 py-0.5 rounded text-[10px]">
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </div>
+                      <div>
+                        <span className="text-xxs font-bold uppercase text-slate-500 tracking-wider block">Abstract</span>
+                        <p className="text-xs text-slate-300 mt-1 bg-slate-950 p-3 rounded border border-slate-850 leading-relaxed italic">{selectedNode.data.abstract || selectedNode.data.summary}</p>
+                      </div>
+                      {selectedNode.data.problem && selectedNode.data.problem !== selectedNode.data.summary && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="bg-slate-950 p-3 rounded border border-slate-850">
+                            <span className="text-xxs font-bold text-slate-500 uppercase">Problem Scoped</span>
+                            <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.problem}</p>
+                          </div>
+                          <div className="bg-slate-950 p-3 rounded border border-slate-850">
+                            <span className="text-xxs font-bold text-slate-500 uppercase">Context / Scoping</span>
+                            <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.context}</p>
+                          </div>
+                        </div>
+                      )}
+                      {selectedNode.data.key_ideas && selectedNode.data.key_ideas.length > 0 && selectedNode.data.key_ideas[0] !== selectedNode.data.summary && (
+                        <div>
+                          <span className="text-xxs font-bold uppercase text-slate-500 tracking-wider block">Key Ideas & Core Concepts</span>
+                          <div className="flex flex-wrap gap-1.5 mt-1.5">
+                            {selectedNode.data.key_ideas.map((idea, idx) => (
+                              <span key={idx} className="bg-slate-850 text-slate-300 text-xxs px-2.5 py-1 rounded border border-slate-800 font-semibold">
+                                {idea}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      {selectedNode.data.lessons && selectedNode.data.lessons !== 'Refer to post content for technical insights.' && (
+                        <div>
+                          <span className="text-xxs font-bold uppercase text-slate-500 tracking-wider block font-mono text-indigo-400">Lessons Learned</span>
+                          <p className="text-xs text-slate-300 mt-1 bg-slate-950/40 p-3 rounded border border-slate-850/60 leading-relaxed">{selectedNode.data.lessons}</p>
+                        </div>
+                      )}
                       {selectedNode.data.content && (
                         <div>
                           <span className="text-xxs font-bold uppercase text-slate-500 tracking-wider block">Outline & Key Assertions</span>
                           <p className="text-xs text-slate-400 mt-1 leading-relaxed whitespace-pre-wrap">{selectedNode.data.content}</p>
+                        </div>
+                      )}
+                      {selectedNode.data.situation && (
+                        <div className="mt-4 border-t border-slate-800 pt-4 space-y-3">
+                          <span className="text-xxs font-bold uppercase text-indigo-400 tracking-wider block">🎯 Reusable STAR Interview Evidence</span>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="bg-slate-950 p-3 rounded border border-slate-850">
+                              <span className="text-xxs font-bold text-slate-500 uppercase">Situation</span>
+                              <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.situation}</p>
+                            </div>
+                            <div className="bg-slate-950 p-3 rounded border border-slate-850">
+                              <span className="text-xxs font-bold text-slate-500 uppercase">Task</span>
+                              <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.task}</p>
+                            </div>
+                            <div className="bg-slate-950 p-3 rounded border border-slate-850">
+                              <span className="text-xxs font-bold text-slate-500 uppercase">Action</span>
+                              <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.action}</p>
+                            </div>
+                            <div className="bg-slate-950 p-3 rounded border border-slate-850">
+                              <span className="text-xxs font-bold text-slate-500 uppercase">Result</span>
+                              <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.result}</p>
+                            </div>
+                          </div>
+                          {selectedNode.data.tradeoffs && (
+                            <div className="text-xs text-slate-400">
+                              <strong>Trade-offs Analyzed:</strong> <span className="text-slate-300">{selectedNode.data.tradeoffs}</span>
+                            </div>
+                          )}
+                          {selectedNode.data.stakeholders && selectedNode.data.stakeholders.length > 0 && (
+                            <div className="text-xs text-slate-400">
+                              <strong>Stakeholders Managed:</strong> <span className="text-slate-300">{selectedNode.data.stakeholders.join(', ')}</span>
+                            </div>
+                          )}
                         </div>
                       )}
                     </div>

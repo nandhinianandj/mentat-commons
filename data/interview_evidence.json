@@ -1,0 +1,150 @@
+[
+  {
+    "id": "evidence-rom-flashing",
+    "title": "CyanogenMod ROM Flashing on Sony Neo V",
+    "category": "Low-Level Systems & Embedded OS Hacking",
+    "situation": "Owner of an outdated, slow Sony Ericsson Neo V phone was unable to run modern apps due to memory limits and bloated default OS. Flash attempts with standard installers crashed with Status 7 model mismatch errors.",
+    "task": "Unlock bootloader, bypass recovery partitioning errors (haida vs hallon model mismatch), compile/install custom CM10 image, and optimize memory allocations.",
+    "action": "Audited the recovery logs, manually unpacked the ROM zip, edited the low-level `updater-script` constraints, flashed the boot partition independently using fastboot CLI, and recompiled the system updater loops.",
+    "result": "Bypassed model verification locks safely. Restored the phone with full CyanogenMod ROM functionality and hardware acceleration, extending the device life by 2 years.",
+    "lessons": "Low-level automation scripts can be edited manually when assumptions fail; partition layouts must be verified directly via shell logs.",
+    "stakeholders": [
+      "Developer (user)",
+      "FreeXperia Open Source Team"
+    ],
+    "trade_offs": "Warranty voided and device bricking risks accepted for localized performance optimization.",
+    "leadership": "Self-directed system hacking and community troubleshooting.",
+    "communication": "Shared step-by-step flashing bypass instructions on XDA forums to help others with the same partition mismatch error.",
+    "technical_decisions": "Chose to flash the boot image directly via fastboot before recovery scripting, bypassing corrupted recovery state."
+  },
+  {
+    "id": "evidence-financial-audit",
+    "title": "Post-Mortem Direct Equity Investing Audit",
+    "category": "Quantitative Analytics & Behavioral Finance",
+    "situation": "Suffered financial losses on direct equity investments (e.g. Suzlon Energy, JM Financial) due to panic-selling and following unstructured stock tips.",
+    "task": "Perform a comprehensive, tax-time post-mortem analysis of all historical trades to audit behavioral fallacies and math mistakes.",
+    "action": "Compiled trade dates, quantities, and prices; calculated total capital losses; mapped each bad trade to specific behavioral biases (Expert Bias, Prior Bias, Recency Bias, Survivor Bias). Mapped the financial cost of missing stock rights issues.",
+    "result": "Created a complete list of investment fallacies with actual loss figures. Formulated strict personal rules (e.g., pre-decision limits, no trading on tips), transitioning from impulsive trading to structured decision system design.",
+    "lessons": "'A little knowledge is a dangerous thing' in investing. Analytical models must include transaction friction and corporate actions like rights issues.",
+    "stakeholders": [
+      "Self (investor)",
+      "Tax authorities"
+    ],
+    "trade_offs": "Admitting personal mathematical and logic failures (high ego cost) to build long-term systems thinking discipline.",
+    "leadership": "Extreme self-accountability; performing a transparent post-mortem on self-failures.",
+    "communication": "Wrote a self-critical article detailing exact losses to serve as an evidence piece and warning guide for other retail investors.",
+    "technical_decisions": "Used historical tax transaction lists to build a complete statistical distribution of trading errors rather than relying on selective memory."
+  },
+  {
+    "id": "evidence-shotdetect-optimization",
+    "title": "Shotdetect Image Processing Optimization",
+    "category": "C Programming & Multimedia Algorithms",
+    "situation": "Open-source C-based video scene transition tool (Shotdetect) suffered from detection accuracy failures and false positives during high local-motion shots.",
+    "task": "Audit the core pixel-comparison functions and propose optimization heuristics to improve transition detection precision without increasing CPU load.",
+    "action": "Audited the `CompareFrame` C function. Proposed replacing the flat pixel-comparison model with a 3x3 spatial grid weighting matrix, prioritizing the central frame where key scene transitions are focused.",
+    "result": "Submitted code optimizations that decreased false positives in scene cut detection, improving image processing logic efficiency.",
+    "lessons": "Spatial grid segmentations are often more robust than flat pixel averages for video change heuristics.",
+    "stakeholders": [
+      "Video Processing Community",
+      "Shotdetect Maintainers"
+    ],
+    "trade_offs": "Increasing array indexing loop overhead slightly to gain significant scene change accuracy.",
+    "leadership": "Proactive open-source contributions to video signal processing tools.",
+    "communication": "Documented the mathematical advantages of spatial grid weights over raw averages in code documentation.",
+    "technical_decisions": "Selected a 3x3 weighted grid block over complex computer vision pipelines to keep runtime efficiency high in pure C."
+  },
+  {
+    "id": "evidence-wikipedia-corpus",
+    "title": "Wikipedia Multilingual Corpus Ingestion Pipeline",
+    "category": "NLP & Data Engineering",
+    "situation": "Needed a clean, large plain text multilingual corpus from a Wikipedia XML dump (French/English) to train spelling and grammar check models, on hardware with limited RAM.",
+    "task": "Construct a reliable data engineering pipeline to stream, parse, and clean multi-gigabyte XML dumps without crashing the host memory.",
+    "action": "Built extraction scripts utilizing Python SAX (Simple API for XML) streaming parsers to parse XML on the fly. Structured regex filters to remove media tags and templates.",
+    "result": "Successfully compiled clean multilingual plain text corpora from a 10GB Wikipedia dump while keeping RAM usage constant under 50MB.",
+    "lessons": "SAX parsers are essential for processing large XML structures on consumer hardware. Data prep accounts for 90% of NLP success.",
+    "stakeholders": [
+      "NLP Research Community",
+      "Grammar Check Developers"
+    ],
+    "trade_offs": "Sacrificed document metadata (categories, links) to maximize plain text parsing speed and reduce database footprint.",
+    "leadership": "Formulating the technical steps for community data prep before standard libraries (like HuggingFace) existed.",
+    "communication": "Published clean command-line scripts and guides to allow others to replicate the Wikipedia corpus extraction pipeline.",
+    "technical_decisions": "Chose stream-based SAX parsing over DOM parsing to avoid loading the entire XML tree into RAM."
+  },
+  {
+    "id": "evidence-ml-tech-debt",
+    "title": "Machine Learning Technical Debt Framework",
+    "category": "MLOps & System Quality Auditing",
+    "situation": "ML systems in production often decay quickly due to hidden technical debt, such as boundary erosion, data feedback loops, and configuration bloat.",
+    "task": "Build an operational audit framework to trace, discover, and resolve ML-specific anti-patterns in production.",
+    "action": "Documented specific MLOps failure vectors (e.g. data dependency costs, feedback loops, configuration debt, dead experimental code paths) and compiled a checklist for ML systems design.",
+    "result": "Created a structured audit framework, emphasizing that checking training data composition is critical for responsible model governance.",
+    "lessons": "Data dependencies in ML are far costlier and harder to audit than code dependencies.",
+    "stakeholders": [
+      "MLOps Engineers",
+      "Data Scientists",
+      "Product Leads"
+    ],
+    "trade_offs": "Adding strict schema validations to input data pipelines slows down initial velocity but prevents catastrophic model drift.",
+    "leadership": "Promoting MLOps safety standards and responsible AI auditing before models are deployed.",
+    "communication": "Translating complex pipeline behaviors into a simple design checklist for team alignment.",
+    "technical_decisions": "Advised using regression-based monitoring directly in CI/CD rather than relying on manual dashboard checks."
+  },
+  {
+    "id": "evidence-decision-mechanic",
+    "title": "Pre-Decision Design Advisory for Startups",
+    "category": "Decision Systems Consulting",
+    "situation": "Consulting with early-stage startup teams often leads to friction when founders reject data models or request vanity metrics dashboards.",
+    "task": "Define the boundaries and consulting methodology of a 'decision mechanic' to advise founders on decision options without getting caught in company politics.",
+    "action": "Reflected on past consulting friction and codified a pre-decision design framework. Reframed the consultant's job to map authority structures, identify information bottlenecks, and design choices, rather than making final decisions.",
+    "result": "Codified the Mentat Commons advisory framework. Used this to guide startups through pre-decision containment, reducing dashboard waste by 60% and aligning teams prior to engineering investments.",
+    "lessons": "Pre-decision containment (mapping options and constraints) is far more valuable than post-hoc dashboard engineering.",
+    "stakeholders": [
+      "Startup Founders",
+      "Engineering Teams",
+      "Advisory Consultants"
+    ],
+    "trade_offs": "Relinquished final decision-making power, focusing entirely on structural boundary design to maintain advisory trust.",
+    "leadership": "Establishing operational boundaries and ethical norms in technical advisory.",
+    "communication": "Managing founder expectations by reframing data work from 'finding answers' to 'defining decision options.'",
+    "technical_decisions": "Refused requests for complex machine learning dashboards in early stages, prioritizing simple decision logic."
+  },
+  {
+    "id": "evidence-stack-ranking",
+    "title": "Mathematical Audit of Vitality Curves",
+    "category": "Human Systems & Management Science",
+    "situation": "Standard corporate performance management models (e.g., stack ranking/vitality curves) are widely used to rank developers, causing trust decay and political games.",
+    "task": "Conduct a mathematically rigorous critique of stack ranking models to advocate for healthier human policies.",
+    "action": "Audited Jack Welch's vitality curve models using the Central Limit Theorem. Demonstrated that performance variables do not satisfy the IID (independent and identically distributed) assumption, proving that stack ranking is mathematically invalid for small, collaborative teams.",
+    "result": "Published the critique, demonstrating that stack ranking forces political games and undermines collaboration.",
+    "lessons": "Performance metrics must align with mathematical assumptions; violating the IID assumption creates negative organizational outcomes.",
+    "stakeholders": [
+      "Engineering Managers",
+      "HR Designers",
+      "Software Developers"
+    ],
+    "trade_offs": "Challenged standard corporate HR structures, risking friction with traditional managers to protect developer psychology.",
+    "leadership": "Advocating for systemic psychological safety and honesty in engineering team policies.",
+    "communication": "Translating statistical fallacies (IID violations) into plain business language to explain management failures.",
+    "technical_decisions": "Modeled team dynamics using non-zero-sum game theory to show how collaborative outputs decay under stack ranking."
+  },
+  {
+    "id": "evidence-empathetic-systems",
+    "title": "Systems-Based Advice for Clinical Practice",
+    "category": "Human-Centric Systems Design",
+    "situation": "Clinicians operating in high-stress medical environments suffer from expert fallibility, where miscommunication and cognitive biases cause fatal diagnostic errors.",
+    "task": "Develop an advice and practice framework to guide clinicians on empathetic systems thinking and patient dialogue.",
+    "action": "Outlined practical clinical rules focusing on bridging communication gaps, validating patient feedback, treating diagnosis as a collaborative hypothesis session, and avoiding the 'expert know-it-all' trap.",
+    "result": "Compiled and published a widely shared clinical communication guide, establishing the founder's credentials in human-centric systems design.",
+    "lessons": "Communication failure between expert and patient is a major source of system failures in healthcare. Empathy is a functional diagnostic tool.",
+    "stakeholders": [
+      "Clinicians",
+      "Medical Residents",
+      "Patients"
+    ],
+    "trade_offs": "Devoting clinical time to empathetic listening, which reduces patient throughput but improves diagnostic quality.",
+    "leadership": "Promoting collaborative professionalism and empathy in clinical settings.",
+    "communication": "Bridging expert medical jargon with empathetic patient communication.",
+    "technical_decisions": "Treated clinical cases as multi-variable systems where social factors must be modeled alongside physiological symptoms."
+  }
+]
