@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CareerKnowledgeBase",
+  "type": "OBJECT",
+  "properties": {
+    "experiences": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "id": { "type": "STRING" },
+          "organization": { "type": "STRING" },
+          "role": { "type": "STRING" },
+          "start_date": { "type": "STRING" },
+          "end_date": { "type": "STRING" },
+          "summary": { "type": "STRING" },
+          "responsibilities": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "deliverables": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "technologies": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "stakeholders": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "outcomes": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "domains": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "leadership_examples": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "evidence_links": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "axes": { "type": "ARRAY", "items": { "type": "STRING", "enum": ["axis-i", "axis-ii", "axis-iii"] } }
+        },
+        "required": ["id", "organization", "role", "start_date", "end_date", "summary", "responsibilities", "deliverables", "technologies", "axes"]
+      }
+    },
+    "projects": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "id": { "type": "STRING" },
+          "title": { "type": "STRING" },
+          "organization": { "type": "STRING" },
+          "problem": { "type": "STRING" },
+          "context": { "type": "STRING" },
+          "solution": { "type": "STRING" },
+          "architecture": { "type": "STRING" },
+          "decisions": { "type": "STRING" },
+          "tradeoffs": { "type": "STRING" },
+          "technologies": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "outcomes": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "impact": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "reusable_stories": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "interview_questions_supported": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "screenshots": {
+            "type": "ARRAY",
+            "items": {
+              "type": "OBJECT",
+              "properties": {
+                "url": { "type": "STRING" },
+                "caption": { "type": "STRING" }
+              },
+              "required": ["url", "caption"]
+            }
+          },
+          "links": {
+            "type": "ARRAY",
+            "items": {
+              "type": "OBJECT",
+              "properties": {
+                "name": { "type": "STRING" },
+                "url": { "type": "STRING" }
+              },
+              "required": ["name", "url"]
+            }
+          },
+          "evidence": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "axes": { "type": "ARRAY", "items": { "type": "STRING", "enum": ["axis-i", "axis-ii", "axis-iii"] } }
+        },
+        "required": ["id", "title", "problem", "solution", "technologies", "axes"]
+      }
+    },
+    "skills": {
+      "type": "OBJECT",
+      "additionalProperties": {
+        "type": "OBJECT",
+        "properties": {
+          "categories": {
+            "type": "OBJECT",
+            "additionalProperties": {
+              "type": "OBJECT",
+              "properties": {
+                "yearsOfExperience": { "type": "NUMBER" },
+                "confidence": { "type": "STRING" },
+                "description": { "type": "STRING" },
+                "projects": { "type": "ARRAY", "items": { "type": "STRING" } }
+              },
+              "required": ["yearsOfExperience", "confidence", "description", "projects"]
+            }
+          },
+          "totalYears": { "type": "NUMBER" },
+          "confidence": { "type": "STRING" }
+        },
+        "required": ["categories", "totalYears"]
+      }
+    },
+    "talks": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "id": { "type": "STRING" },
+          "topic": { "type": "STRING" },
+          "audience": { "type": "STRING" },
+          "duration": { "type": "STRING" },
+          "abstract": { "type": "STRING" },
+          "slides": { "type": "STRING" },
+          "recordings": { "type": "STRING" },
+          "lessons": { "type": "STRING" },
+          "related_projects": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "axes": { "type": "ARRAY", "items": { "type": "STRING", "enum": ["axis-i", "axis-ii", "axis-iii"] } }
+        },
+        "required": ["id", "topic", "audience", "duration", "lessons", "axes"]
+      }
+    },
+    "community": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "id": { "type": "STRING" },
+          "name": { "type": "STRING" },
+          "volunteering": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "theatre": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "facilitation": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "partnerships": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "workshops": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "organizing": { "type": "ARRAY", "items": { "type": "STRING" } },
+          "axes": { "type": "ARRAY", "items": { "type": "STRING", "enum": ["axis-i", "axis-ii", "axis-iii"] } }
+        },
+        "required": ["id", "name", "axes"]
+      }
+    },
+    "writing": {
+      "type": "OBJECT",
+      "properties": {
+        "articles": { "type": "ARRAY", "items": { "$ref": "#/definitions/WritingItem" } },
+        "essays": { "type": "ARRAY", "items": { "$ref": "#/definitions/WritingItem" } },
+        "research_notes": { "type": "ARRAY", "items": { "$ref": "#/definitions/WritingItem" } },
+        "stories": { "type": "ARRAY", "items": { "$ref": "#/definitions/WritingItem" } },
+        "blog_posts": { "type": "ARRAY", "items": { "$ref": "#/definitions/WritingItem" } },
+        "talk_proposals": { "type": "ARRAY", "items": { "$ref": "#/definitions/WritingItem" } },
+        "white_papers": { "type": "ARRAY", "items": { "$ref": "#/definitions/WritingItem" } }
+      }
+    }
+  },
+  "required": ["experiences", "projects", "skills", "talks", "community", "writing"],
+  "definitions": {
+    "WritingItem": {
+      "type": "OBJECT",
+      "properties": {
+        "id": { "type": "STRING" },
+        "title": { "type": "STRING" },
+        "summary": { "type": "STRING" },
+        "content": { "type": "STRING" },
+        "axes": { "type": "ARRAY", "items": { "type": "STRING", "enum": ["axis-i", "axis-ii", "axis-iii"] } },
+        "abstract": { "type": "STRING" },
+        "problem": { "type": "STRING" },
+        "context": { "type": "STRING" },
+        "key_ideas": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "lessons": { "type": "STRING" },
+        "related_articles": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "related_projects": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "related_skills": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "related_talks": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "reading_time": { "type": "STRING" },
+        "evidence_links": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "tags": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "featured": { "type": "BOOLEAN" }
+      },
+      "required": ["id", "title", "summary", "axes"]
+    }
+  }
+}

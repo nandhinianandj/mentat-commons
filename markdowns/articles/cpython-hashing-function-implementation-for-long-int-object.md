@@ -1,0 +1,42 @@
+---
+title: cpython hashing function implementation for long int object.
+abstract: Original post from the blog titled 'cpython hashing function implementation
+  for long int object.'.
+problem: Original post from the blog titled 'cpython hashing function implementation
+  for long int object.'.
+context: Legacy Wordpress blog post reference.
+key_ideas:
+- Original post from the blog titled 'cpython hashing function implementation for
+  long int object.'.
+lessons: Refer to post content for technical insights.
+related_articles: []
+related_projects: []
+related_skills: []
+related_talks: []
+career_axes:
+- axis-i
+reading_time: 2 mins
+evidence_links:
+- https://softwaremechanic.wordpress.com/
+tags:
+- Archive
+- Featured Collection
+featured: false
+---
+
+This is a follow up to
+this post.
+So went on opening up the Objects/dictobject.c file and start reading up the comments. It’s extremely well documented. I read through the first set of comments(about 50 lines) to learn that
+python’s dict has four type of slots. i.e: an entry in the python’s dict object can be one of 4 types:
+1. Active : active (key,value pair)
+2. Unused: key=value=NULL
+3. Dummy: key=dummy value=NULL — was previously active, but was deleted.
+4. Pending not yet inserted or deleted. key !=dummy and key != null
+As for further implications and usage of these different states i refer you to
+go here.
+Moving on to the comments on hashing function.
+From the comment section:
+Major subtleties ahead: Most hash schemes depend on having a “good” hash
+function, in the sense of simulating
+
+...[Full content preserved in source]
