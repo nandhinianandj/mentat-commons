@@ -1368,6 +1368,20 @@ export default function CareerKBPage() {
                   {/* Writing Entity Details */}
                   {selectedNode.type === 'writing' && (
                     <div className="space-y-4">
+                      {selectedNode.data.ai_assisted && (
+                        <div className="bg-indigo-950/40 border border-indigo-900/60 p-3 rounded-lg flex items-center justify-between gap-4">
+                          <div className="space-y-0.5">
+                            <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Speculative Systems Research</span>
+                            <p className="text-xxs text-slate-400 leading-normal">This narrative thought experiment is part of the MeWe project.</p>
+                          </div>
+                          <a 
+                            href={`/narrative?node=${selectedNode.id}`} 
+                            className="bg-indigo-900/60 hover:bg-indigo-800 text-slate-100 hover:text-white px-2.5 py-1.5 rounded text-[10px] font-semibold transition-all flex-shrink-0"
+                          >
+                            Read in Narrative View
+                          </a>
+                        </div>
+                      )}
                       <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded border border-slate-850 text-xxs font-mono text-slate-500">
                         <span>Reading Time: {selectedNode.data.reading_time || '2 mins'}</span>
                         {selectedNode.data.tags && selectedNode.data.tags.length > 0 && (

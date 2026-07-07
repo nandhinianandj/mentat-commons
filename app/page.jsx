@@ -59,49 +59,49 @@ export default function HomePage() {
       text: "How do organizations make better decisions?",
       description: "Aligning metrics to decision-action trees, containing uncertainty, and establishing robust accountability frameworks.",
       projectIds: ["proj-axelrod"],
-      articleIds: ["write-how-not-to-be-decision-mechanic", "write-dichotomy"]
+      articleIds: ["write-how-not-to-be-decision-mechanic", "write-dichotomy", "write-meta-reminders"]
     },
     {
       id: "q2",
       text: "How should humans and AI collaborate?",
       description: "AI-assisted programming loops, MLOps monitoring systems, and negotiating alignment boundaries between populations.",
       projectIds: ["proj-smart-waste"],
-      articleIds: ["write-alignment-ai-agents-future-of-swe", "write-aa-coding-here-to-stay", "write-gen-ai-impact-predictions"]
+      articleIds: ["write-alignment-ai-agents-future-of-swe", "write-aa-coding-here-to-stay", "write-gen-ai-impact-predictions", "write-interlude-interconnected-jugalbandhi"]
     },
     {
       id: "q3",
       text: "How do data and stories work together?",
       description: "Linguistic affordances between statistics and narratives, bridging structural datasets with socio-cultural alignment.",
       projectIds: ["proj-decision-labs"],
-      articleIds: ["write-dichotomy", "write-principles-of-good-data-analysis"]
+      articleIds: ["write-dichotomy", "write-principles-of-good-data-analysis", "write-road2mewe-v2", "write-interlude-trust-me"]
     },
     {
       id: "q4",
       text: "What causes alignment failures?",
       description: "Analyzing transmission delays, process constraints vs vision, and the breakdown of communication loops.",
       projectIds: ["proj-smart-waste"],
-      articleIds: ["write-efficiency-vs-effectiveness", "write-stack-ranking-16"]
+      articleIds: ["write-efficiency-vs-effectiveness", "write-stack-ranking-16", "write-road2mewe", "write-what-not-to-do"]
     },
     {
       id: "q5",
       text: "How should expertise be represented?",
       description: "Generalist cognitive models vs specialization boundaries, and building structured hiring pipelines.",
       projectIds: ["proj-decision-labs"],
-      articleIds: ["write-expertise-vs-generalists", "write-hiring-data-science-teams"]
+      articleIds: ["write-expertise-vs-generalists", "write-hiring-data-science-teams", "write-road2mewe-v2"]
     },
     {
       id: "q6",
       text: "How do organizations learn?",
       description: "Establishing continuous feed-forward loops and translating cognitive science research into operational labs.",
       projectIds: ["proj-decision-labs"],
-      articleIds: ["write-summary-of-how-studying-cog-sci-changed-me"]
+      articleIds: ["write-summary-of-how-studying-cog-sci-changed-me", "write-interlude-phoenix-rebirth"]
     },
     {
       id: "q7",
       text: "How do systems become resilient?",
       description: "Applying optionality, skin-in-the-game, and info-compartmentalization to buffer organizational fragility.",
       projectIds: ["proj-smart-waste"],
-      articleIds: ["write-antifragile-notes-and-review", "write-leakcraft"]
+      articleIds: ["write-antifragile-notes-and-review", "write-leakcraft", "write-road2mewe-v3", "write-interlude-kindness-alibi", "write-interlude-phoenix-rebirth", "write-interlude-interconnected-jugalbandhi"]
     },
     {
       id: "q8",
@@ -115,14 +115,14 @@ export default function HomePage() {
       text: "How should uncertainty be managed?",
       description: "Using Bayesian updates, error monitoring, and behavior logs to buffer risk and prior biases.",
       projectIds: ["proj-axelrod"],
-      articleIds: ["write-my-stock-market-dabblings", "write-advice-to-doctors"]
+      articleIds: ["write-my-stock-market-dabblings", "write-advice-to-doctors", "write-meta-reminders"]
     },
     {
       id: "q10",
       text: "How do communities coordinate?",
       description: "Managing cognitive attention constraints, collaborative dialogs, and information-sharing environments.",
       projectIds: ["proj-smart-waste"],
-      articleIds: ["write-effects-of-vipassana", "write-leakcraft"]
+      articleIds: ["write-effects-of-vipassana", "write-leakcraft", "write-road2mewe", "write-road2mewe-v3", "write-one-road-maybe-two", "write-interlude-trust-mewe"]
     }
   ];
 
