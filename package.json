@@ -8,9 +8,10 @@
     "lint": "next lint",
     "test:ckb": "node scripts/validate-ckb.mjs",
     "test:spec": "node scripts/test-speculative-research.mjs",
+    "test:radar": "node scripts/validate-radar.mjs",
     "radar:brief": "node scripts/radar-brief.mjs",
     "radar:incubate": "node scripts/radar-incubate.mjs",
-    "test": "npm run test:ckb && npm run test:spec"
+    "test": "npm run test:ckb && npm run test:spec && npm run test:radar"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
