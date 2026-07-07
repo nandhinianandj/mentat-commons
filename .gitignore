@@ -36,3 +36,7 @@ next-env.d.ts
 # local graph / tool files
 .dual-graph/
 dev_server.log
+
+# Conversation Radar dynamic files
+/data/radar_db.json
+/briefings/
