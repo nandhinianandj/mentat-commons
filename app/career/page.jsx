@@ -94,8 +94,45 @@ export default function CareerKBPage() {
         if (response.ok) {
           const data = await response.json();
           setCkbData(data);
-          // Set default selected node as Axelrod's Razor or Mentat Commons
-          if (data.projects && data.projects.length > 0) {
+          // Set default selected node based on query parameters or fall back to Axelrod
+          let selectedFromQuery = false;
+          if (typeof window !== 'undefined') {
+            const params = new URLSearchParams(window.location.search);
+            const nodeId = params.get('node') || params.get('id');
+            if (nodeId) {
+              const proj = data.projects.find(p => p.id === nodeId);
+              if (proj) {
+                setSelectedNode({ type: 'project', id: nodeId, data: proj });
+                selectedFromQuery = true;
+              }
+              const exp = data.experiences.find(e => e.id === nodeId);
+              if (exp) {
+                setSelectedNode({ type: 'experience', id: nodeId, data: exp });
+                selectedFromQuery = true;
+              }
+              const talk = data.talks.find(t => t.id === nodeId);
+              if (talk) {
+                setSelectedNode({ type: 'talk', id: nodeId, data: talk });
+                selectedFromQuery = true;
+              }
+              const comm = data.community.find(c => c.id === nodeId);
+              if (comm) {
+                setSelectedNode({ type: 'community', id: nodeId, data: comm });
+                selectedFromQuery = true;
+              }
+              if (!selectedFromQuery) {
+                Object.entries(data.writing).forEach(([cat, list]) => {
+                  const w = list.find(item => item.id === nodeId || item.id === `write-${nodeId}`);
+                  if (w) {
+                    setSelectedNode({ type: 'writing', id: w.id, data: { ...w, category: cat } });
+                    selectedFromQuery = true;
+                  }
+                });
+              }
+            }
+          }
+
+          if (!selectedFromQuery && data.projects && data.projects.length > 0) {
             const axelrod = data.projects.find(p => p.id === 'proj-axelrod');
             if (axelrod) {
               setSelectedNode({ type: 'project', id: 'proj-axelrod', data: axelrod });

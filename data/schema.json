@@ -170,7 +170,8 @@
         "reading_time": { "type": "STRING" },
         "evidence_links": { "type": "ARRAY", "items": { "type": "STRING" } },
         "tags": { "type": "ARRAY", "items": { "type": "STRING" } },
-        "featured": { "type": "BOOLEAN" }
+        "featured": { "type": "BOOLEAN" },
+        "ai_assisted": { "type": "BOOLEAN" }
       },
       "required": ["id", "title", "summary", "axes"]
     }

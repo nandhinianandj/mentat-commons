@@ -123,5 +123,46 @@
       "abstract": "Abstract",
       "related_projects": "Related Projects"
     }
+  },
+  "v2": {
+    "home": {
+      "hero_title": "I work at the intersection of technology, decision making and human systems.",
+      "hero_subtitle": "Navigating organizational complexity through systems thinking, empirical evidence, and collaborative learning.",
+      "axes_title": "Enduring Career Axes",
+      "axes_subtitle": "My work is structured around three core pillars:",
+      "axis1_desc": "Technical Leadership — ML/AI Strategy, Software Engineering Architecture, and Model Governance.",
+      "axis2_desc": "Human Systems — Applied Facilitation, Training, Restorative Practices, and Communications.",
+      "axis3_desc": "Decision Systems — The intersection of cognition, statistics, and organizational behavior.",
+      "questions_title": "Enduring Research Questions",
+      "questions_subtitle": "Exploring the recurring problems that shape my research and consulting engagements:"
+    },
+    "consulting": {
+      "title": "Collaborative Consulting & Problem Solving",
+      "subtitle": "If we worked together, what kinds of problems could we solve?",
+      "service1_title": "Technical Leadership & MLOps Governance",
+      "service1_desc": "Auditing silent model decay, tracking patient overlap leaks, and building production-grade validation systems.",
+      "service2_title": "Decision Design & Scoping",
+      "service2_desc": "Aligning organization metrics to decision-action trees, preventing vanity dashboard waste, and structuring incentives.",
+      "service3_title": "Applied Facilitation & Training",
+      "service3_desc": "Interactive learning designs, applied improvisation workshops, and transmission of alignment across teams.",
+      "credibility_title": "Evidence-Based Capabilities"
+    },
+    "about": {
+      "title": "About Nandhini Anand Jeyahar",
+      "subtitle": "Interdisciplinary background spanning computer vision, cognitive science, and systems facilitation.",
+      "bio_p1": "My journey started with a fascination for genetic algorithms and machine vision. Over two decades, it has evolved into a deep practice of systems thinking, data engineering, and group dynamics.",
+      "bio_p2": "I work with teams who want to make better decisions. Sometimes that means writing optimized C++ scene detection code, sometimes it means auditing dataset leakage, and sometimes it means facilitating applied theater circles."
+    },
+    "portfolio": {
+      "title": "Evidence Portfolio & Case Studies",
+      "subtitle": "Empirical case studies mapped to problems, trade-offs, and lessons."
+    },
+    "narrative": {
+      "title": "Speculative Systems Research",
+      "subtitle": "Exploring collective coordination, governance, and institutional alignment through narrative and thought experiments.",
+      "disclosure_title": "Iterative Collaboration Model & AI Disclosure",
+      "disclosure_desc": "The MeWe series is developed through an iterative collaboration between myself and modern language models. The ideas, worldbuilding, themes, questions and direction originate from my ongoing research interests. AI is used as a collaborative writing partner to explore alternatives, refine prose, experiment with narrative structure and accelerate iteration. Final editorial decisions, conceptual direction and thematic coherence remain human-guided.",
+      "research_philosophy": "Why Speculative Fiction? Some questions are difficult to investigate through technical writing alone. Stories allow us to simulate societies, organizations, incentives, and long-term consequences — serving as speculative research instruments alongside software and consulting."
+    }
   }
 }
