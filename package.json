@@ -9,6 +9,7 @@
     "test:ckb": "node scripts/validate-ckb.mjs",
     "test:spec": "node scripts/test-speculative-research.mjs",
     "radar:brief": "node scripts/radar-brief.mjs",
+    "radar:incubate": "node scripts/radar-incubate.mjs",
     "test": "npm run test:ckb && npm run test:spec"
   },
   "dependencies": {
