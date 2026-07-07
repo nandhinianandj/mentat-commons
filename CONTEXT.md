@@ -23,6 +23,9 @@ Legacy WordPress blog migration, interconnected evidence graph construction, STA
   - Created a dedicated `/narrative` page with a Speculative Research Philosophy card and transparent **AI Disclosure box** (detailing the iterative human-AI collaboration process).
   - Deep-linked MeWe links from the homepage questions list directly to `/narrative?node=write-some-slug` (expanding the corresponding chapter automatically).
   - Added a transition bridge banner inside the Career Explorer details panel for any AI-assisted articles, routing visitors to read them in narrative context.
+* **Test Suite Integration**:
+  - Created `scripts/test-speculative-research.mjs` verifying schema validation, MeWe article presence, referential integrity of mapped evidence links, and i18n localization completion.
+  - Configured `npm run test:spec`, `npm run test:ckb`, and `npm test` scripts in `package.json` to run both test suites simultaneously. All test cases compiled and passed successfully.
 
 ## Next Steps
 * Add deep-dive code evidence links to the corresponding historical GitHub projects.

@@ -56,6 +56,12 @@ export default function SpeculativeResearchPage() {
     return found || id;
   };
 
+  const getProjectTitle = (id) => {
+    if (!ckbData || !ckbData.projects) return id;
+    const p = ckbData.projects.find(proj => proj.id === id);
+    return p ? p.title : id;
+  };
+
   // Mappings of MeWe chapters to the enduring questions they explore
   const questionExploringMap = {
     "write-meta-reminders": "How do organizations make better decisions? & How should uncertainty be managed?",
