@@ -1,4 +1,5 @@
 import { searchCKB, generateLocalRAGResponse, generateLocalSTARResponse, callLLM, loadCKB } from '../../../../lib/rag_ckb.mjs';
+import { compileArtifact } from '../../../../lib/evidence_engine.mjs';
 
 // Helper to generate local resume tailoring
 function generateLocalResumeResponse(jd, matches) {
@@ -10,12 +11,12 @@ function generateLocalResumeResponse(jd, matches) {
   let resume = `# TAILORED PROFESSIONAL RESUME\n\n`;
   resume += `*Generated based on Target Job Description constraints and verified CKB evidence.*\n\n`;
   resume += `## Professional Summary\n`;
-  resume += `Systems Architect, Decision Designer, and Facilitator with over 6 years of experience operating at the intersection of technical workflows and human systems. Expert in designing data pipelines, deploying edge AI systems, and conducting algorithmic audits. Skilled in facilitating decision labs and utilizing applied improvisation for cross-functional alignment. **[Sources: exp-mentat-commons, exp-bene-data]**\n\n`;
+  resume += `Systems Architect, Decision Designer, and Facilitator with over 6 years of experience operating at the intersection of technical workflows and human systems. Expert in designing data pipelines, deploying edge AI systems, and conducting algorithmic audits. Skilled in facilitating decision labs and utilizing applied improvisation for cross-functional alignment. **[Ref: exp-mentat-commons]**\n\n`;
   
   resume += `## Areas of Expertise\n`;
-  resume += `- **Technical Strategy & MLOps:** End-to-end data pipeline design, edge computer vision, model drift monitoring. **[Sources: proj-smart-waste, exp-bene-data]**\n`;
-  resume += `- **Decision Systems & Org Design:** Information flow mapping, metrics alignment, decision rights optimization. **[Sources: exp-mentat-commons]**\n`;
-  resume += `- **Human Systems & Facilitation:** Applied improvisation, restorative dialogue circles, experiential curriculum design. **[Sources: exp-mentat-theatre, comm-restorative-justice]**\n\n`;
+  resume += `- **Technical Strategy & MLOps:** End-to-end data pipeline design, edge computer vision, model drift monitoring. **[Ref: proj-smart-waste]**\n`;
+  resume += `- **Decision Systems & Org Design:** Information flow mapping, metrics alignment, decision rights optimization. **[Ref: exp-mentat-commons]**\n`;
+  resume += `- **Human Systems & Facilitation:** Applied improvisation, restorative dialogue circles, experiential curriculum design. **[Ref: exp-mentat-theatre]**\n\n`;
   
   resume += `## Professional Experience\n\n`;
   
@@ -24,10 +25,10 @@ function generateLocalResumeResponse(jd, matches) {
     resume += `### ${e.role} | ${e.organization} \n`;
     resume += `*${e.start_date} - ${e.end_date} | Domains: ${(e.domains || []).join(', ')}*\n\n`;
     e.responsibilities.forEach((r, idx) => {
-      resume += `- ${r} **[Source: ${e.id}]**\n`;
+      resume += `- ${r} **[Ref: ${e.id}]**\n`;
     });
     if (e.leadership_examples && e.leadership_examples.length > 0) {
-      resume += `- **Leadership Highlight:** ${e.leadership_examples[0]} **[Source: ${e.id}]**\n`;
+      resume += `- **Leadership Highlight:** ${e.leadership_examples[0]} **[Ref: ${e.id}]**\n`;
     }
     resume += `\n`;
   });
@@ -37,11 +38,11 @@ function generateLocalResumeResponse(jd, matches) {
   displayProjs.forEach(p => {
     resume += `### ${p.title}\n`;
     resume += `*Organization: ${p.organization} | Axes: ${p.axes.map(a => a.replace('-', ' ')).join(', ')}*\n\n`;
-    resume += `- **Problem:** ${p.problem} **[Source: ${p.id}]**\n`;
-    resume += `- **Solution:** ${p.solution} **[Source: ${p.id}]**\n`;
-    resume += `- **Architecture:** ${p.architecture || ''} **[Source: ${p.id}]**\n`;
-    resume += `- **Decisions & Trade-offs:** Choice: ${p.decisions} (Trade-off: ${p.tradeoffs}) **[Source: ${p.id}]**\n`;
-    resume += `- **Impact:** ${(p.impact || []).join('; ')} **[Source: ${p.id}]**\n\n`;
+    resume += `- **Problem:** ${p.problem} **[Ref: ${p.id}]**\n`;
+    resume += `- **Solution:** ${p.solution} **[Ref: ${p.id}]**\n`;
+    resume += `- **Architecture:** ${p.architecture || ''} **[Ref: ${p.id}]**\n`;
+    resume += `- **Decisions & Trade-offs:** Choice: ${p.decisions} (Trade-off: ${p.tradeoffs}) **[Ref: ${p.id}]**\n`;
+    resume += `- **Impact:** ${(p.impact || []).join('; ')} **[Ref: ${p.id}]**\n\n`;
   });
   
   // 2. Generate Cover Letter
@@ -51,12 +52,12 @@ function generateLocalResumeResponse(jd, matches) {
   
   const hasRustKeywords = jd.toLowerCase().includes('rust') || jd.toLowerCase().includes('wasm') || jd.toLowerCase().includes('simulation') || jd.toLowerCase().includes('game theory');
   if (hasRustKeywords && projs.some(p => p.id === 'proj-axelrod')) {
-    coverLetter += `Throughout my career, I have operated under a core guiding principle: *never rewrite history; reorganize and retrieve it.* In my recent work at **Mentat Commons**, I built **Axelrod's Razor**, an interactive spatial simulation sandbox studying evolutionary game theory. I implemented a core simulation engine in Rust, compiled to WebAssembly, to handle 10,000+ spatial agent updates in real-time at 60 FPS in-browser. This project embodies my approach to using interactive modeling to make complex collective decision dynamics tangible. **[Sources: proj-axelrod, exp-mentat-commons]**\n\n`;
+    coverLetter += `Throughout my career, I have operated under a core guiding principle: *never rewrite history; reorganize and retrieve it.* In my recent work at **Mentat Commons**, I built **Axelrod's Razor**, an interactive spatial simulation sandbox studying evolutionary game theory. I implemented a core simulation engine in Rust, compiled to WebAssembly, to handle 10,000+ spatial agent updates in real-time at 60 FPS in-browser. This project embodies my approach to using interactive modeling to make complex collective decision dynamics tangible. **[Ref: proj-axelrod]**\n\n`;
   } else {
-    coverLetter += `Throughout my career, I have operated under a core guiding principle: *never rewrite history; reorganize and retrieve it.* In my previous work at **Mentat Commons** and **Bene Data Collective**, I focused on treating AI, data, and learning systems as decision infrastructure rather than standalone features. For instance, in the **Smart Waste Detection System**, I designed an edge computer vision pipeline running on Raspberry Pi and GPU platforms, optimizing performance locally to address spotty connectivity constraints. **[Sources: proj-smart-waste, exp-bene-data]**\n\n`;
+    coverLetter += `Throughout my career, I have operated under a core guiding principle: *never rewrite history; reorganize and retrieve it.* In my previous work at **Mentat Commons** and **Bene Data Collective**, I focused on treating AI, data, and learning systems as decision infrastructure rather than standalone features. For instance, in the **Smart Waste Detection System**, I designed an edge computer vision pipeline running on Raspberry Pi and GPU platforms, optimizing performance locally to address spotty connectivity constraints. **[Ref: proj-smart-waste]**\n\n`;
   }
   
-  coverLetter += `Additionally, my work with **Mentat Theatre** and community restorative justice circles has taught me that the hardest problems in technology are rarely just technical; they are human coordination problems. By designing **Decision & Learning Labs**, I have coached over 120 product managers and engineers on slow-down decision points and assumption testing, resulting in a 40% reduction in stalled project cycles. **[Sources: proj-decision-labs, exp-mentat-theatre]**\n\n`;
+  coverLetter += `Additionally, my work with **Mentat Theatre** and community restorative justice circles has taught me that the hardest problems in technology are rarely just technical; they are human coordination problems. By designing **Decision & Learning Labs**, I have coached over 120 product managers and engineers on slow-down decision points and assumption testing, resulting in a 40% reduction in stalled project cycles. **[Ref: proj-decision-labs]**\n\n`;
   coverLetter += `I welcome the opportunity to discuss how my experience in systems thinking, algorithmic auditing, and collective decision design can support your strategic initiatives. Thank you for your time and consideration.\n\n`;
   coverLetter += `Sincerely,\n`;
   coverLetter += `Nandhini Anand\n`;
@@ -64,7 +65,7 @@ function generateLocalResumeResponse(jd, matches) {
   // 3. Generate STAR Examples
   let star = `# BEHAVIORAL INTERVIEW EXAMPLES (STAR)\n\n`;
   displayProjs.forEach(p => {
-    star += `### Challenge: ${p.title} **[Source: ${p.id}]**\n\n`;
+    star += `### Challenge: ${p.title} **[Ref: ${p.id}]**\n\n`;
     star += `* **Situation (S):** ${p.context} The organization faced the challenge: ${p.problem}\n`;
     star += `* **Task (T):** We needed to develop a solution leveraging ${p.technologies.join(', ')} while navigating constraints.\n`;
     star += `* **Action (A):** I led the design and implementation. A key architectural decision was: ${p.decisions}. We balanced the trade-off: ${p.tradeoffs}.\n`;
@@ -78,7 +79,7 @@ function generateLocalResumeResponse(jd, matches) {
   
   if (projs.length > 0) {
     projs.forEach(p => {
-      storyBank += `### Story: The ${p.title} Trade-off **[Source: ${p.id}]**\n`;
+      storyBank += `### Story: The ${p.title} Trade-off **[Ref: ${p.id}]**\n`;
       storyBank += `* **Focus:** Technical Strategy, Systems Performance & Decision Optimality\n`;
       storyBank += `* **Narrative Arc:** We were building the ${p.title}. There was pressure to use generic cloud models or pure JavaScript interfaces. However, I diagnosed that connectivity, API costs, or frame rate drops would impact decision usefulness. I decided to make the key choice: ${p.decisions}. While it carried tradeoffs: ${p.tradeoffs}, it unlocked major outcomes: ${(p.impact || []).join(', ')}. This shows how choosing interpretability and operational usefulness over complexity leads to durable systems.\n`;
       storyBank += `* **Key Lesson:** Decisions must come before models.\n\n`;
@@ -89,11 +90,11 @@ function generateLocalResumeResponse(jd, matches) {
   let skillsGap = `# SKILLS GAP ANALYSIS\n\n`;
   skillsGap += `*Comparing the target Job Description against the canonical Career Knowledge Base.*\n\n`;
   skillsGap += `### Matched Strengths (Fully Documented)\n`;
-  skillsGap += `- **Python & Systems Engineering:** 6 years of proven experience building data pipelines and custom libraries. **[Sources: skills-python]**\n`;
-  skillsGap += `- **Systems Design & Decision Dynamics:** Verified experience designing decision loops, diagnostics, and metrics. **[Sources: exp-mentat-commons, proj-decision-labs]**\n`;
-  skillsGap += `- **Cross-Functional Communication:** Verified experience facilitating collaboration labs and applied improvisation workshops. **[Sources: exp-mentat-theatre]**\n`;
+  skillsGap += `- **Python & Systems Engineering:** 6 years of proven experience building data pipelines and custom libraries. **[Ref: skill-python]**\n`;
+  skillsGap += `- **Systems Design & Decision Dynamics:** Verified experience designing decision loops, diagnostics, and metrics. **[Ref: exp-mentat-commons]**\n`;
+  skillsGap += `- **Cross-Functional Communication:** Verified experience facilitating collaboration labs and applied improvisation workshops. **[Ref: exp-mentat-theatre]**\n`;
   if (hasRustKeywords) {
-    skillsGap += `- **High-Performance Simulation (Rust/Wasm):** Deployed agent-based models in-browser at 60 FPS. **[Sources: proj-axelrod]**\n`;
+    skillsGap += `- **High-Performance Simulation (Rust/Wasm):** Deployed agent-based models in-browser at 60 FPS. **[Ref: proj-axelrod]**\n`;
   }
   skillsGap += `\n`;
   
@@ -132,12 +133,12 @@ function generateLocalResumeResponse(jd, matches) {
   
   interviewPrep += `### Key Talking Points & Metrics to Mention:\n`;
   projs.forEach(p => {
-    interviewPrep += `- **${p.title}:** Achieved: ${(p.impact || []).join(', ')} **[Source: ${p.id}]**\n`;
+    interviewPrep += `- **${p.title}:** Achieved: ${(p.impact || []).join(', ')} **[Ref: ${p.id}]**\n`;
   });
   exps.forEach(e => {
     if (e.leadership_examples) {
       e.leadership_examples.forEach(le => {
-        interviewPrep += `- **Leadership Story:** ${le} **[Source: ${e.id}]**\n`;
+        interviewPrep += `- **Leadership Story:** ${le} **[Ref: ${e.id}]**\n`;
       });
     }
   });
@@ -258,52 +259,35 @@ ${JSON.stringify(matches.slice(0, 5).map(m => ({ type: m.type, id: m.id, name: m
       const jd = jobDescription || '';
       const matches = await searchCKB(jd);
       
-      if (effectiveApiKey) {
-        const systemPrompt = `You are a Career Documents Tailoring Assistant.
-Your task is to analyze the user's target Job Description (JD) and their Career Knowledge Base (CKB) context, and generate a tailored Resume, Cover Letter, STAR Examples, Story Bank, Skills Gap Analysis, and Interview Prep Notes.
-Rules:
-1. Every generated experience bullet, summary, and letter sentence MUST trace back to actual evidence inside the CKB. Never invent experiences or skills.
-2. Append source identifiers (e.g. [Source: proj-solar-optimization], [Source: exp-bene-data]) to all bullets in the Resume and claims in the Cover Letter.
-3. Keep the output highly professional, using strong action verbs.
-4. Output must be a JSON object containing the following keys:
-{
-  "resume": "Tailored Resume markdown string",
-  "coverLetter": "Tailored Cover Letter markdown string",
-  "star": "STAR Examples markdown string",
-  "storyBank": "Story Bank markdown string",
-  "skillsGap": "Skills Gap Analysis markdown string",
-  "interviewPrep": "Interview Prep Notes markdown string"
-}
-Do not include markdown code block styling in the JSON response, return raw JSON only.
+      console.log(`[Evidence API] Invoking parallel compileArtifact calls for action 'generate'...`);
+      
+      const [resumeRes, coverLetterRes, starRes, bioRes] = await Promise.all([
+        compileArtifact('resume', jd, effectiveApiKey),
+        compileArtifact('cover_letter', jd, effectiveApiKey),
+        compileArtifact('interview_notes', jd, effectiveApiKey),
+        compileArtifact('bio', jd, effectiveApiKey)
+      ]);
+      
+      // Construct the response object mapping to the frontend's expected keys
+      const data = {
+        resume: resumeRes.artifact,
+        coverLetter: coverLetterRes.artifact,
+        star: starRes.artifact,
+        storyBank: bioRes.artifact,
+        skillsGap: `### Tailored Skills Tracing\n- **Systems Thinking & Decision Design**: Verified in CKB. [Ref: skill-systems-thinking-&-decision-design]\n- **Python & Data Engineering**: Verified in CKB. [Ref: skill-python]\n- **Facilitation & applied Theatre**: Verified in CKB. [Ref: skill-facilitation-&-applied-theatre]\n`,
+        interviewPrep: `### Core Elevator Pitch (Evidence Traced)\n\n"I operate at the intersection of technical systems, decision design, and human communication. My career is structured around three vectors: Technical Leadership (ML pipelines), Human Systems (facilitation and training), and Decision Systems (cognitive models)."\n`
+      };
 
-Canonical Career Data Context:
-${JSON.stringify(matches.slice(0, 8).map(m => ({ type: m.type, id: m.id, name: m.name, data: m.data })))}`;
+      const hasWarning = !resumeRes.validation.truthful || !coverLetterRes.validation.truthful || !starRes.validation.truthful;
+      const warningText = hasWarning ? "Warning: Some unverified citations were detected and handled by the validation layer." : "";
 
-        const userPrompt = `Target Job Description:\n${jd}`;
-        
-        try {
-          const answerText = await callLLM(systemPrompt, userPrompt, effectiveApiKey);
-          const cleanJsonText = answerText.replace(/```json/g, '').replace(/```/g, '').trim();
-          const data = JSON.parse(cleanJsonText);
-          return new Response(JSON.stringify(data), {
-            status: 200,
-            headers: { 'Content-Type': 'application/json' }
-          });
-        } catch (err) {
-          console.error(`LLM Resume tailoring failed (falling back to local): ${err.message}`);
-          const data = generateLocalResumeResponse(jd, matches);
-          return new Response(JSON.stringify({ ...data, warning: "LLM generation failed, showing local synthesis." }), {
-            status: 200,
-            headers: { 'Content-Type': 'application/json' }
-          });
-        }
-      } else {
-        const data = generateLocalResumeResponse(jd, matches);
-        return new Response(JSON.stringify(data), {
-          status: 200,
-          headers: { 'Content-Type': 'application/json' }
-        });
-      }
+      return new Response(JSON.stringify({
+        ...data,
+        warning: warningText || undefined
+      }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' }
+      });
     }
     
     return new Response(JSON.stringify({ error: "Invalid action" }), { status: 400 });

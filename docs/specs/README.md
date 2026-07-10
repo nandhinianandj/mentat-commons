@@ -9,6 +9,7 @@ A specification is a formal description of a system component's requirements, da
 *   [career-evidence-graph.md](file:///home/bobbyd/playspace/mentat-commons/docs/specs/career-evidence-graph.md): The core specification detailing the Career Evidence Graph, schemas, and verification pipelines.
 *   [conversation-radar.md](file:///home/bobbyd/playspace/mentat-commons/docs/specs/conversation-radar.md): The specification for the local-first research assistant monitoring conversations and surfacing engagement opportunities.
 *   [idea-incubator.md](file:///home/bobbyd/playspace/mentat-commons/docs/specs/idea-incubator.md): The specification for the long-term idea tracking incubator mapping trend drift to enduring signature themes.
+*   [evidence-engine.md](file:///home/bobbyd/playspace/mentat-commons/docs/specs/evidence-engine.md): The specification for the retrieval-first professional artifact compiler ensuring truthfulness and provenance mapping.
 
 ## How to use
 1.  Copy [TEMPLATE.md](file:///home/bobbyd/playspace/mentat-commons/docs/specs/TEMPLATE.md) to a new file named `subsystem-name.md` (e.g. `knowledge-ingestion-pipeline.md`).

@@ -1,0 +1,6 @@
+Role: Technical Leadership & Decision Architect
+We are looking for a senior systems designer who can bridge machine learning systems with organizational decision-making models.
+Key requirements:
+- Deep expertise in Python, MLOps monitoring, and data pipelines.
+- Experience leading architecture without formal authority and mentoring junior engineers.
+- Strong systems thinking perspective, combining technical platforms with human-centered facilitation.
