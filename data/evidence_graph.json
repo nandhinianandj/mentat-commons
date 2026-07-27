@@ -7558,6 +7558,12 @@
       "articles": [
         "visualization-grammar-vega"
       ]
+    },
+    {
+      "id": "proj-social-animals",
+      "label": "Social Animals (HumanZoo)",
+      "type": "Project",
+      "articles": []
     }
   ],
   "edges": [
@@ -28542,6 +28548,36 @@
       "articles": [
         "visualization-grammar-vega"
       ]
+    },
+    {
+      "source": "proj-social-animals",
+      "target": "technology_dart",
+      "relation": "uses",
+      "articles": []
+    },
+    {
+      "source": "proj-social-animals",
+      "target": "technology_flutter",
+      "relation": "uses",
+      "articles": []
+    },
+    {
+      "source": "proj-social-animals",
+      "target": "concept_human_systems",
+      "relation": "related_to",
+      "articles": []
+    },
+    {
+      "source": "proj-social-animals",
+      "target": "concept_decision_systems",
+      "relation": "related_to",
+      "articles": []
+    },
+    {
+      "source": "proj-social-animals",
+      "target": "write-interlude-interconnected-jugalbandhi",
+      "relation": "references",
+      "articles": []
     }
   ]
 }

@@ -390,6 +390,108 @@
         "axis-ii",
         "axis-iii"
       ]
+    },
+    {
+      "id": "proj-social-animals",
+      "title": "Social Animals (HumanZoo)",
+      "organization": "Desert Intelligence",
+      "problem": "Decoupling core game logic from Flutter UI, designing a deterministic daily seed pseudo-random generation system for global shared discussions, constructing a non-binary personality classification engine without massive conditional branches, preventing gameplay min-maxing, and executing player-aligned ethical monetization.",
+      "context": "Designed and developed as a reflective five-minute simulation of collective coordination, decision dynamics, and personality mirror mapping under Desert Intelligence.",
+      "solution": "Engineered a clean Dart-based GameEngine separated completely from Flutter via MVC, using deterministic daily date-based seeds for Wordle-style challenges, a 5D Euclidean Distance vector model for trait-to-profile animal classification, hidden traits UX to prompt genuine player choice, and a post-run voluntary reciprocity contribution model.",
+      "architecture": "Pure Dart GameEngine core (decoupled from Flutter SDK for unit-testability and headless execution), utilizing a 5D Euclidean vector distance calculation to compute the closest animal archetype, and a deterministic pseudo-random number generator (PRNG) seeded dynamically by YYYYMMDD.",
+      "decisions": "Opted for a mathematical Euclidean space model over standard branching IF-ELSE trees to ensure infinite profile scalability and zero edge-case category overlap. Retained a hidden state tracker for traits during runs to prevent min-maxing, forcing players to react to qualitative narratives rather than numerical optimizations.",
+      "tradeoffs": "Hiding attributes reduced transparency during gameplay, occasionally confusing players who preferred instant quantitative feedback, but significantly increased post-run emotional resonance and authentic social discussions.",
+      "technologies": [
+        "Dart",
+        "Flutter",
+        "Linear Algebra",
+        "Deterministic RNG",
+        "MVC Architecture"
+      ],
+      "outcomes": [
+        "Successfully built a zero-dependency headless GameEngine testable in <10ms unit test environments.",
+        "Deployed deterministic daily seed loops running identically across iOS, Android, and web clients."
+      ],
+      "impact": [
+        "Drove authentic social gameplay discussion around daily shared scenarios without luck-based variance.",
+        "Swapped transactional mobile ad pressure for voluntary contributions, generating positive user reciprocity and community-driven funding."
+      ],
+      "reusable_stories": [
+        "Decoupling Flutter UI states from pure logic for testability and portability.",
+        "Min-maxing prevention in text-based games by converting quantitative metrics into qualitative narratives."
+      ],
+      "interview_questions_supported": [
+        "Tell me about a time you decoupled a UI framework from core business logic.",
+        "How do you handle scaling category classification without nesting conditional branches?"
+      ],
+      "screenshots": [
+        {
+          "url": "/images/social-animals/loop_1_start.jpg",
+          "caption": "Initial scene setup and daily seed challenge prompt showing Money, Energy, and Time indicators."
+        },
+        {
+          "url": "/images/social-animals/loop_2_turn.jpg",
+          "caption": "Interactive decision screen showing narrative choice prompt with hidden personality attribute impacts."
+        },
+        {
+          "url": "/images/social-animals/loop_3_feedback.jpg",
+          "caption": "Post-choice outcome feedback loop reflecting updates to visible survival resources (Money, Energy, Time)."
+        },
+        {
+          "url": "/images/social-animals/fox.jpg",
+          "caption": "Fox classification profile screen: High Influence and Caution archetype vector."
+        },
+        {
+          "url": "/images/social-animals/beaver.jpg",
+          "caption": "Beaver classification profile screen: High Resilience and Caution archetype vector."
+        },
+        {
+          "url": "/images/social-animals/cockroach.jpg",
+          "caption": "Cockroach classification profile screen: Extreme Resilience and low-resource survival archetype."
+        },
+        {
+          "url": "/images/social-animals/dinosaur.jpg",
+          "caption": "Dinosaur classification profile screen: Low Adaptability archetype vector."
+        },
+        {
+          "url": "/images/social-animals/owl.jpg",
+          "caption": "Owl classification profile screen: High Curiosity and Caution archetype vector."
+        },
+        {
+          "url": "/images/social-animals/mammal.jpg",
+          "caption": "Mammal classification profile screen: Balanced coordinates across caution and social variables."
+        },
+        {
+          "url": "/images/social-animals/octopus.jpg",
+          "caption": "Octopus classification profile screen: High Curiosity and Adaptability archetype vector."
+        },
+        {
+          "url": "/images/social-animals/turkey.jpg",
+          "caption": "Turkey classification profile screen: Low Caution and Influence archetype vector."
+        },
+        {
+          "url": "/images/social-animals/wolf.jpg",
+          "caption": "Wolf classification profile screen: High Influence and Resilience coordinate group."
+        },
+        {
+          "url": "/images/social-animals/ant.jpg",
+          "caption": "Ant classification profile screen: High Caution and collective coordination archetype."
+        }
+      ],
+      "links": [
+        {
+          "name": "HumanZoo Q&A Guide",
+          "url": "/social-animals-screenshots/CASE_STUDY_QA.md"
+        }
+      ],
+      "evidence": [
+        "Unit test suite for the headless GameEngine running in Dart VM",
+        "Voluntary reciprocity post-run contribution screen in Flutter app"
+      ],
+      "axes": [
+        "axis-ii",
+        "axis-iii"
+      ]
     }
   ],
   "skills": {

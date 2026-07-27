@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Compass, Briefcase, Terminal, ArrowLeft, ExternalLink, Shield, Cpu, Lightbulb, CheckCircle } from 'lucide-react';
+import { Compass, Briefcase, Terminal, ArrowLeft, ExternalLink, Shield, Cpu, Lightbulb, CheckCircle, Maximize2, X } from 'lucide-react';
 import locales from '../../locales/en.json';
 
 export default function PortfolioPage() {
   const [ckbData, setCkbData] = useState(null);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
+  const [lightboxImage, setLightboxImage] = useState(null);
 
   // Localization helper
   const t = (key, defaultValue = '') => {
@@ -72,7 +73,8 @@ export default function PortfolioPage() {
     "proj-axelrod": ["write-how-not-to-be-decision-mechanic", "write-dichotomy", "write-my-stock-market-dabblings"],
     "proj-smart-waste": ["write-alignment-ai-agents-future-of-swe", "write-exploring-the-chestxray14-dataset-problems", "write-shotdetect-logic"],
     "proj-solar-optimization": ["write-low-level-systems-debugging", "write-systems-optimization-playbook"],
-    "proj-decision-labs": ["write-efficiency-vs-effectiveness", "write-effects-of-vipassana", "write-leakcraft"]
+    "proj-decision-labs": ["write-efficiency-vs-effectiveness", "write-effects-of-vipassana", "write-leakcraft"],
+    "proj-social-animals": ["write-interlude-interconnected-jugalbandhi", "write-interlude-trust-mewe", "write-one-road-maybe-two"]
   };
 
   const getArticleTitle = (id) => {
@@ -251,6 +253,53 @@ export default function PortfolioPage() {
             </div>
           )}
 
+          {/* Visual Gallery for Projects (lightbox support) */}
+          {selectedProject.screenshots && selectedProject.screenshots.length > 0 && (
+            <div className="pt-6 border-t border-slate-850 space-y-4">
+              <span className="text-xs font-bold uppercase text-slate-400 tracking-wider flex items-center gap-1.5 font-mono">
+                <Maximize2 className="w-3.5 h-3.5 text-indigo-400" />
+                {t('ckb.explorer.screenshot_gallery', 'Screenshot Gallery')}
+              </span>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {selectedProject.screenshots.map((shot, idx) => (
+                  <div 
+                    key={idx} 
+                    onClick={() => setLightboxImage(shot)}
+                    className="bg-slate-950 border border-slate-850 rounded-lg p-2 hover:border-indigo-500 cursor-zoom-in transition-all group overflow-hidden"
+                    title={t('ckb.explorer.click_zoom', 'Click to zoom')}
+                  >
+                    <div className="h-28 bg-slate-900 rounded flex items-center justify-center relative overflow-hidden">
+                      {shot.url.includes('placeholder') ? (
+                        <>
+                          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-slate-900 to-indigo-950/20 opacity-80 group-hover:opacity-60 transition-opacity" />
+                          <div className="w-full h-full flex flex-col justify-between p-2 font-mono text-xxs text-slate-500">
+                            <div className="flex justify-between">
+                              <span>[SCREEN_{idx + 1}]</span>
+                              <span className="text-indigo-400 font-bold">READY</span>
+                            </div>
+                            <div className="text-center text-indigo-500/60 font-semibold py-4 uppercase text-xxs tracking-wider">
+                              Simulation View
+                            </div>
+                            <div className="text-right text-[9px] text-slate-650">60 FPS</div>
+                          </div>
+                        </>
+                      ) : (
+                        <img 
+                          src={shot.url} 
+                          alt={shot.caption} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      )}
+                    </div>
+                    <p className="text-[10px] text-slate-400 leading-snug mt-1.5 line-clamp-2">
+                      {shot.caption}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Tech Stack Footer */}
           <div className="pt-6 border-t border-slate-850 flex flex-wrap gap-2 items-center">
             <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mr-2">Technologies Used</span>
@@ -283,6 +332,34 @@ export default function PortfolioPage() {
           )}
 
         </article>
+      )}
+
+      {/* Lightbox Modal */}
+      {lightboxImage && (
+        <div className="fixed inset-0 bg-slate-950/90 z-50 flex flex-col items-center justify-center p-4 animate-in fade-in duration-200">
+          <div className="absolute top-4 right-4 z-50">
+            <button 
+              onClick={() => setLightboxImage(null)}
+              className="p-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 rounded-full text-white hover:scale-105 transition-all"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+          
+          <div className="max-w-4xl w-full flex flex-col items-center gap-4">
+            <div className="w-full max-h-[70vh] bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex items-center justify-center shadow-2xl relative p-2">
+              <img 
+                src={lightboxImage.url} 
+                alt={lightboxImage.caption} 
+                className="max-w-full max-h-[68vh] object-contain rounded-lg"
+              />
+            </div>
+            
+            <div className="text-slate-300 text-center max-w-2xl px-4 bg-slate-900/80 border border-slate-800 p-4 rounded-xl shadow-md">
+              <p className="text-sm leading-relaxed">{lightboxImage.caption}</p>
+            </div>
+          </div>
+        </div>
       )}
 
     </div>
