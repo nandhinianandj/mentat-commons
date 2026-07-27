@@ -1261,20 +1261,30 @@ export default function CareerKBPage() {
                                 title={t('ckb.explorer.click_zoom')}
                               >
                                 <div className="h-28 bg-slate-900 rounded flex items-center justify-center relative overflow-hidden">
-                                  {/* Simulated abstract visual design grids representing the project state */}
-                                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-slate-900 to-indigo-950/20 opacity-80 group-hover:opacity-60 transition-opacity" />
-                                  
-                                  {/* Interactive game theory or CV system mock visual inside the placeholder box */}
-                                  <div className="w-full h-full flex flex-col justify-between p-2 font-mono text-xxs text-slate-500">
-                                    <div className="flex justify-between">
-                                      <span>[SCREEN_{idx + 1}]</span>
-                                      <span className="text-indigo-400 font-bold">READY</span>
-                                    </div>
-                                    <div className="text-center text-indigo-500/60 font-semibold py-4 uppercase text-xxs tracking-wider">
-                                      {idx === 0 ? 'Simulation View' : idx === 1 ? 'Population Chart' : 'Payload Configurator'}
-                                    </div>
-                                    <div className="text-right text-[9px] text-slate-650">60 FPS</div>
-                                  </div>
+                                  {shot.url.includes('placeholder') ? (
+                                    <>
+                                      {/* Simulated abstract visual design grids representing the project state */}
+                                      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-slate-900 to-indigo-950/20 opacity-80 group-hover:opacity-60 transition-opacity" />
+                                      
+                                      {/* Interactive game theory or CV system mock visual inside the placeholder box */}
+                                      <div className="w-full h-full flex flex-col justify-between p-2 font-mono text-xxs text-slate-500">
+                                        <div className="flex justify-between">
+                                          <span>[SCREEN_{idx + 1}]</span>
+                                          <span className="text-indigo-400 font-bold">READY</span>
+                                        </div>
+                                        <div className="text-center text-indigo-500/60 font-semibold py-4 uppercase text-xxs tracking-wider">
+                                          {idx === 0 ? 'Simulation View' : idx === 1 ? 'Population Chart' : 'Payload Configurator'}
+                                        </div>
+                                        <div className="text-right text-[9px] text-slate-650">60 FPS</div>
+                                      </div>
+                                    </>
+                                  ) : (
+                                    <img 
+                                      src={shot.url} 
+                                      alt={shot.caption} 
+                                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                  )}
                                 </div>
                                 <p className="text-[10px] text-slate-400 leading-snug mt-1.5 line-clamp-2">
                                   {shot.caption}
@@ -1546,50 +1556,58 @@ export default function CareerKBPage() {
                 <X className="w-6 h-6" />
               </button>
             </div>
-            
-            <div className="max-w-4xl w-full flex flex-col items-center gap-4">
-              {/* Visual mock screenshot canvas for game theory spatial tournament representation */}
-              <div className="w-full h-80 sm:h-[480px] bg-slate-900 border border-slate-800 rounded-xl flex flex-col justify-between p-4 font-mono shadow-2xl relative overflow-hidden select-none">
-                
-                {/* Visual grid rendering for game-theory grid sandbox */}
-                <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 opacity-30 pointer-events-none">
-                  {Array(100).fill(0).map((_, i) => {
-                    const isGreen = (i * 3 + 1) % 7 === 0;
-                    const isRed = (i * 2 + 3) % 9 === 0;
-                    return (
-                      <div 
-                        key={i} 
-                        className={`border-[0.5px] border-slate-800/20 ${
-                          isGreen ? 'bg-emerald-500/25' : isRed ? 'bg-rose-500/25' : 'bg-transparent'
-                        }`} 
-                      />
-                    );
-                  })}
-                </div>
-
-                <div className="flex justify-between items-center z-10 text-slate-500 text-xs border-b border-slate-850 pb-2">
-                  <span>[MENTAT_COMMONS // AXELROD_GRID_SIMULATOR]</span>
-                  <span className="text-emerald-400 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-900/60 text-[10px]">ACTIVE GENERATION</span>
-                </div>
-                
-                <div className="my-auto flex flex-col items-center justify-center text-center z-10 space-y-4">
-                  <Maximize2 className="w-10 h-10 text-indigo-500/60 animate-pulse" />
-                  <div className="text-indigo-400 uppercase tracking-widest text-sm font-black py-1 px-4 bg-indigo-950/40 rounded border border-indigo-900/50">
-                    {lightboxImage.caption.split(':')[0]}
+                     <div className="max-w-4xl w-full flex flex-col items-center gap-4">
+              {lightboxImage.url.includes('placeholder') ? (
+                /* Visual mock screenshot canvas for game theory spatial tournament representation */
+                <div className="w-full h-80 sm:h-[480px] bg-slate-900 border border-slate-800 rounded-xl flex flex-col justify-between p-4 font-mono shadow-2xl relative overflow-hidden select-none">
+                  
+                  {/* Visual grid rendering for game-theory grid sandbox */}
+                  <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 opacity-30 pointer-events-none">
+                    {Array(100).fill(0).map((_, i) => {
+                      const isGreen = (i * 3 + 1) % 7 === 0;
+                      const isRed = (i * 2 + 3) % 9 === 0;
+                      return (
+                        <div 
+                          key={i} 
+                          className={`border-[0.5px] border-slate-800/20 ${
+                            isGreen ? 'bg-emerald-500/25' : isRed ? 'bg-rose-500/25' : 'bg-transparent'
+                          }`} 
+                        />
+                      );
+                    })}
                   </div>
-                  <p className="text-slate-400 max-w-md text-xs leading-relaxed">
-                    Interactive game theory model showcasing strategy propagation and agent-based spatial cooperation.
-                  </p>
-                </div>
 
-                <div className="flex justify-between items-center z-10 text-slate-500 text-xxs font-mono border-t border-slate-850 pt-2">
-                  <span>Payoff matrix: T=5, R=3, P=1, S=0</span>
-                  <span>10,000 agents | 60 FPS WebAssembly</span>
+                  <div className="flex justify-between items-center z-10 text-slate-500 text-xs border-b border-slate-850 pb-2">
+                    <span>[MENTAT_COMMONS // AXELROD_GRID_SIMULATOR]</span>
+                    <span className="text-emerald-400 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-900/60 text-[10px]">ACTIVE GENERATION</span>
+                  </div>
+                  
+                  <div className="my-auto flex flex-col items-center justify-center text-center z-10 space-y-4">
+                    <Maximize2 className="w-10 h-10 text-indigo-500/60 animate-pulse" />
+                    <div className="text-indigo-400 uppercase tracking-widest text-sm font-black py-1 px-4 bg-indigo-950/40 rounded border border-indigo-900/50">
+                      {lightboxImage.caption.split(':')[0]}
+                    </div>
+                    <p className="text-slate-400 max-w-md text-xs leading-relaxed">
+                      Interactive game theory model showcasing strategy propagation and agent-based spatial cooperation.
+                    </p>
+                  </div>
+
+                  <div className="flex justify-between items-center z-10 text-slate-500 text-xxs font-mono border-t border-slate-850 pt-2">
+                    <span>Payoff matrix: T=5, R=3, P=1, S=0</span>
+                    <span>10,000 agents | 60 FPS WebAssembly</span>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="w-full max-h-[70vh] bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex items-center justify-center shadow-2xl relative p-2">
+                  <img 
+                    src={lightboxImage.url} 
+                    alt={lightboxImage.caption} 
+                    className="max-w-full max-h-[68vh] object-contain rounded-lg"
+                  />
+                </div>
+              )}
               
               <div className="text-slate-300 text-center max-w-2xl px-4 bg-slate-900/80 border border-slate-800 p-4 rounded-xl shadow-md">
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Screenshot Context</p>
                 <p className="text-sm leading-relaxed">{lightboxImage.caption}</p>
               </div>
             </div>
