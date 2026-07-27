@@ -26,6 +26,11 @@ Legacy WordPress blog migration, interconnected evidence graph construction, STA
 * **Test Suite Integration**:
   - Created `scripts/test-speculative-research.mjs` verifying schema validation, MeWe article presence, referential integrity of mapped evidence links, and i18n localization completion.
   - Configured `npm run test:spec`, `npm run test:ckb`, and `npm test` scripts in `package.json` to run both test suites simultaneously. All test cases compiled and passed successfully.
+* **Social Animals (HumanZoo) Case Study & Gallery**:
+  - Integrated the `Social Animals (HumanZoo)` game project Q&A guidelines, traits coordinates logic, outcomes, and impact statements into CKB database and evidence graph models.
+  - Deployed real screenshot jpg files in `public/images/social-animals/` and configured the client-side visual gallery and lightbox modals on both the `/career` and `/portfolio` views to render actual images.
+* **Vercel Analytics Integration**:
+  - Installed `@vercel/analytics` dependency library and injected `<Analytics />` tracking scripts directly into the Next.js `app/layout.jsx` global wrapper.
 
 ## Next Steps
 * Add deep-dive code evidence links to the corresponding historical GitHub projects.
