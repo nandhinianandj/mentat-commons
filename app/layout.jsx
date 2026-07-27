@@ -1,5 +1,6 @@
 import './globals.css'
 import Head from 'next/head'
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: 'Mentat Commons — Designing decisions for collective intelligence',
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
             <p>© 2026 Mentat Commons — Bene Data Collective • Mentat Theatre • Desert Intelligence • Sietch Protocol</p>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   )
