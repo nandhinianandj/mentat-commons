@@ -153,13 +153,31 @@ export default function PortfolioPage() {
         <article className="card bg-slate-900/10 border-slate-850 p-6 md:p-8 space-y-8 animate-fadeIn">
           
           {/* Title header */}
-          <div className="space-y-2 pb-6 border-b border-slate-850">
-            <span className="text-xs font-mono text-indigo-400 font-bold uppercase tracking-widest">
-              Case Study // {selectedProject.organization}
-            </span>
-            <h1 className="text-2xl md:text-3xl font-extrabold text-slate-100 leading-tight">
-              {selectedProject.title}
-            </h1>
+          <div className="pb-6 border-b border-slate-850 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+            <div className="space-y-1">
+              <span className="text-xs font-mono text-indigo-400 font-bold uppercase tracking-widest block">
+                Case Study // {selectedProject.organization}
+              </span>
+              <h1 className="text-2xl md:text-3xl font-extrabold text-slate-100 leading-tight">
+                {selectedProject.title}
+              </h1>
+            </div>
+            {selectedProject.links && selectedProject.links.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {selectedProject.links.map(lnk => (
+                  <a
+                    key={lnk.url}
+                    href={lnk.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-650 hover:bg-indigo-500 text-white rounded-lg text-xs font-bold transition-all shadow hover:scale-105"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    <span>{lnk.name}</span>
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Problem & Context Section */}

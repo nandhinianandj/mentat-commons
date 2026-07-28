@@ -480,6 +480,10 @@
       ],
       "links": [
         {
+          "name": "Play Social Animals (HumanZoo)",
+          "url": "https://p01--human-zoon--h9hm4gz6b7gt.code.run/"
+        },
+        {
           "name": "HumanZoo Q&A Guide",
           "url": "/social-animals-screenshots/CASE_STUDY_QA.md"
         }
