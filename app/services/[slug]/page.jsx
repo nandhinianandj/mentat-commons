@@ -34,6 +34,7 @@ export default function ServiceDetailPage({ params }) {
       "name": "Mentat Commons",
       "url": "https://nandhinianand.vercel.app",
       "logo": "https://nandhinianand.vercel.app/images/mentat-commons-og.png",
+      "email": "nandhini.anandj@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Remote",

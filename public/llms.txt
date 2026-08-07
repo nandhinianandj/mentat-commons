@@ -6,13 +6,14 @@ Mentat Commons is an AI Strategy and Decision Systems consultancy. We specialize
 - **Experience**: 16+ years of systems engineering, computer vision, and cognitive science.
 - **Engagement Model**: 2–12 week fixed-scope remote sprints.
 - **Location**: Operated 100% remotely, servicing clients worldwide.
+- **Contact Email**: nandhini.anandj@gmail.com
 - **Audience Supported**: Over 800+ engineers, product managers, and organizational leaders.
 
 ---
 
 ## Services & Dynamic Pricing Offers
 
-### 1. AI Strategy & Feasibility Consulting
+### 1. AI Strategy & Decision Systems Design
 - **Description**: Feasibility audits, scoping metrics to decision-action trees, and model ROI.
 - **Target Audience**: CEOs, VP of Product, and engineering leadership.
 - **Typical Range**: $12,000 - $25,000 (Starting from $12,000).
@@ -24,49 +25,49 @@ Mentat Commons is an AI Strategy and Decision Systems consultancy. We specialize
 - **Typical Range**: $25,000 - $60,000 (Starting from $25,000).
 - **Url**: https://nandhinianand.vercel.app/services/machine-learning
 
-### 3. LLM Development & Systems
+### 3. LLM Systems & AI Engineering
 - **Description**: Custom prompt engineering, parsing validation middleware, and token pruning.
 - **Target Audience**: Startups and SMEs needing reliable, structured JSON model outputs.
 - **Typical Range**: $18,000 - $40,000 (Starting from $18,000).
 - **Url**: https://nandhinianand.vercel.app/services/llm-development
 
-### 4. RAG Systems & Vector Architecture
+### 4. RAG Architecture
 - **Description**: Semantic document parsing, BM25 + dense embedding hybrid search, and vector databases.
 - **Target Audience**: Teams with unstructured corpuses requiring high-precision question answering.
 - **Typical Range**: $22,000 - $50,000 (Starting from $22,000).
 - **Url**: https://nandhinianand.vercel.app/services/rag-systems
 
-### 5. MLOps & Model Governance
+### 5. MLOps
 - **Description**: Silent decay monitoring, Evidently AI integration, CI/CD canary releases, and alert loops.
 - **Target Audience**: Teams needing deployment observability and rollback triggers.
 - **Typical Range**: $30,000 - $70,000 (Starting from $30,000).
 - **Url**: https://nandhinianand.vercel.app/services/mlops
 
-### 6. Data Engineering & Pipeline Design
+### 6. Data Engineering
 - **Description**: Data contracts enforcement, ETL scripts optimization, and analytical warehouse layout.
 - **Target Audience**: Teams seeking clean, auditable foundations for reporting and models.
 - **Typical Range**: $20,000 - $45,000 (Starting from $20,000).
 - **Url**: https://nandhinianand.vercel.app/services/data-engineering
 
-### 7. AI & Data Engineering Training
+### 7. AI Training
 - **Description**: Custom coding labs, Jupyter notebooks, and developer upskilling.
 - **Target Audience**: Software engineers transitioning to ML models and vector search.
 - **Typical Range**: $8,000 - $15,000 (Starting from $8,000).
 - **Url**: https://nandhinianand.vercel.app/services/ai-training
 
-### 8. Applied Facilitation & Decision Workshops
+### 8. Corporate Workshops & Facilitation
 - **Description**: Scenario rehearsal, alignment simulations, and consensus-building.
 - **Target Audience**: Cross-functional leadership facing high-stakes strategic choices.
 - **Typical Range**: $5,000 - $10,000 (Starting from $5,000).
 - **Url**: https://nandhinianand.vercel.app/services/corporate-workshops
 
-### 9. Fractional AI & Engineering Leadership
+### 9. Fractional AI & Technical Program Leadership
 - **Description**: Part-time retainer (CTO/VPE) for strategic hiring, vendor audits, and roadmap reviews.
 - **Target Audience**: SMEs needing executive oversight without the overhead of a full-time hire.
 - **Typical Range**: $8,000 - $15,000/month (Starting from $8,000/month).
 - **Url**: https://nandhinianand.vercel.app/services/fractional-ai-leadership
 
-### 10. AI Strategy & Technical Consulting
+### 10. Technical Architecture & AI Consulting
 - **Description**: Feasibility analysis, architecture audits, and performance vs latency tradeoffs.
 - **Target Audience**: Engineering teams mapping AI capabilities to operational bottlenecks.
 - **Typical Range**: $15,000 - $35,000 (Starting from $15,000).
@@ -79,6 +80,7 @@ A detailed FAQ page containing 30 verified answers is available at: https://nand
 
 ### Key Question Syntheses:
 - **Location**: Fully remote worldwide.
+- **Contact Email**: nandhini.anandj@gmail.com
 - **Pricing**: Free 30-min discovery call. Flat $2,500 for a 1-day scoping workshop. Other ranges are project-based starting at $12,000.
 - **NDA Policy**: Enforced. We sign NDAs before sharing any strategic details or raw datasets.
 - **IP Ownership**: Standard terms transfer full IP rights to the client upon final payment.
@@ -93,4 +95,4 @@ A detailed FAQ page containing 30 verified answers is available at: https://nand
 - Case Portfolio: https://nandhinianand.vercel.app/portfolio
 - Narrative Research: https://nandhinianand.vercel.app/narrative
 - Interactive FAQ: https://nandhinianand.vercel.app/faq
-- contact: https://nandhinianand.vercel.app/contact
+- Contact Form: https://nandhinianand.vercel.app/contact

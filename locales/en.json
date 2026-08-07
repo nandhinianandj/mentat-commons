@@ -168,8 +168,8 @@
   },
   "services": {
     "ai-strategy": {
-      "title": "AI Strategy & Feasibility Consulting",
-      "tagline": "Factual feasibility audits and decision-action tree scoping before writing code.",
+      "title": "AI Strategy & Decision Systems Design",
+      "tagline": "Structuring ROI and action-based decision frameworks before writing code.",
       "description": "Establish clear technical roadmaps, calculate ROI metrics, and outline algorithmic governance frameworks for your organization.",
       "for": "CEOs, VP of Product, and engineering leadership looking to scope AI opportunities without wasting resources.",
       "problems": [
@@ -204,7 +204,7 @@
     },
     "machine-learning": {
       "title": "Machine Learning Consulting",
-      "tagline": "Auditing dataset leakage, implementing custom classifiers, and building classical ML systems.",
+      "tagline": "Auditing dataset leakage, model calibration, and containerized ML pipelines.",
       "description": "Develop and audit predictive engines, regression models, and computer vision classifiers using rigorous testing protocols.",
       "for": "Engineering teams and product managers who require production-grade predictive models and statistical audits.",
       "problems": [
@@ -239,8 +239,8 @@
       "next_steps": "Schedule an engineering alignment session to define target classification metrics and input datasets."
     },
     "llm-development": {
-      "title": "LLM Development & Systems",
-      "tagline": "Instruction tuning, custom prompt design, and domain-specific LLM workflows.",
+      "title": "LLM Systems & AI Engineering",
+      "tagline": "Structured parsing middleware, prompt routing graphs, and edge case optimization.",
       "description": "Build agentic workflows, structured parsing layers, and customized prompt routing graphs that handle edge cases reliably.",
       "for": "SMEs and startups building user-facing AI applications requiring structured, predictable text outputs.",
       "problems": [
@@ -275,8 +275,8 @@
       "next_steps": "Request an audit of your current LLM system architecture and API token logs."
     },
     "rag-systems": {
-      "title": "RAG Systems & Vector Architecture",
-      "tagline": "Designing document pipelines, semantic chunking, metadata injection, and vector search.",
+      "title": "RAG Architecture",
+      "tagline": "Semantic chunking, metadata injection, and vector search retrievers.",
       "description": "Construct high-precision Retrieval-Augmented Generation systems using semantic chunking and advanced hybrid search.",
       "for": "Product companies and enterprise teams with large unstructured document corpuses needing accurate question answering.",
       "problems": [
@@ -311,8 +311,8 @@
       "next_steps": "Set up a deep-dive call to inspect sample document structures and define parsing constraints."
     },
     "mlops": {
-      "title": "MLOps & Model Governance",
-      "tagline": "Automated drift detection, validation pipelines, model versioning, and latency optimization.",
+      "title": "MLOps",
+      "tagline": "Automated drift detection, validation pipelines, and release governance.",
       "description": "Build deployment infrastructure, monitoring loops, and regression safeguards for reliable production AI operations.",
       "for": "ML engineering departments needing to maintain high model reliability, detect drift, and govern production models.",
       "problems": [
@@ -347,8 +347,8 @@
       "next_steps": "Arrange a technical review of your current ML model deployment logs and CI/CD pipelines."
     },
     "data-engineering": {
-      "title": "Data Engineering & Pipeline Design",
-      "tagline": "Data contracts, robust ETL pipelines, dbt modeling, and analytical storage layout.",
+      "title": "Data Engineering",
+      "tagline": "Data quality contracts, dbt modeling layouts, and ingestion dag orchestration.",
       "description": "Establish reliable analytics data pipelines with structured contracts, validation rules, and scalable storage layers.",
       "for": "Data teams seeking to build robust data foundations for AI engines and executive reporting.",
       "problems": [
@@ -383,8 +383,8 @@
       "next_steps": "Request a review of your analytical queries and warehouse performance schemas."
     },
     "ai-training": {
-      "title": "AI & Data Engineering Training",
-      "tagline": "Custom curricula, hands-on coding labs, and technical upskilling for product teams.",
+      "title": "AI Training",
+      "tagline": "Custom Jupyter notebook curricula and engineering labs for developers.",
       "description": "Deliver custom coding curricula, hands-on engineering labs, and technical tool evaluations for your developers.",
       "for": "Engineering teams transitioning into AI Engineering or adopting modern data stack practices.",
       "problems": [
@@ -418,8 +418,8 @@
       "next_steps": "Define your team's existing skill levels and current roadmap objectives to customize the curriculum."
     },
     "corporate-workshops": {
-      "title": "Applied Facilitation & Decision Workshops",
-      "tagline": "Active scenario rehearsal, alignment simulations, and collaborative design games.",
+      "title": "Corporate Workshops & Facilitation",
+      "tagline": "Active scenario rehearsal and cross-functional alignment simulations.",
       "description": "Align cross-functional teams, surface hidden product assumptions, and build collective decision literacy.",
       "for": "Cross-functional leadership groups, engineering teams, and policy circles facing high-stakes decisions.",
       "problems": [
@@ -451,8 +451,8 @@
       "next_steps": "Schedule a preparation briefing to discuss your organization's bottleneck decisions."
     },
     "fractional-ai-leadership": {
-      "title": "Fractional AI & Engineering Leadership",
-      "tagline": "Dedicated fractional CTO/VPE capacity to guide hiring, technical scoping, and vendor selection.",
+      "title": "Fractional AI Leadership & Technical Program Leadership",
+      "tagline": "Strategic retainer for hiring protocols, roadmap governance, and vendor audits.",
       "description": "Secure strategic technical guidance, mentor leadership, and govern technical execution on a fractional retainer.",
       "for": "SMEs and growing startups needing executive AI/ML leadership without the cost of a full-time hire.",
       "problems": [
@@ -484,8 +484,8 @@
       "next_steps": "Book a strategic consultation call to evaluate your technical leadership gaps."
     },
     "ai-consulting": {
-      "title": "AI Strategy & Technical Consulting",
-      "tagline": "Broad strategic and architectural audits to map AI capabilities to business bottlenecks.",
+      "title": "Technical Architecture & AI Consulting",
+      "tagline": "Strategic feasibility reviews, latency-vs-cost mapping, and stack selection.",
       "description": "A comprehensive service linking your business challenges directly to machine learning and AI capabilities.",
       "for": "Engineering and executive teams who need clear direction on implementing model architectures safely and cost-effectively.",
       "problems": [

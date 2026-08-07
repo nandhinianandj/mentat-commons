@@ -143,7 +143,7 @@ export default function HomePage() {
     "logo": "https://nandhinianand.vercel.app/images/mentat-commons-og.png",
     "image": "https://nandhinianand.vercel.app/images/mentat-commons-og.png",
     "description": "Mentat Commons is an AI Strategy, Machine Learning, and Decision Systems consultancy. We specialize in MLOps governance, custom vector RAG engines, database pipelines, and applied team facilitation worldwide.",
-    "telephone": "+1-000-000-0000",
+    "email": "nandhini.anandj@gmail.com",
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
@@ -237,7 +237,7 @@ export default function HomePage() {
             <h4 className="font-bold text-slate-100 text-sm border-b border-slate-900 pb-2">Targeted AI Engineering & Audits</h4>
             <ul className="text-xs md:text-sm text-slate-300 space-y-2">
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
-                <span><a href="/services/ai-strategy" className="hover:underline text-indigo-400 font-medium">AI Strategy & Scoping</a></span>
+                <span><a href="/services/ai-strategy" className="hover:underline text-indigo-400 font-medium">AI Strategy & Decision Systems Design</a></span>
                 <span className="font-mono text-slate-400">From $12,000</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
@@ -245,19 +245,19 @@ export default function HomePage() {
                 <span className="font-mono text-slate-400">From $25,000</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
-                <span><a href="/services/llm-development" className="hover:underline text-indigo-400 font-medium">LLM Development & Systems</a></span>
+                <span><a href="/services/llm-development" className="hover:underline text-indigo-400 font-medium">LLM Systems & AI Engineering</a></span>
                 <span className="font-mono text-slate-400">From $18,000</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
-                <span><a href="/services/rag-systems" className="hover:underline text-indigo-400 font-medium">RAG Systems & Vector Search</a></span>
+                <span><a href="/services/rag-systems" className="hover:underline text-indigo-400 font-medium">RAG Architecture</a></span>
                 <span className="font-mono text-slate-400">From $22,000</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
-                <span><a href="/services/mlops" className="hover:underline text-indigo-400 font-medium">MLOps & Governance Audits</a></span>
+                <span><a href="/services/mlops" className="hover:underline text-indigo-400 font-medium">MLOps</a></span>
                 <span className="font-mono text-slate-400">From $30,000</span>
               </li>
               <li className="flex justify-between pb-1.5">
-                <span><a href="/services/data-engineering" className="hover:underline text-indigo-400 font-medium">Data Engineering Pipelines</a></span>
+                <span><a href="/services/data-engineering" className="hover:underline text-indigo-400 font-medium">Data Engineering</a></span>
                 <span className="font-mono text-slate-400">From $20,000</span>
               </li>
             </ul>
@@ -267,16 +267,20 @@ export default function HomePage() {
             <h4 className="font-bold text-slate-100 text-sm border-b border-slate-900 pb-2">Retainers, Training & Scenarios</h4>
             <ul className="text-xs md:text-sm text-slate-300 space-y-2">
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
-                <span><a href="/services/fractional-ai-leadership" className="hover:underline text-indigo-400 font-medium">Fractional AI Leadership Retainer</a></span>
+                <span><a href="/services/fractional-ai-leadership" className="hover:underline text-indigo-400 font-medium">Fractional AI & Technical Program Leadership</a></span>
                 <span className="font-mono text-slate-400">From $8,000/mo</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
-                <span><a href="/services/ai-training" className="hover:underline text-indigo-400 font-medium">AI & Data Engineering Training</a></span>
+                <span><a href="/services/ai-training" className="hover:underline text-indigo-400 font-medium">AI Training</a></span>
                 <span className="font-mono text-slate-400">From $8,000</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
-                <span><a href="/services/corporate-workshops" className="hover:underline text-indigo-400 font-medium">Applied Facilitation Workshops</a></span>
+                <span><a href="/services/corporate-workshops" className="hover:underline text-indigo-400 font-medium">Corporate Workshops & Facilitation</a></span>
                 <span className="font-mono text-slate-400">From $5,000</span>
+              </li>
+              <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
+                <span><a href="/services/ai-consulting" className="hover:underline text-indigo-400 font-medium">Technical Architecture & AI Consulting</a></span>
+                <span className="font-mono text-slate-400">From $15,000</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span>1-Day Technical Scoping Workshop</span>
