@@ -287,8 +287,8 @@ export default function HomePage() {
                 <span className="font-mono text-slate-400 text-xxs md:text-xs">Flat ₹2,00,000 | 1 Day</span>
               </li>
               <li className="flex justify-between pb-1.5">
-                <span>30-Min Technical Discovery Call</span>
-                <span className="font-mono text-emerald-400 text-xxs md:text-xs">Free (₹0) | 30 Mins</span>
+                <span>15-Min Technical Discovery Call</span>
+                <span className="font-mono text-emerald-400 text-xxs md:text-xs">Free (₹0) | 15 Mins</span>
               </li>
             </ul>
           </div>

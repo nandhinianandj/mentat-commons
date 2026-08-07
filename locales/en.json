@@ -200,7 +200,7 @@
         "typical_range": "₹10,00,000 - ₹20,00,000",
         "model": "Fixed-scope discovery sprint"
       },
-      "next_steps": "Book a 30-minute technical discovery call to review your current data contracts and decision nodes."
+      "next_steps": "Book a 15-minute technical discovery call to review your current data contracts and decision nodes."
     },
     "machine-learning": {
       "title": "Machine Learning Consulting",
@@ -516,7 +516,7 @@
         "typical_range": "₹12,00,000 - ₹30,00,000",
         "model": "Sprint-based delivery"
       },
-      "next_steps": "Schedule an initial 30-minute discovery call to share your data assets and targets."
+      "next_steps": "Schedule an initial 15-minute discovery call to share your data assets and targets."
     }
   },
   "faq": [
@@ -594,11 +594,11 @@
     },
     {
       "q": "How do we start an engagement with you?",
-      "a": "You can book a 30-minute technical discovery call via our contact form. We will review your current systems, data readiness, and business bottlenecks to define a structured scope of work."
+      "a": "You can book a 15-minute technical discovery call via our contact form. We will review your current systems, data readiness, and business bottlenecks to define a structured scope of work."
     },
     {
       "q": "What is your pricing structure for discovery calls?",
-      "a": "All initial 30-minute technical discovery calls are free (₹0). During this call, we determine if your problem aligns with our capabilities and whether your data is structured enough for engagement."
+      "a": "All initial 15-minute technical discovery calls are free (₹0). During this call, we determine if your problem aligns with our capabilities and whether your data is structured enough for engagement."
     },
     {
       "q": "What is the price of a 1-day scoping workshop?",
