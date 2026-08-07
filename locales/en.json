@@ -126,15 +126,16 @@
   },
   "v2": {
     "home": {
-      "hero_title": "I work at the intersection of technology, decision making and human systems.",
-      "hero_subtitle": "Navigating organizational complexity through systems thinking, empirical evidence, and collaborative learning.",
+      "hero_title": "Factual AI Strategy & Production Decision Systems.",
+      "hero_subtitle": "Evidence-based consulting in machine learning architecture, MLOps audits, and team facilitation. 16+ years of engineering experience, remote worldwide.",
       "axes_title": "Enduring Career Axes",
       "axes_subtitle": "My work is structured around three core pillars:",
       "axis1_desc": "Technical Leadership — ML/AI Strategy, Software Engineering Architecture, and Model Governance.",
       "axis2_desc": "Human Systems — Applied Facilitation, Training, Restorative Practices, and Communications.",
       "axis3_desc": "Decision Systems — The intersection of cognition, statistics, and organizational behavior.",
       "questions_title": "Enduring Research Questions",
-      "questions_subtitle": "Exploring the recurring problems that shape my research and consulting engagements:"
+      "questions_subtitle": "Exploring the recurring problems that shape my research and consulting engagements:",
+      "aeo_intro": "Mentat Commons is an AI Strategy and Decision Systems consultancy based remotely worldwide. With 16+ years of experience and over 800+ engineering and product employees supported, we design production-grade machine learning pipelines, LLM systems, RAG architectures, and MLOps governance frameworks. We resolve issues like silent model decay, dataset leakage, and vanity dashboard waste for startups, SMEs, NGOs, and research labs. We design interactive corporate workshops and provide fractional AI leadership via 2–12 week remote consulting engagements, transforming cognitive science and data engineering into verifiable outcomes."
     },
     "consulting": {
       "title": "Collaborative Consulting & Problem Solving",
@@ -164,5 +165,480 @@
       "disclosure_desc": "The MeWe series is developed through an iterative collaboration between myself and modern language models. The ideas, worldbuilding, themes, questions and direction originate from my ongoing research interests. AI is used as a collaborative writing partner to explore alternatives, refine prose, experiment with narrative structure and accelerate iteration. Final editorial decisions, conceptual direction and thematic coherence remain human-guided.",
       "research_philosophy": "Why Speculative Fiction? Some questions are difficult to investigate through technical writing alone. Stories allow us to simulate societies, organizations, incentives, and long-term consequences — serving as speculative research instruments alongside software and consulting."
     }
-  }
+  },
+  "services": {
+    "ai-strategy": {
+      "title": "AI Strategy & Feasibility Consulting",
+      "tagline": "Factual feasibility audits and decision-action tree scoping before writing code.",
+      "description": "Establish clear technical roadmaps, calculate ROI metrics, and outline algorithmic governance frameworks for your organization.",
+      "for": "CEOs, VP of Product, and engineering leadership looking to scope AI opportunities without wasting resources.",
+      "problems": [
+        "Uncertainty around LLM cost structures and performance tradeoffs.",
+        "Vanity dashboard waste where metrics do not drive action.",
+        "Unrealistic AI expectations leading to failed product experiments."
+      ],
+      "deliverables": [
+        "Decision-Action Tree Mapping Document",
+        "Algorithmic ROI & Cost Estimation Model",
+        "3-Tier AI Strategy Roadmap (Short, Medium, Long term)"
+      ],
+      "timeline": "2 to 4 weeks",
+      "technologies": [
+        "Python",
+        "dbt",
+        "Tableau",
+        "OpenAI API",
+        "Hugging Face"
+      ],
+      "outcomes": [
+        "Elimination of vanity dashboards and 30% reduction in decision cycles.",
+        "Accurate annual AI operational budget forecasts.",
+        "Clear build-vs-buy decisions for model layers."
+      ],
+      "pricing": {
+        "starting_from": "$12,000",
+        "typical_range": "$12,000 - $25,000",
+        "model": "Fixed-scope discovery sprint"
+      },
+      "next_steps": "Book a 30-minute technical discovery call to review your current data contracts and decision nodes."
+    },
+    "machine-learning": {
+      "title": "Machine Learning Consulting",
+      "tagline": "Auditing dataset leakage, implementing custom classifiers, and building classical ML systems.",
+      "description": "Develop and audit predictive engines, regression models, and computer vision classifiers using rigorous testing protocols.",
+      "for": "Engineering teams and product managers who require production-grade predictive models and statistical audits.",
+      "problems": [
+        "Dataset leakage causing overoptimistic offline test metrics.",
+        "High latency and inference costs in model serving pipelines.",
+        "Inability to integrate custom CV or NLP classifiers into legacy systems."
+      ],
+      "deliverables": [
+        "Data Leakage Audit Report",
+        "Custom Classifier Python Packages & Docker Files",
+        "Model Performance Evaluation Dashboard"
+      ],
+      "timeline": "4 to 8 weeks",
+      "technologies": [
+        "Python",
+        "PyTorch",
+        "scikit-learn",
+        "CUDA",
+        "FastAPI",
+        "Docker"
+      ],
+      "outcomes": [
+        "Zero-leakage model evaluation ensuring realistic production accuracy.",
+        "Model inference latency reduced by up to 50%.",
+        "Fully containerized, repeatable model builds."
+      ],
+      "pricing": {
+        "starting_from": "$25,000",
+        "typical_range": "$25,000 - $60,000",
+        "model": "Milestone-based project engagement"
+      },
+      "next_steps": "Schedule an engineering alignment session to define target classification metrics and input datasets."
+    },
+    "llm-development": {
+      "title": "LLM Development & Systems",
+      "tagline": "Instruction tuning, custom prompt design, and domain-specific LLM workflows.",
+      "description": "Build agentic workflows, structured parsing layers, and customized prompt routing graphs that handle edge cases reliably.",
+      "for": "SMEs and startups building user-facing AI applications requiring structured, predictable text outputs.",
+      "problems": [
+        "Hallucination and lack of constraint in model output formatting (JSON/XML).",
+        "Prompt injection vulnerability and sensitive data leaks.",
+        "High API costs and slow time-to-first-token in multi-agent loops."
+      ],
+      "deliverables": [
+        "Pydantic-based Parsing & Validation Middleware",
+        "Optimized Prompt Templates with Evaluator Scripts",
+        "Defensive Prompt Security Implementation Guardrails"
+      ],
+      "timeline": "3 to 6 weeks",
+      "technologies": [
+        "Python",
+        "Instructor",
+        "LangChain",
+        "OpenAI SDK",
+        "Llama-Index",
+        "LangSmith"
+      ],
+      "outcomes": [
+        "99.9% reliable JSON output structures for UI rendering.",
+        "Vulnerability mitigation for standard indirect prompt injections.",
+        "Prompt token size reduced by 25% through pruning."
+      ],
+      "pricing": {
+        "starting_from": "$18,000",
+        "typical_range": "$18,000 - $40,000",
+        "model": "Sprint-based implementation"
+      },
+      "next_steps": "Request an audit of your current LLM system architecture and API token logs."
+    },
+    "rag-systems": {
+      "title": "RAG Systems & Vector Architecture",
+      "tagline": "Designing document pipelines, semantic chunking, metadata injection, and vector search.",
+      "description": "Construct high-precision Retrieval-Augmented Generation systems using semantic chunking and advanced hybrid search.",
+      "for": "Product companies and enterprise teams with large unstructured document corpuses needing accurate question answering.",
+      "problems": [
+        "Naïve text chunking splitting critical paragraphs and losing context.",
+        "Irrelevant documents retrieved by vector search polluting the LLM context window.",
+        "Out-of-date vector databases missing latest document updates."
+      ],
+      "deliverables": [
+        "Custom Document Parsing & Semantic Chunking Pipeline",
+        "Hybrid Search Retrieval Engine (BM25 + Dense Embeddings)",
+        "Automated Index Ingestion & Syncer Daemon"
+      ],
+      "timeline": "4 to 8 weeks",
+      "technologies": [
+        "Python",
+        "Qdrant",
+        "pgvector",
+        "Cohere Rerank",
+        "LlamaIndex",
+        "Docker"
+      ],
+      "outcomes": [
+        "Retrieval accuracy (MRR) improved from 60% to 92%.",
+        "LLM context token waste reduced by 40%.",
+        "Near real-time vector database updates."
+      ],
+      "pricing": {
+        "starting_from": "$22,000",
+        "typical_range": "$22,000 - $50,000",
+        "model": "Phase-based implementation"
+      },
+      "next_steps": "Set up a deep-dive call to inspect sample document structures and define parsing constraints."
+    },
+    "mlops": {
+      "title": "MLOps & Model Governance",
+      "tagline": "Automated drift detection, validation pipelines, model versioning, and latency optimization.",
+      "description": "Build deployment infrastructure, monitoring loops, and regression safeguards for reliable production AI operations.",
+      "for": "ML engineering departments needing to maintain high model reliability, detect drift, and govern production models.",
+      "problems": [
+        "Silent accuracy decay in production models due to changing user distributions.",
+        "Lack of rollback and deployment safety checks for newly trained models.",
+        "No automated alert pipeline when model latency or error rates spike."
+      ],
+      "deliverables": [
+        "Evidently AI / custom Drift Detection Pipeline",
+        "GitHub Actions CI/CD Release Workflows for Models",
+        "Prometheus & Grafana Monitoring Dashboards"
+      ],
+      "timeline": "4 to 10 weeks",
+      "technologies": [
+        "Python",
+        "Docker",
+        "Evidently AI",
+        "MLflow",
+        "GitHub Actions",
+        "Kubernetes"
+      ],
+      "outcomes": [
+        "Automated drift alerts flagging data distribution shifts within 1 hour.",
+        "Safe, zero-downtime canary rollouts for updated model versions.",
+        "Unified registry tracking model metrics and metadata."
+      ],
+      "pricing": {
+        "starting_from": "$30,000",
+        "typical_range": "$30,000 - $70,000",
+        "model": "Architecture design and implementation"
+      },
+      "next_steps": "Arrange a technical review of your current ML model deployment logs and CI/CD pipelines."
+    },
+    "data-engineering": {
+      "title": "Data Engineering & Pipeline Design",
+      "tagline": "Data contracts, robust ETL pipelines, dbt modeling, and analytical storage layout.",
+      "description": "Establish reliable analytics data pipelines with structured contracts, validation rules, and scalable storage layers.",
+      "for": "Data teams seeking to build robust data foundations for AI engines and executive reporting.",
+      "problems": [
+        "Upstream API schema modifications breaking downstream models without warning.",
+        "Slow, unoptimized query runtimes in data warehouses driving up costs.",
+        "Unreliable cron jobs leading to incomplete data in reporting tables."
+      ],
+      "deliverables": [
+        "Data Quality Contract & Schema Schema Validator",
+        "dbt Modeling Warehouse Layout & ETL Scripts",
+        "Airflow/Prefect Ingestion Dag Orchestrators"
+      ],
+      "timeline": "4 to 8 weeks",
+      "technologies": [
+        "Python",
+        "PostgreSQL",
+        "dbt",
+        "Apache Airflow",
+        "DuckDB",
+        "BigQuery"
+      ],
+      "outcomes": [
+        "Failing pipelines halted gracefully via data contract enforcement, preventing corruption.",
+        "Analytical query speeds optimized by 3x, reducing cloud warehouse spend.",
+        "100% data auditability back to ingestion source."
+      ],
+      "pricing": {
+        "starting_from": "$20,000",
+        "typical_range": "$20,000 - $45,000",
+        "model": "Fixed-fee pipeline build"
+      },
+      "next_steps": "Request a review of your analytical queries and warehouse performance schemas."
+    },
+    "ai-training": {
+      "title": "AI & Data Engineering Training",
+      "tagline": "Custom curricula, hands-on coding labs, and technical upskilling for product teams.",
+      "description": "Deliver custom coding curricula, hands-on engineering labs, and technical tool evaluations for your developers.",
+      "for": "Engineering teams transitioning into AI Engineering or adopting modern data stack practices.",
+      "problems": [
+        "Software engineers struggling to write robust AI code and vector search queries.",
+        "Team members relying on insecure or fragile copy-paste AI code templates.",
+        "Lack of internal standards for evaluating and validating model outputs."
+      ],
+      "deliverables": [
+        "Custom Curriculum & Course Material Repository",
+        "Interactive Jupyter Lab Coding Notebooks",
+        "1-Month Post-Training Team Support Channel"
+      ],
+      "timeline": "2 to 4 weeks",
+      "technologies": [
+        "Python",
+        "Jupyter",
+        "PyTorch",
+        "Qdrant",
+        "OpenAI API"
+      ],
+      "outcomes": [
+        "Upskilled software engineers capable of building and maintaining production RAG systems.",
+        "Consistent, secure internal coding standards for API interactions.",
+        "Increased velocity in building internal AI features."
+      ],
+      "pricing": {
+        "starting_from": "$8,000",
+        "typical_range": "$8,000 - $15,000",
+        "model": "Fixed training workshop fee"
+      },
+      "next_steps": "Define your team's existing skill levels and current roadmap objectives to customize the curriculum."
+    },
+    "corporate-workshops": {
+      "title": "Applied Facilitation & Decision Workshops",
+      "tagline": "Active scenario rehearsal, alignment simulations, and collaborative design games.",
+      "description": "Align cross-functional teams, surface hidden product assumptions, and build collective decision literacy.",
+      "for": "Cross-functional leadership groups, engineering teams, and policy circles facing high-stakes decisions.",
+      "problems": [
+        "Teams working in silos, leading to late-stage integration conflicts.",
+        "Stalled organizational checkpoints due to unvoiced disagreements.",
+        "Difficulty aligning technical capabilities with business governance expectations."
+      ],
+      "deliverables": [
+        "Scenario Rehearsal Simulation Script",
+        "Post-Workshop Alignment & Diagnostic Summary Report",
+        "Custom Interactive Decision Exercises"
+      ],
+      "timeline": "1 to 2 weeks",
+      "technologies": [
+        "Applied Improvisation",
+        "Theatre of the Oppressed",
+        "Role-play Simulation"
+      ],
+      "outcomes": [
+        "Surfaced hidden execution assumptions, preventing downstream project delays.",
+        "Agreed decision rights and accountability protocols for high-stakes actions.",
+        "Improved cross-team communication capacity."
+      ],
+      "pricing": {
+        "starting_from": "$5,000",
+        "typical_range": "$5,000 - $10,000",
+        "model": "Flat-rate workshop fee"
+      },
+      "next_steps": "Schedule a preparation briefing to discuss your organization's bottleneck decisions."
+    },
+    "fractional-ai-leadership": {
+      "title": "Fractional AI & Engineering Leadership",
+      "tagline": "Dedicated fractional CTO/VPE capacity to guide hiring, technical scoping, and vendor selection.",
+      "description": "Secure strategic technical guidance, mentor leadership, and govern technical execution on a fractional retainer.",
+      "for": "SMEs and growing startups needing executive AI/ML leadership without the cost of a full-time hire.",
+      "problems": [
+        "Unsure how to structure the hiring process for data science and AI teams.",
+        "Inability to audit third-party AI software vendors and agency scopes of work.",
+        "Lack of high-level technical oversight in product roadmap planning."
+      ],
+      "deliverables": [
+        "Monthly Technical Strategy & Execution Reviews",
+        "Custom Hiring Rubrics & Interview Protocols",
+        "Vendor Audit Reports & Recommendation matrixes"
+      ],
+      "timeline": "Ongoing (3 to 12 month retainer)",
+      "technologies": [
+        "Systems Design",
+        "Technical Strategy",
+        "Team Architecture"
+      ],
+      "outcomes": [
+        "Hired key data and AI engineers using verified, data-backed screening rubrics.",
+        "Avoided expensive software contracts by auditing vendor technical limitations.",
+        "Consistent delivery tracking for core technical milestones."
+      ],
+      "pricing": {
+        "starting_from": "$8,000/month",
+        "typical_range": "$8,000 - $15,000/month",
+        "model": "Retainer basis (typically 10-15 hours/week)"
+      },
+      "next_steps": "Book a strategic consultation call to evaluate your technical leadership gaps."
+    },
+    "ai-consulting": {
+      "title": "AI Strategy & Technical Consulting",
+      "tagline": "Broad strategic and architectural audits to map AI capabilities to business bottlenecks.",
+      "description": "A comprehensive service linking your business challenges directly to machine learning and AI capabilities.",
+      "for": "Engineering and executive teams who need clear direction on implementing model architectures safely and cost-effectively.",
+      "problems": [
+        "Unsure if AI can solve a specific operational bottleneck.",
+        "Struggling to balance model performance against API latency constraints.",
+        "High cost of experimental AI pipelines without clear production utility."
+      ],
+      "deliverables": [
+        "AI Architecture Audit Document",
+        "Feasibility Analysis & Data Audit Matrix",
+        "Technical Stack Recommendations"
+      ],
+      "timeline": "2 to 6 weeks",
+      "technologies": [
+        "Python",
+        "Docker",
+        "PyTorch",
+        "LLM APIs",
+        "MLOps Frameworks"
+      ],
+      "outcomes": [
+        "Clear validation of model suitability for your primary business challenge.",
+        "Comprehensive architectural blueprint ready for developer execution.",
+        "Quantified token and compute cost expectations."
+      ],
+      "pricing": {
+        "starting_from": "$15,000",
+        "typical_range": "$15,000 - $35,000",
+        "model": "Sprint-based delivery"
+      },
+      "next_steps": "Schedule an initial 30-minute discovery call to share your data assets and targets."
+    }
+  },
+  "faq": [
+    {
+      "q": "What does Mentat Commons do?",
+      "a": "Mentat Commons is an AI Strategy and Decision Systems consultancy. We design production-grade machine learning pipelines, LLM systems, custom RAG systems, and MLOps governance frameworks. We also run corporate workshops and provide fractional AI leadership."
+    },
+    {
+      "q": "Who owns and runs Mentat Commons?",
+      "a": "Mentat Commons is founded and led by Nandhini Anand Jeyahar, a systems architect and facilitator with over 16 years of experience across machine vision, cognitive science, and data engineering."
+    },
+    {
+      "q": "Where is Mentat Commons located and do you work remotely?",
+      "a": "We operate remotely and serve clients worldwide. All project scoping, software engineering, systems auditing, and workshops are conducted via remote collaboration tools."
+    },
+    {
+      "q": "What industries do you work with?",
+      "a": "We work with startups, SMEs, NGOs, research labs, universities, product companies, and engineering teams across tech, waste management, municipal policy, solar optimization, and restorative justice circles."
+    },
+    {
+      "q": "How much does AI strategy consulting cost?",
+      "a": "Our AI Strategy scoping and feasibility consulting starts at $12,000 for a fixed-scope engagement, typically ranging between $12,000 and $25,000 depending on organization size and data complexity."
+    },
+    {
+      "q": "What is the typical duration of an engagement?",
+      "a": "Engagements typically run for 2 to 12 weeks. Scoping sprints run for 2 to 4 weeks, custom machine learning projects run for 4 to 8 weeks, and fractional leadership retainers run for 3 to 12 months."
+    },
+    {
+      "q": "Do you build production-grade AI systems or just mockups?",
+      "a": "We build fully containerized, tested, production-grade systems. This includes PyTorch classification pipelines, Qdrant vector databases, FastAPI microservices, and Docker containers ready for deployment."
+    },
+    {
+      "q": "What is your technology stack for Machine Learning?",
+      "a": "Our core ML/AI engineering stack includes Python, PyTorch, scikit-learn, CUDA, Docker, FastAPI, Qdrant, pgvector, MLflow, and evidently AI."
+    },
+    {
+      "q": "Do you deploy on AWS, Azure, and Google Cloud Platform?",
+      "a": "Yes. We design cloud-agnostic containerized architectures using Docker and Kubernetes, allowing deployment across AWS, Google Cloud Platform (GCP), Microsoft Azure, or custom private servers."
+    },
+    {
+      "q": "What is Retrieval-Augmented Generation (RAG) and when should we use it?",
+      "a": "RAG is an architecture that fetches relevant documents from a database and passes them to an LLM to answer user queries with grounding. Use it when you need to answer questions using custom, private, or real-time document corpuses without expensive model fine-tuning."
+    },
+    {
+      "q": "How do you prevent data leakage in LLM training and RAG setups?",
+      "a": "We enforce strict testing pipelines that isolate training datasets from evaluation datasets, utilize data contracts, and build custom validators (using Pydantic/Instructor) to audit and filter context strings before processing."
+    },
+    {
+      "q": "What is silent model decay and how do you audit it?",
+      "a": "Silent model decay occurs when a model's accuracy drops in production due to changes in real-world user data patterns. We audit this by building drift detection pipelines (e.g. via Evidently AI) to track performance metrics and alert engineering teams."
+    },
+    {
+      "q": "Can you train our internal engineering team in AI engineering?",
+      "a": "Yes. We offer AI and Data Engineering training starting at $8,000, delivering custom coding curricula, Jupyter notebooks, and hands-on coding labs to upskill your developers in vector databases and model integration."
+    },
+    {
+      "q": "What are your corporate workshops like?",
+      "a": "Our workshops combine systems thinking and applied improvisation to help teams surface hidden product assumptions, align workflows, and establish clear decision-making rights. Pricing starts at $5,000."
+    },
+    {
+      "q": "What does Fractional AI Leadership involve?",
+      "a": "It provides your business with a fractional CTO or VP of Engineering to guide technical architecture, scope projects, audit vendors, and build hiring rubrics. Retainers start at $8,000/month."
+    },
+    {
+      "q": "How do you measure the success of an AI project?",
+      "a": "Success is measured using factual technical and business metrics, such as retrieval accuracy (MRR), query latency reduction, decision cycle acceleration, API token cost savings, and operational error rate reductions."
+    },
+    {
+      "q": "What is your approach to AI safety, governance, and ethics?",
+      "a": "We prioritize empirical testing, data contract boundaries, explicit auditing logs, bias monitoring, and clear human-in-the-loop decision boundaries over speculative hype."
+    },
+    {
+      "q": "Do you sign NDAs (Non-Disclosure Agreements)?",
+      "a": "Yes. We require a signed NDA before sharing or reviewing any proprietary datasets, code repositories, or strategic corporate roadmap details."
+    },
+    {
+      "q": "How do we start an engagement with you?",
+      "a": "You can book a 30-minute technical discovery call via our contact form. We will review your current systems, data readiness, and business bottlenecks to define a structured scope of work."
+    },
+    {
+      "q": "What is your pricing structure for discovery calls?",
+      "a": "All initial 30-minute technical discovery calls are free ($0). During this call, we determine if your problem aligns with our capabilities and whether your data is structured enough for engagement."
+    },
+    {
+      "q": "What is the price of a 1-day scoping workshop?",
+      "a": "A intensive 1-day scoping workshop to define system architectures and align stakeholders is a flat fee of $2,500, which includes a pre-scoping call and a detailed technical report."
+    },
+    {
+      "q": "What are the typical costs for a 2-week architecture sprint?",
+      "a": "A 2-week Architecture & Discovery Sprint costs approximately $12,000. It produces complete technical blueprints, dataset audits, and model feasibility recommendations."
+    },
+    {
+      "q": "What are the typical costs for a 6-week implementation project?",
+      "a": "A typical 6-week production pipeline implementation (such as custom drift monitoring or vector search optimization) ranges between $35,000 and $50,000 depending on complexity."
+    },
+    {
+      "q": "How do you handle intellectual property (IP) rights?",
+      "a": "Upon receipt of final payment, all custom software, pipeline configurations, training notebooks, and dashboards built specifically for your organization belong entirely to you."
+    },
+    {
+      "q": "Do you support open-source LLMs like Llama and Mistral?",
+      "a": "Yes. We design architectures that support open-source models (such as Meta's Llama or Mistral) hosted locally or on private cloud instances, alongside proprietary APIs."
+    },
+    {
+      "q": "What is your MLOps capability, and do you configure CI/CD for models?",
+      "a": "Yes. We configure automated model packaging, deployment pipelines, canary release scripts, and automated rollback triggers using GitHub Actions, Docker, and MLflow."
+    },
+    {
+      "q": "How does Mentat Commons combine cognitive science with machine learning?",
+      "a": "We map cognitive limitations (like human attention constraints) and organizational incentives alongside machine learning outputs, ensuring that AI systems act as robust support systems rather than automated bottlenecks."
+    },
+    {
+      "q": "What are your decision-action trees, and how do they reduce dashboard waste?",
+      "a": "Decision-action trees ensure every data query or model prediction maps directly to a discrete business action. If a metric cannot alter a decision path, we prune it from the system, reducing unnecessary infrastructure."
+    },
+    {
+      "q": "Do you work with NGOs and academic research labs?",
+      "a": "Yes. We have structured data auditing capabilities tailored to NGOs, restorative justice groups, and academic research labs where model safety and alignment are critical."
+    },
+    {
+      "q": "How do you verify the performance and accuracy of LLM outputs?",
+      "a": "We implement continuous testing loops using structured parsing rules, reference eval datasets, and metric logging tools like LangSmith to measure format accuracy, grounding, and response consistency."
+    }
+  ]
 }

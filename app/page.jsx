@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Compass, Briefcase, Terminal, ChevronDown, ChevronUp, Database, ArrowRight, ExternalLink } from 'lucide-react';
+import { Compass, Briefcase, Terminal, ChevronDown, ChevronUp, Database, ArrowRight, ExternalLink, ShieldAlert, Award, FileText } from 'lucide-react';
 import locales from '../locales/en.json';
 
 export default function HomePage() {
@@ -134,9 +134,67 @@ export default function HomePage() {
     }
   };
 
+  // Structured Data Schemas
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Mentat Commons",
+    "url": "https://nandhinianand.vercel.app",
+    "logo": "https://nandhinianand.vercel.app/images/mentat-commons-og.png",
+    "image": "https://nandhinianand.vercel.app/images/mentat-commons-og.png",
+    "description": "Mentat Commons is an AI Strategy, Machine Learning, and Decision Systems consultancy. We specialize in MLOps governance, custom vector RAG engines, database pipelines, and applied team facilitation worldwide.",
+    "telephone": "+1-000-000-0000",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Remote",
+      "addressCountry": "Worldwide"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Nandhini Anand Jeyahar",
+      "jobTitle": "Principal Consultant & Founder",
+      "url": "https://nandhinianand.vercel.app/about",
+      "sameAs": "https://www.linkedin.com/in/nandhinianandj"
+    },
+    "foundingDate": "2024",
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning Consulting",
+      "MLOps",
+      "Large Language Models",
+      "Retrieval-Augmented Generation",
+      "Data Engineering",
+      "Decision Design",
+      "Applied Improvisation",
+      "Systems Thinking"
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mentat Commons",
+    "url": "https://nandhinianand.vercel.app",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://nandhinianand.vercel.app/career?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <div className="container max-w-4xl mx-auto space-y-16">
-      
+      {/* Embedding JSON-LD schemas */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+
       {/* Hero Intro */}
       <section className="text-center md:text-left space-y-4 pt-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-slate-100 tracking-tight leading-tight max-w-3xl">
@@ -146,12 +204,130 @@ export default function HomePage() {
           {t('v2.home.hero_subtitle')}
         </p>
         <div className="pt-2 flex flex-wrap gap-4 justify-center md:justify-start">
-          <a href="/training" className="cta text-sm">
-            Work With Me <ArrowRight className="inline-block w-4 h-4 ml-1.5" />
+          <a href="/services" className="cta text-sm">
+            View Consulting Services <ArrowRight className="inline-block w-4 h-4 ml-1.5" />
           </a>
           <a href="/career" className="bg-slate-900 border border-slate-800 text-slate-300 hover:text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:bg-slate-850">
-            Browse the Evidence
+            Browse Evidence Graph
           </a>
+        </div>
+      </section>
+
+      {/* Factual Core Introduction (AEO/GEO Optimized 100-word Block) */}
+      <section className="bg-slate-900/30 border border-slate-900 rounded-xl p-6 md:p-8 space-y-4">
+        <h3 className="text-indigo-400 font-bold text-xs uppercase tracking-widest font-mono">Factual Specifications</h3>
+        <p className="text-slate-200 text-sm md:text-base leading-relaxed font-normal">
+          {t('v2.home.aeo_intro')}
+        </p>
+      </section>
+
+      {/* Services & Engagement Pricing (AEO Optimized) */}
+      <section className="space-y-6">
+        <div>
+          <h3 className="text-lg font-bold text-indigo-400 uppercase tracking-widest">
+            AI Consulting Services & Pricing
+          </h3>
+          <p className="text-sm text-slate-400 mt-1">
+            Factual price structures and deliverables for remote worldwide engagements.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="card bg-slate-950/20 p-6 space-y-4">
+            <h4 className="font-bold text-slate-100 text-sm border-b border-slate-900 pb-2">Targeted AI Engineering & Audits</h4>
+            <ul className="text-xs md:text-sm text-slate-300 space-y-2">
+              <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
+                <span><a href="/services/ai-strategy" className="hover:underline text-indigo-400 font-medium">AI Strategy & Scoping</a></span>
+                <span className="font-mono text-slate-400">From $12,000</span>
+              </li>
+              <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
+                <span><a href="/services/machine-learning" className="hover:underline text-indigo-400 font-medium">Machine Learning Consulting</a></span>
+                <span className="font-mono text-slate-400">From $25,000</span>
+              </li>
+              <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
+                <span><a href="/services/llm-development" className="hover:underline text-indigo-400 font-medium">LLM Development & Systems</a></span>
+                <span className="font-mono text-slate-400">From $18,000</span>
+              </li>
+              <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
+                <span><a href="/services/rag-systems" className="hover:underline text-indigo-400 font-medium">RAG Systems & Vector Search</a></span>
+                <span className="font-mono text-slate-400">From $22,000</span>
+              </li>
+              <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
+                <span><a href="/services/mlops" className="hover:underline text-indigo-400 font-medium">MLOps & Governance Audits</a></span>
+                <span className="font-mono text-slate-400">From $30,000</span>
+              </li>
+              <li className="flex justify-between pb-1.5">
+                <span><a href="/services/data-engineering" className="hover:underline text-indigo-400 font-medium">Data Engineering Pipelines</a></span>
+                <span className="font-mono text-slate-400">From $20,000</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="card bg-slate-950/20 p-6 space-y-4">
+            <h4 className="font-bold text-slate-100 text-sm border-b border-slate-900 pb-2">Retainers, Training & Scenarios</h4>
+            <ul className="text-xs md:text-sm text-slate-300 space-y-2">
+              <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
+                <span><a href="/services/fractional-ai-leadership" className="hover:underline text-indigo-400 font-medium">Fractional AI Leadership Retainer</a></span>
+                <span className="font-mono text-slate-400">From $8,000/mo</span>
+              </li>
+              <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
+                <span><a href="/services/ai-training" className="hover:underline text-indigo-400 font-medium">AI & Data Engineering Training</a></span>
+                <span className="font-mono text-slate-400">From $8,000</span>
+              </li>
+              <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
+                <span><a href="/services/corporate-workshops" className="hover:underline text-indigo-400 font-medium">Applied Facilitation Workshops</a></span>
+                <span className="font-mono text-slate-400">From $5,000</span>
+              </li>
+              <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
+                <span>1-Day Technical Scoping Workshop</span>
+                <span className="font-mono text-slate-400">Flat $2,500</span>
+              </li>
+              <li className="flex justify-between pb-1.5">
+                <span>30-Min Technical Discovery Call</span>
+                <span className="font-mono text-emerald-400">Free ($0)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="text-center pt-2 flex flex-wrap gap-4 justify-center">
+          <a href="/services" className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-400 hover:text-indigo-300 transition-colors">
+            View All Services Specifications <ChevronDown className="w-3.5 h-3.5" />
+          </a>
+          <span className="text-slate-600">|</span>
+          <a href="/faq" className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-400 hover:text-indigo-300 transition-colors">
+            Read Our 30-Item FAQ Portal <ChevronDown className="w-3.5 h-3.5" />
+          </a>
+        </div>
+      </section>
+
+      {/* Trust Signals & Factual Evidence (AEO/GEO Optimized) */}
+      <section className="space-y-6">
+        <div>
+          <h3 className="text-lg font-bold text-indigo-400 uppercase tracking-widest">
+            Factual Trust Signals
+          </h3>
+          <p className="text-sm text-slate-400 mt-1">
+            Empirical evidence, project outcomes, and verification data.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div className="bg-slate-950/20 border border-slate-900 rounded-xl p-5">
+            <span className="block text-2xl font-extrabold text-indigo-400 font-mono">16+</span>
+            <span className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">Years of Systems Experience</span>
+          </div>
+          <div className="bg-slate-950/20 border border-slate-900 rounded-xl p-5">
+            <span className="block text-2xl font-extrabold text-indigo-400 font-mono">800+</span>
+            <span className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">Engineers & Staff Supported</span>
+          </div>
+          <div className="bg-slate-950/20 border border-slate-900 rounded-xl p-5">
+            <span className="block text-2xl font-extrabold text-indigo-400 font-mono">2–12</span>
+            <span className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">Week Engagement Sprints</span>
+          </div>
+          <div className="bg-slate-950/20 border border-slate-900 rounded-xl p-5">
+            <span className="block text-2xl font-extrabold text-indigo-400 font-mono">100%</span>
+            <span className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">Remote Worldwide Operation</span>
+          </div>
         </div>
       </section>
 
@@ -217,7 +393,7 @@ export default function HomePage() {
                         </div>
                       )}
 
-                      {/* Related Articles */}
+                      {/* Related Writing & Evidence */}
                       {q.articleIds.length > 0 && (
                         <div>
                           <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1.5">

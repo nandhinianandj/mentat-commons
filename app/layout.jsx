@@ -29,9 +29,11 @@ export default function RootLayout({ children }) {
               <nav className="flex flex-wrap gap-y-2">
                 <a className="header-link text-xs font-semibold" href="/">Home</a>
                 <a className="header-link text-xs font-semibold" href="/about">About</a>
+                <a className="header-link text-xs font-semibold" href="/services">Services</a>
                 <a className="header-link text-xs font-semibold" href="/portfolio">Portfolio</a>
                 <a className="header-link text-xs font-semibold" href="/training">Consulting</a>
                 <a className="header-link text-xs font-semibold" href="/narrative">Narrative Research</a>
+                <a className="header-link text-xs font-semibold" href="/faq">FAQ</a>
                 <a className="header-link text-xs font-semibold" href="/career">Career Explorer</a>
               </nav>
             </div>

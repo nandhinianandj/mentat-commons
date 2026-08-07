@@ -3,16 +3,19 @@ import path from 'path';
 
 const BASE_URL = 'https://nandhinianand.vercel.app';
 const CKB_FILE = path.join(process.cwd(), 'data', 'career_knowledge_base.json');
+const LOCALES_FILE = path.join(process.cwd(), 'locales', 'en.json');
 const SITEMAP_FILE = path.join(process.cwd(), 'public', 'sitemap.xml');
 
 // Standard static pages
 const STATIC_PAGES = [
   '',
   '/about',
-  '/career',
-  '/narrative',
+  '/services',
   '/portfolio',
   '/training',
+  '/narrative',
+  '/faq',
+  '/career',
   '/contact',
   '/links',
   '/copilot',
@@ -38,7 +41,16 @@ async function generateSitemap() {
       urls.push(`${BASE_URL}${page}`);
     }
 
-    // 2. Read Career Knowledge Base for dynamic node routes
+    // 2. Read locales for dynamic service pages
+    const localesContent = await fs.readFile(LOCALES_FILE, 'utf-8');
+    const locales = JSON.parse(localesContent);
+    if (locales.services) {
+      Object.keys(locales.services).forEach(slug => {
+        urls.push(`${BASE_URL}/services/${slug}`);
+      });
+    }
+
+    // 3. Read Career Knowledge Base for dynamic node routes
     const ckbContent = await fs.readFile(CKB_FILE, 'utf-8');
     const ckb = JSON.parse(ckbContent);
 
