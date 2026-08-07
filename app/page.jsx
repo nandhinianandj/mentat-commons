@@ -238,27 +238,27 @@ export default function HomePage() {
             <ul className="text-xs md:text-sm text-slate-300 space-y-2">
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span><a href="/services/ai-strategy" className="hover:underline text-indigo-400 font-medium">AI Strategy & Decision Systems Design</a></span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">From $12,000 | 2–4 Wks</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">From ₹10,00,000 | 2–4 Wks</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span><a href="/services/machine-learning" className="hover:underline text-indigo-400 font-medium">Machine Learning Consulting</a></span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">From $25,000 | 4–8 Wks</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">From ₹20,00,000 | 4–8 Wks</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span><a href="/services/llm-development" className="hover:underline text-indigo-400 font-medium">LLM Systems & AI Engineering</a></span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">From $18,000 | 3–6 Wks</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">From ₹15,00,000 | 3–6 Wks</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span><a href="/services/rag-systems" className="hover:underline text-indigo-400 font-medium">RAG Architecture</a></span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">From $22,000 | 4–8 Wks</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">From ₹18,00,000 | 4–8 Wks</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span><a href="/services/mlops" className="hover:underline text-indigo-400 font-medium">MLOps</a></span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">From $30,000 | 4–10 Wks</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">From ₹25,00,000 | 4–10 Wks</span>
               </li>
               <li className="flex justify-between pb-1.5">
                 <span><a href="/services/data-engineering" className="hover:underline text-indigo-400 font-medium">Data Engineering</a></span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">From $20,000 | 4–8 Wks</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">From ₹16,00,000 | 4–8 Wks</span>
               </li>
             </ul>
           </div>
@@ -268,27 +268,27 @@ export default function HomePage() {
             <ul className="text-xs md:text-sm text-slate-300 space-y-2">
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span><a href="/services/fractional-ai-leadership" className="hover:underline text-indigo-400 font-medium">Fractional AI & Technical Program Leadership</a></span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">From $8,000/mo | Retainer</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">From ₹6,50,000/mo | Retainer</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span><a href="/services/ai-training" className="hover:underline text-indigo-400 font-medium">AI Training</a></span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">From $8,000 | 2–4 Wks</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">From ₹6,50,000 | 2–4 Wks</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span><a href="/services/corporate-workshops" className="hover:underline text-indigo-400 font-medium">Corporate Workshops & Facilitation</a></span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">From $5,000 | 1–2 Wks</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">From ₹4,00,000 | 1–2 Wks</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span><a href="/services/ai-consulting" className="hover:underline text-indigo-400 font-medium">Technical Architecture & AI Consulting</a></span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">From $15,000 | 2–6 Wks</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">From ₹12,00,000 | 2–6 Wks</span>
               </li>
               <li className="flex justify-between border-b border-slate-900/50 pb-1.5">
                 <span>1-Day Technical Scoping Workshop</span>
-                <span className="font-mono text-slate-400 text-xxs md:text-xs">Flat $2,500 | 1 Day</span>
+                <span className="font-mono text-slate-400 text-xxs md:text-xs">Flat ₹2,00,000 | 1 Day</span>
               </li>
               <li className="flex justify-between pb-1.5">
                 <span>30-Min Technical Discovery Call</span>
-                <span className="font-mono text-emerald-400 text-xxs md:text-xs">Free ($0) | 30 Mins</span>
+                <span className="font-mono text-emerald-400 text-xxs md:text-xs">Free (₹0) | 30 Mins</span>
               </li>
             </ul>
           </div>

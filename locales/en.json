@@ -196,8 +196,8 @@
         "Clear build-vs-buy decisions for model layers."
       ],
       "pricing": {
-        "starting_from": "$12,000",
-        "typical_range": "$12,000 - $25,000",
+        "starting_from": "₹10,00,000",
+        "typical_range": "₹10,00,000 - ₹20,00,000",
         "model": "Fixed-scope discovery sprint"
       },
       "next_steps": "Book a 30-minute technical discovery call to review your current data contracts and decision nodes."
@@ -232,8 +232,8 @@
         "Fully containerized, repeatable model builds."
       ],
       "pricing": {
-        "starting_from": "$25,000",
-        "typical_range": "$25,000 - $60,000",
+        "starting_from": "₹20,00,000",
+        "typical_range": "₹20,00,000 - ₹50,00,000",
         "model": "Milestone-based project engagement"
       },
       "next_steps": "Schedule an engineering alignment session to define target classification metrics and input datasets."
@@ -268,8 +268,8 @@
         "Prompt token size reduced by 25% through pruning."
       ],
       "pricing": {
-        "starting_from": "$18,000",
-        "typical_range": "$18,000 - $40,000",
+        "starting_from": "₹15,00,000",
+        "typical_range": "₹15,00,000 - ₹35,00,000",
         "model": "Sprint-based implementation"
       },
       "next_steps": "Request an audit of your current LLM system architecture and API token logs."
@@ -304,8 +304,8 @@
         "Near real-time vector database updates."
       ],
       "pricing": {
-        "starting_from": "$22,000",
-        "typical_range": "$22,000 - $50,000",
+        "starting_from": "₹18,00,000",
+        "typical_range": "₹18,00,000 - ₹40,00,000",
         "model": "Phase-based implementation"
       },
       "next_steps": "Set up a deep-dive call to inspect sample document structures and define parsing constraints."
@@ -340,8 +340,8 @@
         "Unified registry tracking model metrics and metadata."
       ],
       "pricing": {
-        "starting_from": "$30,000",
-        "typical_range": "$30,000 - $70,000",
+        "starting_from": "₹25,00,000",
+        "typical_range": "₹25,00,000 - ₹60,00,000",
         "model": "Architecture design and implementation"
       },
       "next_steps": "Arrange a technical review of your current ML model deployment logs and CI/CD pipelines."
@@ -376,8 +376,8 @@
         "100% data auditability back to ingestion source."
       ],
       "pricing": {
-        "starting_from": "$20,000",
-        "typical_range": "$20,000 - $45,000",
+        "starting_from": "₹16,00,000",
+        "typical_range": "₹16,00,000 - ₹35,00,000",
         "model": "Fixed-fee pipeline build"
       },
       "next_steps": "Request a review of your analytical queries and warehouse performance schemas."
@@ -411,8 +411,8 @@
         "Increased velocity in building internal AI features."
       ],
       "pricing": {
-        "starting_from": "$8,000",
-        "typical_range": "$8,000 - $15,000",
+        "starting_from": "₹6,50,000",
+        "typical_range": "₹6,50,000 - ₹12,00,000",
         "model": "Fixed training workshop fee"
       },
       "next_steps": "Define your team's existing skill levels and current roadmap objectives to customize the curriculum."
@@ -444,8 +444,8 @@
         "Improved cross-team communication capacity."
       ],
       "pricing": {
-        "starting_from": "$5,000",
-        "typical_range": "$5,000 - $10,000",
+        "starting_from": "₹4,00,000",
+        "typical_range": "₹4,00,000 - ₹8,00,000",
         "model": "Flat-rate workshop fee"
       },
       "next_steps": "Schedule a preparation briefing to discuss your organization's bottleneck decisions."
@@ -477,8 +477,8 @@
         "Consistent delivery tracking for core technical milestones."
       ],
       "pricing": {
-        "starting_from": "$8,000/month",
-        "typical_range": "$8,000 - $15,000/month",
+        "starting_from": "₹6,50,000/month",
+        "typical_range": "₹6,50,000 - ₹12,00,000/month",
         "model": "Retainer basis (typically 10-15 hours/week)"
       },
       "next_steps": "Book a strategic consultation call to evaluate your technical leadership gaps."
@@ -512,8 +512,8 @@
         "Quantified token and compute cost expectations."
       ],
       "pricing": {
-        "starting_from": "$15,000",
-        "typical_range": "$15,000 - $35,000",
+        "starting_from": "₹12,00,000",
+        "typical_range": "₹12,00,000 - ₹30,00,000",
         "model": "Sprint-based delivery"
       },
       "next_steps": "Schedule an initial 30-minute discovery call to share your data assets and targets."
@@ -538,7 +538,7 @@
     },
     {
       "q": "How much does AI strategy consulting cost?",
-      "a": "Our AI Strategy scoping and feasibility consulting starts at $12,000 for a fixed-scope engagement, typically ranging between $12,000 and $25,000 depending on organization size and data complexity."
+      "a": "Our AI Strategy scoping and feasibility consulting starts at ₹10,00,000 for a fixed-scope engagement, typically ranging between ₹10,00,000 and ₹20,00,000 depending on organization size and data complexity."
     },
     {
       "q": "What is the typical duration of an engagement?",
@@ -570,15 +570,15 @@
     },
     {
       "q": "Can you train our internal engineering team in AI engineering?",
-      "a": "Yes. We offer AI and Data Engineering training starting at $8,000, delivering custom coding curricula, Jupyter notebooks, and hands-on coding labs to upskill your developers in vector databases and model integration."
+      "a": "Yes. We offer AI and Data Engineering training starting at ₹6,50,000, delivering custom coding curricula, Jupyter notebooks, and hands-on coding labs to upskill your developers in vector databases and model integration."
     },
     {
       "q": "What are your corporate workshops like?",
-      "a": "Our workshops combine systems thinking and applied improvisation to help teams surface hidden product assumptions, align workflows, and establish clear decision-making rights. Pricing starts at $5,000."
+      "a": "Our workshops combine systems thinking and applied improvisation to help teams surface hidden product assumptions, align workflows, and establish clear decision-making rights. Pricing starts at ₹4,00,000."
     },
     {
       "q": "What does Fractional AI Leadership involve?",
-      "a": "It provides your business with a fractional CTO or VP of Engineering to guide technical architecture, scope projects, audit vendors, and build hiring rubrics. Retainers start at $8,000/month."
+      "a": "It provides your business with a fractional CTO or VP of Engineering to guide technical architecture, scope projects, audit vendors, and build hiring rubrics. Retainers start at ₹6,50,000/month."
     },
     {
       "q": "How do you measure the success of an AI project?",
@@ -598,19 +598,19 @@
     },
     {
       "q": "What is your pricing structure for discovery calls?",
-      "a": "All initial 30-minute technical discovery calls are free ($0). During this call, we determine if your problem aligns with our capabilities and whether your data is structured enough for engagement."
+      "a": "All initial 30-minute technical discovery calls are free (₹0). During this call, we determine if your problem aligns with our capabilities and whether your data is structured enough for engagement."
     },
     {
       "q": "What is the price of a 1-day scoping workshop?",
-      "a": "A intensive 1-day scoping workshop to define system architectures and align stakeholders is a flat fee of $2,500, which includes a pre-scoping call and a detailed technical report."
+      "a": "A intensive 1-day scoping workshop to define system architectures and align stakeholders is a flat fee of ₹2,00,000, which includes a pre-scoping call and a detailed technical report."
     },
     {
       "q": "What are the typical costs for a 2-week architecture sprint?",
-      "a": "A 2-week Architecture & Discovery Sprint costs approximately $12,000. It produces complete technical blueprints, dataset audits, and model feasibility recommendations."
+      "a": "A 2-week Architecture & Discovery Sprint costs approximately ₹10,00,000. It produces complete technical blueprints, dataset audits, and model feasibility recommendations."
     },
     {
       "q": "What are the typical costs for a 6-week implementation project?",
-      "a": "A typical 6-week production pipeline implementation (such as custom drift monitoring or vector search optimization) ranges between $35,000 and $50,000 depending on complexity."
+      "a": "A typical 6-week production pipeline implementation (such as custom drift monitoring or vector search optimization) ranges between ₹25,00,000 and ₹40,00,000 depending on complexity."
     },
     {
       "q": "How do you handle intellectual property (IP) rights?",

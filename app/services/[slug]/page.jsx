@@ -43,11 +43,11 @@ export default function ServiceDetailPage({ params }) {
     },
     "offers": {
       "@type": "Offer",
-      "priceCurrency": "USD",
+      "priceCurrency": "INR",
       "price": service.pricing.starting_from.replace(/[^0-9]/g, ''),
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
-        "priceCurrency": "USD",
+        "priceCurrency": "INR",
         "price": service.pricing.starting_from.replace(/[^0-9]/g, ''),
         "description": `Starting From ${service.pricing.starting_from} (Typical range: ${service.pricing.typical_range})`
       }
