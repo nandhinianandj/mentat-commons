@@ -20,7 +20,7 @@ career_axes:
 - axis-iii
 reading_time: 4 mins
 evidence_links:
-- https://mentatcommons.org/road2mewe-v2
+- https://www.mentatcommons.com/narrative?node=write-road2mewe-v2
 tags:
 - Data Architecture
 - Power Asymmetries

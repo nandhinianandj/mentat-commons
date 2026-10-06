@@ -20,7 +20,7 @@ career_axes:
 - axis-iii
 reading_time: 3 mins
 evidence_links:
-- https://mentatcommons.org/what-not-to-do
+- https://www.mentatcommons.com/narrative?node=write-what-not-to-do
 tags:
 - Compliance
 - Restorative Justice

@@ -102,7 +102,7 @@ That question may be more valuable than the numbers themselves.
 
 This is part of an ongoing exploration into organizational learning, systems thinking, and AI at **Mentat Commons**.
 
-https://consultancy-lac.vercel.app/
+https://www.mentatcommons.com/
 
 I'd love to hear: **What's one business metric everyone tracks that you think has become a proxy for the wrong thing?**
 

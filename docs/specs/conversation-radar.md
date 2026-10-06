@@ -138,7 +138,7 @@ When the pipeline suggests a LinkedIn post, the generator prompt enforces struct
   "headline": "A Hook highlighting the core tension...",
   "argument": "The main technical/organizational stance...",
   "evidence": "How I solved this at [Company] during [Project ID]...",
-  "mentatLinks": ["https://mentat-commons.org/career#proj-axelrod"],
+  "mentatLinks": ["https://www.mentatcommons.com/career#proj-axelrod"],
   "hashtags": ["#SystemsThinking", "#DecisionDesign"],
   "readingTime": "2 min"
 }

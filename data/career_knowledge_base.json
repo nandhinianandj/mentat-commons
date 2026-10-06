@@ -52,8 +52,8 @@
         "Led a cross-functional group of engineers and policy experts through a high-stakes scenario rehearsal to align project handoffs and prevent downstream execution conflicts."
       ],
       "evidence_links": [
-        "https://mentatcommons.org/about",
-        "https://mentatcommons.org/training"
+        "https://www.mentatcommons.com/about",
+        "https://www.mentatcommons.com/training"
       ],
       "axes": [
         "axis-i",
@@ -107,7 +107,7 @@
         "Mentored junior data engineers on data contract design, API versioning, and pipeline observability practices."
       ],
       "evidence_links": [
-        "https://mentatcommons.org/axis1"
+        "https://www.mentatcommons.com/axis1"
       ],
       "axes": [
         "axis-i",
@@ -157,7 +157,7 @@
         "Organized community-based dialogue sessions using theatre as a coordination tool for local policy issues."
       ],
       "evidence_links": [
-        "https://mentatcommons.org/axis2"
+        "https://www.mentatcommons.com/axis2"
       ],
       "axes": [
         "axis-ii",
@@ -274,7 +274,7 @@
       "links": [
         {
           "name": "Project Dashboard Mockup",
-          "url": "https://mentatcommons.org/portfolio"
+          "url": "https://www.mentatcommons.com/portfolio"
         }
       ],
       "evidence": [
@@ -327,7 +327,7 @@
       "links": [
         {
           "name": "Streamlit Sandbox Recommender",
-          "url": "https://mentatcommons.org/portfolio"
+          "url": "https://www.mentatcommons.com/portfolio"
         }
       ],
       "evidence": [
@@ -379,7 +379,7 @@
       "links": [
         {
           "name": "Mentat Commons Training Stream",
-          "url": "https://mentatcommons.org/training"
+          "url": "https://www.mentatcommons.com/training"
         }
       ],
       "evidence": [
@@ -1733,7 +1733,7 @@
         "related_talks": [],
         "reading_time": "4 mins",
         "evidence_links": [
-          "https://mentatcommons.org/mewe-anchors"
+          "https://www.mentatcommons.com/narrative?node=write-meta-reminders"
         ],
         "tags": [
           "Mental Models",
@@ -1768,7 +1768,7 @@
         "related_talks": [],
         "reading_time": "3 mins",
         "evidence_links": [
-          "https://mentatcommons.org/road2mewe"
+          "https://www.mentatcommons.com/narrative?node=write-road2mewe"
         ],
         "tags": [
           "MeWe",
@@ -1803,7 +1803,7 @@
         "related_talks": [],
         "reading_time": "4 mins",
         "evidence_links": [
-          "https://mentatcommons.org/road2mewe-v2"
+          "https://www.mentatcommons.com/narrative?node=write-road2mewe-v2"
         ],
         "tags": [
           "Data Architecture",
@@ -1838,7 +1838,7 @@
         "related_talks": [],
         "reading_time": "3 mins",
         "evidence_links": [
-          "https://mentatcommons.org/road2mewe-v3"
+          "https://www.mentatcommons.com/narrative?node=write-road2mewe-v3"
         ],
         "tags": [
           "Network Theory",
@@ -3127,7 +3127,7 @@
         "related_talks": [],
         "reading_time": "4 mins",
         "evidence_links": [
-          "https://mentatcommons.org/one-road-maybe-two"
+          "https://www.mentatcommons.com/narrative?node=write-one-road-maybe-two"
         ],
         "tags": [
           "Personal Evolution",
@@ -3162,7 +3162,7 @@
         "related_talks": [],
         "reading_time": "3 mins",
         "evidence_links": [
-          "https://mentatcommons.org/what-not-to-do"
+          "https://www.mentatcommons.com/narrative?node=write-what-not-to-do"
         ],
         "tags": [
           "Compliance",
@@ -3196,7 +3196,7 @@
         "related_talks": [],
         "reading_time": "2 mins",
         "evidence_links": [
-          "https://mentatcommons.org/interlude-kindness-alibi"
+          "https://www.mentatcommons.com/narrative?node=write-interlude-kindness-alibi"
         ],
         "tags": [
           "Poetry",
@@ -3230,7 +3230,7 @@
         "related_talks": [],
         "reading_time": "2 mins",
         "evidence_links": [
-          "https://mentatcommons.org/interlude-phoenix-rebirth"
+          "https://www.mentatcommons.com/narrative?node=write-interlude-phoenix-rebirth"
         ],
         "tags": [
           "Poetry",
@@ -3265,7 +3265,7 @@
         "related_talks": [],
         "reading_time": "2 mins",
         "evidence_links": [
-          "https://mentatcommons.org/interlude-trust-me"
+          "https://www.mentatcommons.com/narrative?node=write-interlude-trust-me"
         ],
         "tags": [
           "Poetry",
@@ -3299,7 +3299,7 @@
         "related_talks": [],
         "reading_time": "2 mins",
         "evidence_links": [
-          "https://mentatcommons.org/interlude-trust-mewe"
+          "https://www.mentatcommons.com/narrative?node=write-interlude-trust-mewe"
         ],
         "tags": [
           "Poetry",
@@ -3334,7 +3334,7 @@
         "related_talks": [],
         "reading_time": "2 mins",
         "evidence_links": [
-          "https://mentatcommons.org/interlude-interconnected-jugalbandhi"
+          "https://www.mentatcommons.com/narrative?node=write-interlude-interconnected-jugalbandhi"
         ],
         "tags": [
           "Poetry",

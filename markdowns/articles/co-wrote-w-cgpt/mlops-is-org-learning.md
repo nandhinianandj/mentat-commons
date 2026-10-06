@@ -93,7 +93,7 @@ That question doesn't.
 **Rethinking the Business** is an ongoing Mentat Commons essay series.
 
 More essays:
-https://consultancy-lac.vercel.app/
+https://www.mentatcommons.com/
 
 **Mentat Commons**
 

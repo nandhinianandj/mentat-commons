@@ -100,7 +100,7 @@ This essay is part of a larger series exploring businesses as learning systems, 
 
 More at **Mentat Commons**:
 
-https://consultancy-lac.vercel.app/
+https://www.mentatcommons.com/
 
 What KPI have you seen become disconnected from the behaviour it was originally meant to measure?
 

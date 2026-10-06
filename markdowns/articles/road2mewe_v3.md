@@ -20,7 +20,7 @@ career_axes:
 - axis-iii
 reading_time: 3 mins
 evidence_links:
-- https://mentatcommons.org/road2mewe-v3
+- https://www.mentatcommons.com/narrative?node=write-road2mewe-v3
 tags:
 - Network Theory
 - Bio-mimicry

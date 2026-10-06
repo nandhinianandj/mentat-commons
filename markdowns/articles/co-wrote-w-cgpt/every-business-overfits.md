@@ -89,7 +89,7 @@ Because reality has no obligation to remain compatible with yesterday's assumpti
 **Rethinking the Business** is an ongoing Mentat Commons essay series exploring organizations through cognitive science, machine learning and systems thinking.
 
 More essays:
-https://consultancy-lac.vercel.app/
+https://www.mentatcommons.com/
 
 **Mentat Commons**
 

@@ -604,5 +604,5 @@ We're just getting started.
 
 *Reasoning about systems. Building systems that reason.*
 
-https://consultancy-lac.vercel.app/
+https://www.mentatcommons.com/
 

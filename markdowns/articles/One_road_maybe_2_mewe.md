@@ -19,7 +19,7 @@ career_axes:
 - axis-ii
 reading_time: 4 mins
 evidence_links:
-- https://mentatcommons.org/one-road-maybe-two
+- https://www.mentatcommons.com/narrative?node=write-one-road-maybe-two
 tags:
 - Personal Evolution
 - Trust

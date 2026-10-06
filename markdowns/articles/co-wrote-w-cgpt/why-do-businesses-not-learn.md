@@ -102,7 +102,7 @@ But how to keep updating your understanding of reality.
 
 This is part of a longer exploration into adaptive organizations, AI, and systems thinking at **Mentat Commons**.
 
-https://consultancy-lac.vercel.app/
+https://www.mentatcommons.com/
 
 How does your organization ensure that long-held assumptions are still true—and who is rewarded for proving them wrong?
 

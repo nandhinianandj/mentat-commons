@@ -20,7 +20,7 @@ career_axes:
 - axis-iii
 reading_time: 4 mins
 evidence_links:
-- https://mentatcommons.org/mewe-anchors
+- https://www.mentatcommons.com/narrative?node=write-meta-reminders
 tags:
 - Mental Models
 - Systems Thinking

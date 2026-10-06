@@ -74,7 +74,7 @@ The final essay asks the question that started this journey.
 
 Coming soon at:
 
-https://consultancy-lac.vercel.app/
+https://www.mentatcommons.com/
 
 **Mentat Commons**
 

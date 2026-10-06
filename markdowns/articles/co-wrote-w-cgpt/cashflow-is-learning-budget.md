@@ -87,7 +87,7 @@ Because certainty is expensive.
 
 **Rethinking the Business** continues at Mentat Commons.
 
-https://consultancy-lac.vercel.app/
+https://www.mentatcommons.com/
 
 **Mentat Commons**
 
