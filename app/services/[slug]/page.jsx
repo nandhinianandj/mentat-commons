@@ -32,8 +32,8 @@ export default function ServiceDetailPage({ params }) {
     "provider": {
       "@type": "ProfessionalService",
       "name": "Mentat Commons",
-      "url": "https://nandhinianand.vercel.app",
-      "logo": "https://nandhinianand.vercel.app/images/mentat-commons-og.png",
+      "url": "https://www.mentatcommons.com",
+      "logo": "https://www.mentatcommons.com/images/mentat-commons-og.png",
       "email": "nandhini.anandj@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -62,19 +62,19 @@ export default function ServiceDetailPage({ params }) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://nandhinianand.vercel.app"
+        "item": "https://www.mentatcommons.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://nandhinianand.vercel.app/services"
+        "item": "https://www.mentatcommons.com/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": service.title,
-        "item": `https://nandhinianand.vercel.app/services/${slug}`
+        "item": `https://www.mentatcommons.com/services/${slug}`
       }
     ]
   };

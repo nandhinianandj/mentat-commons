@@ -17,66 +17,66 @@ Mentat Commons is an AI Strategy and Decision Systems consultancy. We specialize
 - **Description**: Feasibility audits, scoping metrics to decision-action trees, and model ROI.
 - **Target Audience**: CEOs, VP of Product, and engineering leadership.
 - **Typical Range**: ₹10,00,000 - ₹20,00,000 (Starting from ₹10,00,000 | 2–4 Wks).
-- **Url**: https://nandhinianand.vercel.app/services/ai-strategy
+- **Url**: https://www.mentatcommons.com/services/ai-strategy
 
 ### 2. Machine Learning Consulting
 - **Description**: Dataset leakage audits, custom classifier development, and containerization.
 - **Target Audience**: Engineering teams requiring production-grade predictive architectures.
 - **Typical Range**: ₹20,00,000 - ₹50,00,000 (Starting from ₹20,00,000 | 4–8 Wks).
-- **Url**: https://nandhinianand.vercel.app/services/machine-learning
+- **Url**: https://www.mentatcommons.com/services/machine-learning
 
 ### 3. LLM Systems & AI Engineering
 - **Description**: Custom prompt engineering, parsing validation middleware, and token pruning.
 - **Target Audience**: Startups and SMEs needing reliable, structured JSON model outputs.
 - **Typical Range**: ₹15,00,000 - ₹35,00,000 (Starting from ₹15,00,000 | 3–6 Wks).
-- **Url**: https://nandhinianand.vercel.app/services/llm-development
+- **Url**: https://www.mentatcommons.com/services/llm-development
 
 ### 4. RAG Architecture
 - **Description**: Semantic document parsing, BM25 + dense embedding hybrid search, and vector databases.
 - **Target Audience**: Teams with unstructured corpuses requiring high-precision question answering.
 - **Typical Range**: ₹18,00,000 - ₹40,00,000 (Starting from ₹18,00,000 | 4–8 Wks).
-- **Url**: https://nandhinianand.vercel.app/services/rag-systems
+- **Url**: https://www.mentatcommons.com/services/rag-systems
 
 ### 5. MLOps
 - **Description**: Silent decay monitoring, Evidently AI integration, CI/CD canary releases, and alert loops.
 - **Target Audience**: Teams needing deployment observability and rollback triggers.
 - **Typical Range**: ₹25,00,000 - ₹60,00,000 (Starting from ₹25,00,000 | 4–10 Wks).
-- **Url**: https://nandhinianand.vercel.app/services/mlops
+- **Url**: https://www.mentatcommons.com/services/mlops
 
 ### 6. Data Engineering
 - **Description**: Data contracts enforcement, ETL scripts optimization, and analytical warehouse layout.
 - **Target Audience**: Teams seeking clean, auditable foundations for reporting and models.
 - **Typical Range**: ₹16,00,000 - ₹35,00,000 (Starting from ₹16,00,000 | 4–8 Wks).
-- **Url**: https://nandhinianand.vercel.app/services/data-engineering
+- **Url**: https://www.mentatcommons.com/services/data-engineering
 
 ### 7. AI Training
 - **Description**: Custom coding labs, Jupyter notebooks, and developer upskilling.
 - **Target Audience**: Software engineers transitioning to ML models and vector search.
 - **Typical Range**: ₹6,50,000 - ₹12,00,000 (Starting from ₹6,50,000 | 2–4 Wks).
-- **Url**: https://nandhinianand.vercel.app/services/ai-training
+- **Url**: https://www.mentatcommons.com/services/ai-training
 
 ### 8. Corporate Workshops & Facilitation
 - **Description**: Scenario rehearsal, alignment simulations, and consensus-building.
 - **Target Audience**: Cross-functional leadership facing high-stakes strategic choices.
 - **Typical Range**: ₹4,00,000 - ₹8,00,000 (Starting from ₹4,00,000 | 1–2 Wks).
-- **Url**: https://nandhinianand.vercel.app/services/corporate-workshops
+- **Url**: https://www.mentatcommons.com/services/corporate-workshops
 
 ### 9. Fractional AI & Technical Program Leadership
 - **Description**: Part-time retainer (CTO/VPE) for strategic hiring, vendor audits, and roadmap reviews.
 - **Target Audience**: SMEs needing executive oversight without the overhead of a full-time hire.
 - **Typical Range**: ₹6,50,000 - ₹12,00,000/month (Starting from ₹6,50,000/month | Retainer).
-- **Url**: https://nandhinianand.vercel.app/services/fractional-ai-leadership
+- **Url**: https://www.mentatcommons.com/services/fractional-ai-leadership
 
 ### 10. Technical Architecture & AI Consulting
 - **Description**: Feasibility analysis, architecture audits, and performance vs latency tradeoffs.
 - **Target Audience**: Engineering teams mapping AI capabilities to operational bottlenecks.
 - **Typical Range**: ₹12,00,000 - ₹30,00,000 (Starting from ₹12,00,000 | 2–6 Wks).
-- **Url**: https://nandhinianand.vercel.app/services/ai-consulting
+- **Url**: https://www.mentatcommons.com/services/ai-consulting
 
 ---
 
 ## Factual FAQ Digest
-A detailed FAQ page containing 30 verified answers is available at: https://nandhinianand.vercel.app/faq
+A detailed FAQ page containing 30 verified answers is available at: https://www.mentatcommons.com/faq
 
 ### Key Question Syntheses:
 - **Location**: Fully remote worldwide.
@@ -89,10 +89,10 @@ A detailed FAQ page containing 30 verified answers is available at: https://nand
 ---
 
 ## Canonical Sitemap
-- Homepage: https://nandhinianand.vercel.app/
-- About Narrative: https://nandhinianand.vercel.app/about
-- Services Index: https://nandhinianand.vercel.app/services
-- Case Portfolio: https://nandhinianand.vercel.app/portfolio
-- Narrative Research: https://nandhinianand.vercel.app/narrative
-- Interactive FAQ: https://nandhinianand.vercel.app/faq
-- Contact Form: https://nandhinianand.vercel.app/contact
+- Homepage: https://www.mentatcommons.com/
+- About Narrative: https://www.mentatcommons.com/about
+- Services Index: https://www.mentatcommons.com/services
+- Case Portfolio: https://www.mentatcommons.com/portfolio
+- Narrative Research: https://www.mentatcommons.com/narrative
+- Interactive FAQ: https://www.mentatcommons.com/faq
+- Contact Form: https://www.mentatcommons.com/contact

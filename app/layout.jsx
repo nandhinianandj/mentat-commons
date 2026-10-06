@@ -1,10 +1,14 @@
 import './globals.css'
 import Head from 'next/head'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
+  metadataBase: new URL('https://www.mentatcommons.com'),
   title: 'Mentat Commons — Designing decisions for collective intelligence',
-  description: 'Mentat Commons — a studio and lab combining data systems, facilitation, and storytelling to help organizations think together.'
+  description: 'Mentat Commons — a studio and lab combining data systems, facilitation, and storytelling to help organizations think together.',
+  alternates: {
+    canonical: '/',
+  },
 }
 
 export default function RootLayout({ children }) {

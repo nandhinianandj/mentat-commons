@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const BASE_URL = 'https://nandhinianand.vercel.app';
+const BASE_URL = 'https://www.mentatcommons.com';
 const CKB_FILE = path.join(process.cwd(), 'data', 'career_knowledge_base.json');
 const LOCALES_FILE = path.join(process.cwd(), 'locales', 'en.json');
 const SITEMAP_FILE = path.join(process.cwd(), 'public', 'sitemap.xml');

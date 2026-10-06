@@ -139,9 +139,9 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Mentat Commons",
-    "url": "https://nandhinianand.vercel.app",
-    "logo": "https://nandhinianand.vercel.app/images/mentat-commons-og.png",
-    "image": "https://nandhinianand.vercel.app/images/mentat-commons-og.png",
+    "url": "https://www.mentatcommons.com",
+    "logo": "https://www.mentatcommons.com/images/mentat-commons-og.png",
+    "image": "https://www.mentatcommons.com/images/mentat-commons-og.png",
     "description": "Mentat Commons is an AI Strategy, Machine Learning, and Decision Systems consultancy. We specialize in MLOps governance, custom vector RAG engines, database pipelines, and applied team facilitation worldwide.",
     "email": "nandhini.anandj@gmail.com",
     "priceRange": "$$$",
@@ -154,7 +154,7 @@ export default function HomePage() {
       "@type": "Person",
       "name": "Nandhini Anand Jeyahar",
       "jobTitle": "Principal Consultant & Founder",
-      "url": "https://nandhinianand.vercel.app/about",
+      "url": "https://www.mentatcommons.com/about",
       "sameAs": "https://www.linkedin.com/in/nandhinianandj"
     },
     "foundingDate": "2024",
@@ -175,10 +175,10 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Mentat Commons",
-    "url": "https://nandhinianand.vercel.app",
+    "url": "https://www.mentatcommons.com",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://nandhinianand.vercel.app/career?search={search_term_string}",
+      "target": "https://www.mentatcommons.com/career?search={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };

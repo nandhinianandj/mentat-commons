@@ -29,13 +29,13 @@ export default function ServicesPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://nandhinianand.vercel.app"
+        "item": "https://www.mentatcommons.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://nandhinianand.vercel.app/services"
+        "item": "https://www.mentatcommons.com/services"
       }
     ]
   };
@@ -55,9 +55,9 @@ export default function ServicesPage() {
         "provider": {
           "@type": "ProfessionalService",
           "name": "Mentat Commons",
-          "url": "https://nandhinianand.vercel.app"
+          "url": "https://www.mentatcommons.com"
         },
-        "url": `https://nandhinianand.vercel.app/services/${slug}`
+        "url": `https://www.mentatcommons.com/services/${slug}`
       }
     }))
   };

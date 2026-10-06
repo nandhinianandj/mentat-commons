@@ -27,13 +27,13 @@ export default function FAQPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://nandhinianand.vercel.app"
+        "item": "https://www.mentatcommons.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "FAQ",
-        "item": "https://nandhinianand.vercel.app/faq"
+        "item": "https://www.mentatcommons.com/faq"
       }
     ]
   };
