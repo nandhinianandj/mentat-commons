@@ -168,9 +168,9 @@
     "contact": {
       "title": "Contact / Collaborate",
       "subtitle": "Send a concise proposal: one-line problem, timeline, and your availability.",
-      "calendly_title": "Direct Scheduling via Calendly",
-      "calendly_desc": "Schedule a 15-minute technical discovery call directly on our calendar.",
-      "calendly_btn": "Book on Calendly",
+      "calendly_title": "Architecture Diagnostic Request",
+      "calendly_desc": "Initiate a zero-dependency diagnostic by sharing your core ML stack, operational symptoms, and team scale via email.",
+      "calendly_btn": "Initiate Diagnostic",
       "form_title": "Or submit a custom proposal",
       "label_name": "Name",
       "label_email": "Email",
@@ -212,7 +212,7 @@
         "typical_range": "₹10,00,000 - ₹20,00,000",
         "model": "Fixed-scope discovery sprint"
       },
-      "next_steps": "Book a 15-minute technical discovery call directly via our Calendly scheduler to review your current data contracts and decision nodes."
+      "next_steps": "Initiate an Architecture Diagnostic Request via email to review your current data contracts and decision nodes."
     },
     "machine-learning": {
       "title": "Machine Learning Consulting",
@@ -528,7 +528,7 @@
         "typical_range": "₹12,00,000 - ₹30,00,000",
         "model": "Sprint-based delivery"
       },
-      "next_steps": "Schedule an initial 15-minute discovery call via our Calendly link to share your data assets and targets."
+      "next_steps": "Initiate an Architecture Diagnostic Request via email to share your data assets, core stack, and operational symptoms."
     }
   },
   "faq": [
@@ -606,11 +606,11 @@
     },
     {
       "q": "How do we start an engagement with you?",
-      "a": "You can book a 15-minute technical discovery call directly via our Calendly scheduler (https://calendly.com/nandhini-anandj/new-meeting). We will review your current systems, data readiness, and business bottlenecks to define a structured scope of work."
+      "a": "Initiate an Architecture Diagnostic Request via email (nandhini@mentatcommons.com) with details on your current core LLM/ML production stack, primary operational symptoms (e.g. silent model decay, dataset leakage), and engineering team scale. We personally reply with the two most critical leverage points to address first."
     },
     {
       "q": "What is your pricing structure for discovery calls?",
-      "a": "All initial 15-minute technical discovery calls are free (₹0). You can book a time slot directly on Calendly to determine if your problem aligns with our capabilities."
+      "a": "We do not do blind discovery calls without system context. Initial Architecture Diagnostics (Value-to-Inbox) are free (₹0). We review your architecture context via email to determine if your problem aligns with our capabilities before scoping paid sprints."
     },
     {
       "q": "What is the price of a 1-day scoping workshop?",

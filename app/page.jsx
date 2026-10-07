@@ -196,10 +196,10 @@ export default function HomePage() {
       />
 
       {/* Hero Intro */}
-      <section className="text-center md:text-left space-y-4 pt-4">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-100 tracking-tight leading-tight max-w-3xl">
+      <section aria-labelledby="hero-title" className="text-center md:text-left space-y-4 pt-4">
+        <h1 id="hero-title" className="text-3xl md:text-4xl font-extrabold text-slate-100 tracking-tight leading-tight max-w-3xl">
           {t('v2.home.hero_title')}
-        </h2>
+        </h1>
         <p className="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed">
           {t('v2.home.hero_subtitle')}
         </p>
@@ -214,19 +214,19 @@ export default function HomePage() {
       </section>
 
       {/* Factual Core Introduction (AEO/GEO Optimized 100-word Block) */}
-      <section className="bg-slate-900/30 border border-slate-900 rounded-xl p-6 md:p-8 space-y-4">
-        <h3 className="text-indigo-400 font-bold text-xs uppercase tracking-widest font-mono">Factual Specifications</h3>
+      <section aria-labelledby="factual-specs-heading" className="bg-slate-900/30 border border-slate-900 rounded-xl p-6 md:p-8 space-y-4">
+        <h2 id="factual-specs-heading" className="text-indigo-400 font-bold text-xs uppercase tracking-widest font-mono">Factual Specifications</h2>
         <p className="text-slate-200 text-sm md:text-base leading-relaxed font-normal">
           {t('v2.home.aeo_intro')}
         </p>
       </section>
 
       {/* Services & Engagement Pricing (AEO Optimized) */}
-      <section className="space-y-6">
+      <section aria-labelledby="services-pricing-heading" className="space-y-6">
         <div>
-          <h3 className="text-lg font-bold text-indigo-400 uppercase tracking-widest">
+          <h2 id="services-pricing-heading" className="text-lg font-bold text-indigo-400 uppercase tracking-widest">
             AI Consulting Services & Pricing
-          </h3>
+          </h2>
           <p className="text-sm text-slate-400 mt-1">
             Factual price structures and deliverables for remote worldwide engagements.
           </p>
@@ -287,12 +287,39 @@ export default function HomePage() {
                 <span className="font-mono text-slate-400 text-xxs md:text-xs">Flat ₹2,00,000 | 1 Day</span>
               </li>
               <li className="flex justify-between pb-1.5">
-                <span><a href="https://calendly.com/nandhini-anandj/new-meeting" target="_blank" rel="noopener noreferrer" className="hover:underline text-indigo-400 font-medium">15-Min Technical Discovery Call</a></span>
-                <span className="font-mono text-emerald-400 text-xxs md:text-xs">Free (₹0) | 15 Mins</span>
+                <span>
+                  <a 
+                    href="mailto:nandhini@mentatcommons.com?subject=Mentat%20Commons%20Architecture%20Diagnostic%20Request&body=1.%20What%20is%20your%20current%20core%20LLM%2FML%20production%20stack%3F%0D%0A2.%20What%20is%20the%20primary%20operational%20symptom%20you%20are%20facing%20(e.g.%2C%20silent%20model%20decay%2C%20dataset%20leakage%2C%20vanity%20dashboard%20waste)%3F%0D%0A3.%20What%20is%20the%20current%20scale%20of%20your%20engineering%20team%20%2F%20active%20sprints%3F" 
+                    className="hover:underline text-indigo-400 font-medium"
+                  >
+                    Architecture Diagnostic Request (Value-to-Inbox)
+                  </a>
+                </span>
+                <span className="font-mono text-emerald-400 text-xxs md:text-xs">Direct Email | Free (₹0)</span>
               </li>
             </ul>
           </div>
         </div>
+
+        {/* High-Intent Value-to-Inbox Diagnostic Trigger */}
+        <div className="diagnostic-trigger bg-gradient-to-br from-indigo-950/20 to-slate-950 border border-slate-900 rounded-xl p-6 space-y-3">
+          <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
+            <Terminal className="w-4 h-4 text-indigo-400" />
+            Let&apos;s diagnose your system decay.
+          </h3>
+          <p className="text-xs md:text-sm text-slate-300 leading-relaxed max-w-2xl">
+            I don&apos;t do blind discovery calls without system context. Click below to open an email, drop in your current architecture details, and I will personally reply with the two most critical leverage points to address first.
+          </p>
+          <div className="pt-1">
+            <a 
+              href="mailto:nandhini@mentatcommons.com?subject=Mentat%20Commons%20Architecture%20Diagnostic%20Request&body=1.%20What%20is%20your%20current%20core%20LLM%2FML%20production%20stack%3F%0D%0A2.%20What%20is%20the%20primary%20operational%20symptom%20you%20are%20facing%20(e.g.%2C%20silent%20model%20decay%2C%20dataset%20leakage%2C%20vanity%20dashboard%20waste)%3F%0D%0A3.%20What%20is%20the%20current%20scale%20of%20your%20engineering%20team%20%2F%20active%20sprints%3F"
+              className="cta text-xs md:text-sm inline-flex items-center gap-1.5"
+            >
+              <strong>Initiate System Diagnostics →</strong>
+            </a>
+          </div>
+        </div>
+
         <div className="text-center pt-2 flex flex-wrap gap-4 justify-center">
           <a href="/services" className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-400 hover:text-indigo-300 transition-colors">
             View All Services Specifications <ChevronDown className="w-3.5 h-3.5" />
@@ -305,11 +332,11 @@ export default function HomePage() {
       </section>
 
       {/* Trust Signals & Factual Evidence (AEO/GEO Optimized) */}
-      <section className="space-y-6">
+      <section aria-labelledby="trust-signals-heading" className="space-y-6">
         <div>
-          <h3 className="text-lg font-bold text-indigo-400 uppercase tracking-widest">
+          <h2 id="trust-signals-heading" className="text-lg font-bold text-indigo-400 uppercase tracking-widest">
             Factual Trust Signals
-          </h3>
+          </h2>
           <p className="text-sm text-slate-400 mt-1">
             Empirical evidence, project outcomes, and verification data.
           </p>
@@ -336,11 +363,11 @@ export default function HomePage() {
       </section>
 
       {/* Enduring Questions Section */}
-      <section className="space-y-6">
+      <section aria-labelledby="enduring-questions-heading" className="space-y-6">
         <div>
-          <h3 className="text-lg font-bold text-indigo-400 uppercase tracking-widest">
+          <h2 id="enduring-questions-heading" className="text-lg font-bold text-indigo-400 uppercase tracking-widest">
             {t('v2.home.questions_title')}
-          </h3>
+          </h2>
           <p className="text-sm text-slate-400 mt-1">
             {t('v2.home.questions_subtitle')}
           </p>
@@ -350,7 +377,7 @@ export default function HomePage() {
           {questionsList.map((q) => {
             const isExpanded = expandedQuestion === q.id;
             return (
-              <div 
+              <article 
                 key={q.id} 
                 className={`card transition-all duration-300 ${isExpanded ? 'border-indigo-900/60 bg-slate-900/50' : 'hover:border-slate-800 bg-slate-950/20'}`}
               >
@@ -358,9 +385,9 @@ export default function HomePage() {
                   onClick={() => toggleQuestion(q.id)}
                   className="w-full flex justify-between items-center text-left"
                 >
-                  <span className="font-semibold text-slate-100 text-sm md:text-base leading-snug">
+                  <h3 className="font-semibold text-slate-100 text-sm md:text-base leading-snug">
                     {q.text}
-                  </span>
+                  </h3>
                   {isExpanded ? (
                     <ChevronUp className="w-5 h-5 text-indigo-400 flex-shrink-0 ml-4" />
                   ) : (
@@ -425,18 +452,18 @@ export default function HomePage() {
                     </div>
                   </div>
                 )}
-              </div>
+              </article>
             );
           })}
         </div>
       </section>
 
       {/* Career Axes */}
-      <section className="space-y-6 pt-4">
+      <section aria-labelledby="career-axes-heading" className="space-y-6 pt-4">
         <div className="text-center md:text-left">
-          <h3 className="text-lg font-bold text-indigo-400 uppercase tracking-widest">
+          <h2 id="career-axes-heading" className="text-lg font-bold text-indigo-400 uppercase tracking-widest">
             {t('v2.home.axes_title')}
-          </h3>
+          </h2>
           <p className="text-sm text-slate-400 mt-1">
             {t('v2.home.axes_subtitle')}
           </p>

@@ -1,5 +1,26 @@
 import nodemailer from 'nodemailer';
 
+// Global transporter cache to prevent per-request instantiation across Vercel serverless warm states
+let cachedTransporter = null;
+
+function getTransporter() {
+  if (!cachedTransporter) {
+    cachedTransporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: parseInt(process.env.SMTP_PORT || '587', 10),
+      secure: process.env.SMTP_SECURE === 'true',
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
+      },
+      pool: true,
+      maxConnections: 3,
+      maxMessages: 100
+    });
+  }
+  return cachedTransporter;
+}
+
 export async function POST(req) {
   try {
     const data = await req.json();
@@ -9,20 +30,10 @@ export async function POST(req) {
       return new Response(JSON.stringify({ ok: false, error: 'Missing fields' }), { status: 400 });
     }
 
-    // Read SMTP config from env
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: parseInt(process.env.SMTP_PORT || '587', 10),
-      secure: process.env.SMTP_SECURE === 'true',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS
-      }
-    });
-
+    const transporter = getTransporter();
     const toEmail = process.env.TO_EMAIL || 'nandhini.jeyahar@gmail.com';
 
-    const mailRes = await transporter.sendMail({
+    await transporter.sendMail({
       from: `"Mentat Commons Site" <${process.env.SMTP_USER}>`,
       to: toEmail,
       subject: `Contact: ${name} — Mentat Commons`,
@@ -36,4 +47,3 @@ export async function POST(req) {
     return new Response(JSON.stringify({ ok: false, error: String(err) }), { status: 500 });
   }
 }
-

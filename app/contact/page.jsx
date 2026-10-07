@@ -52,26 +52,24 @@ export default function ContactPage() {
         </p>
       </div>
 
-      {/* Prominent Direct Calendly Scheduling Card */}
-      <div className="bg-gradient-to-br from-indigo-950/20 to-slate-950 border border-slate-900 rounded-xl p-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      {/* High-Intent Value-to-Inbox Diagnostic Trigger */}
+      <div className="diagnostic-trigger bg-gradient-to-br from-indigo-950/20 to-slate-950 border border-slate-900 rounded-xl p-6 space-y-4">
         <div className="space-y-1.5 text-center md:text-left">
-          <h3 className="font-bold text-slate-200 text-sm flex items-center justify-center md:justify-start gap-2">
-            <Calendar className="w-4 h-4 text-indigo-400" />
-            {t('v2.contact.calendly_title')}
+          <h3 className="text-base font-bold text-slate-100 flex items-center justify-center md:justify-start gap-2">
+            Let&apos;s diagnose your system decay.
           </h3>
-          <p className="text-xs text-slate-400 max-w-md leading-relaxed">
-            {t('v2.contact.calendly_desc')}
+          <p className="text-xs md:text-sm text-slate-300 leading-relaxed max-w-xl">
+            I don&apos;t do blind discovery calls without system context. Click below to open an email, drop in your current architecture details, and I will personally reply with the two most critical leverage points to address first.
           </p>
         </div>
-        <a 
-          href="https://calendly.com/nandhini-anandj/new-meeting" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="cta text-xs inline-flex items-center gap-1.5 whitespace-nowrap"
-        >
-          {t('v2.contact.calendly_btn')}
-          <ChevronRight className="w-3.5 h-3.5" />
-        </a>
+        <div>
+          <a 
+            href="mailto:nandhini@mentatcommons.com?subject=Mentat%20Commons%20Architecture%20Diagnostic%20Request&body=1.%20What%20is%20your%20current%20core%20LLM%2FML%20production%20stack%3F%0D%0A2.%20What%20is%20the%20primary%20operational%20symptom%20you%20are%20facing%20(e.g.%2C%20silent%20model%20decay%2C%20dataset%20leakage%2C%20vanity%20dashboard%20waste)%3F%0D%0A3.%20What%20is%20the%20current%20scale%20of%20your%20engineering%20team%20%2F%20active%20sprints%3F"
+            className="cta text-xs md:text-sm inline-flex items-center gap-1.5"
+          >
+            <strong>Initiate System Diagnostics →</strong>
+          </a>
+        </div>
       </div>
 
       {/* Structured Fallback Proposal Form */}

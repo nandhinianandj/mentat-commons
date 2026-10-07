@@ -74,43 +74,46 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesListSchema) }}
       />
 
-      <div className="space-y-4 text-center md:text-left">
+      <header className="space-y-4 text-center md:text-left">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-100 tracking-tight">
           Professional Services & Offerings
         </h1>
-        <p className="text-slate-400 text-sm md:text-base max-w-2xl leading-relaxed">
-          Mentat Commons provides evidence-backed engineering, training, and strategic leadership. We specialize in bringing rigor to machine learning setups and making organizational decisions transparent.
+        <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
+          Mentat Commons provides evidence-backed engineering, training, and strategic leadership. We specialize in bringing rigor to machine learning setups, preventing silent dataset decay, and making organizational decision nodes transparent.
         </p>
-      </div>
+      </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {Object.entries(services).map(([slug, s]) => {
-          const Icon = serviceIcons[slug] || Settings;
-          return (
-            <div key={slug} className="card hover:border-slate-800 bg-slate-950/20 p-6 flex flex-col justify-between space-y-4 transition-all">
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-indigo-950/40 text-indigo-400 border border-indigo-900/50 rounded-lg">
-                    <Icon className="w-5 h-5" />
+      <section aria-labelledby="services-catalog-heading" className="space-y-6">
+        <h2 id="services-catalog-heading" className="sr-only">Services Catalog</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {Object.entries(services).map(([slug, s]) => {
+            const Icon = serviceIcons[slug] || Settings;
+            return (
+              <article key={slug} className="card hover:border-slate-800 bg-slate-950/20 p-6 flex flex-col justify-between space-y-4 transition-all">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-indigo-950/40 text-indigo-400 border border-indigo-900/50 rounded-lg">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-100">{s.title}</h3>
                   </div>
-                  <h2 className="text-lg font-bold text-slate-100">{s.title}</h2>
+                  <p className="text-xs text-indigo-300 font-semibold uppercase tracking-wider">{s.tagline}</p>
+                  <p className="text-slate-400 text-xs md:text-sm leading-relaxed">{s.description}</p>
                 </div>
-                <p className="text-xs text-indigo-300 font-semibold uppercase tracking-wider">{s.tagline}</p>
-                <p className="text-slate-400 text-xs md:text-sm leading-relaxed">{s.description}</p>
-              </div>
-              <div className="pt-2">
-                <a
-                  href={`/services/${slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-400 hover:text-indigo-300 transition-colors"
-                >
-                  Explore Service Specifications
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+                <div className="pt-2">
+                  <a
+                    href={`/services/${slug}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-400 hover:text-indigo-300 transition-colors"
+                  >
+                    Explore Service Specifications
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
     </div>
   );
 }

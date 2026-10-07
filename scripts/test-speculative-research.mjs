@@ -205,9 +205,16 @@ async function runTests() {
       "Interlude:interconnected_jugalbandhi.md"
     ];
 
+    const isWindows = process.platform === 'win32';
     const missingFiles = [];
     expectedFilenames.forEach(fname => {
-      if (!files.includes(fname)) missingFiles.push(fname);
+      if (!files.includes(fname)) {
+        if (isWindows && fname.includes(':')) {
+          // On Windows NTFS, ':' is an illegal character and git skips checkout
+          return;
+        }
+        missingFiles.push(fname);
+      }
     });
 
     if (missingFiles.length === 0) {

@@ -1,5 +1,4 @@
 import './globals.css'
-import Head from 'next/head'
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
@@ -9,16 +8,43 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
+  openGraph: {
+    title: 'Mentat Commons — Designing decisions for collective intelligence',
+    description: 'Mentat Commons — a studio and lab combining data systems, facilitation, and storytelling to help organizations think together.',
+    url: 'https://www.mentatcommons.com',
+    siteName: 'Mentat Commons',
+    images: [
+      {
+        url: '/images/mentat-commons-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mentat Commons — Designing decisions for collective intelligence',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mentat Commons — Designing decisions for collective intelligence',
+    description: 'Mentat Commons — a studio and lab combining data systems, facilitation, and storytelling to help organizations think together.',
+    images: ['/images/mentat-commons-og.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#030712',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#030712" />
-        <meta property="og:image" content="/images/mentat-commons-og.png" />
-      </Head>
       <body className="min-h-screen flex flex-col justify-between antialiased">
         <div>
           <header className="border-b border-slate-800/80 bg-slate-950/40 backdrop-blur-md sticky top-0 z-50 py-5">

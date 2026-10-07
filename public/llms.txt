@@ -81,7 +81,7 @@ A detailed FAQ page containing 30 verified answers is available at: https://www.
 ### Key Question Syntheses:
 - **Location**: Fully remote worldwide.
 - **Contact Email**: nandhini.anandj@gmail.com
-- **Pricing**: Free 15-min discovery call (Free | 15 Mins) bookable directly at https://calendly.com/nandhini-anandj/new-meeting. Flat ₹2,00,000 for a 1-day scoping workshop (Flat ₹2,00,000 | 1 Day). Other ranges are project-based starting at ₹10,00,000.
+- **Pricing**: Free Architecture Diagnostic (Value-to-Inbox | Free) initiated via email at nandhini@mentatcommons.com. Flat ₹2,00,000 for a 1-day scoping workshop (Flat ₹2,00,000 | 1 Day). Other ranges are project-based starting at ₹10,00,000.
 - **NDA Policy**: Enforced. We sign NDAs before sharing any strategic details or raw datasets.
 - **IP Ownership**: Standard terms transfer full IP rights to the client upon final payment.
 - **Model Support**: Fully supports both open-source models (Llama, Mistral) and proprietary APIs (OpenAI, Gemini, Claude).

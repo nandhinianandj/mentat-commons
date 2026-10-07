@@ -22,18 +22,21 @@ export default function AboutPage() {
   return (
     <div className="container max-w-3xl mx-auto space-y-12 animate-fadeIn">
       
-      {/* Intro */}
-      <section className="space-y-4">
-        <h2 className="text-3xl font-extrabold text-slate-50 tracking-tight">
+      {/* Intro Header */}
+      <header className="space-y-4">
+        <h1 className="text-3xl font-extrabold text-slate-50 tracking-tight">
           {t('v2.about.title')}
-        </h2>
-        <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-2xl">
+        </h1>
+        <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl">
+          Mentat Commons is an independent AI Strategy, Machine Learning, and Decision Systems consultancy founded by Nandhini Anand Jeyahar. Combining 16+ years of systems architecture, cognitive science, and human facilitation, the studio designs fault-tolerant data pipelines, decision-action trees, and model monitoring frameworks for enterprise engineering organizations worldwide.
+        </p>
+        <p className="text-slate-400 text-xs md:text-sm leading-relaxed max-w-2xl font-mono">
           {t('v2.about.subtitle')}
         </p>
-      </section>
+      </header>
 
       {/* Main Narrative */}
-      <section className="card bg-slate-900/15 border-slate-850 p-6 md:p-8 space-y-6 leading-relaxed text-slate-300 text-xs md:text-sm">
+      <article className="card bg-slate-900/15 border-slate-850 p-6 md:p-8 space-y-6 leading-relaxed text-slate-300 text-xs md:text-sm">
         <p>
           {t('v2.about.bio_p1')}
         </p>
@@ -80,7 +83,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </article>
 
       {/* Dynamic Link to Career KB */}
       <section className="text-center">

@@ -97,22 +97,26 @@ export default function ConsultingPage() {
   return (
     <div className="container max-w-4xl mx-auto space-y-12">
       
-      {/* Header */}
-      <section className="space-y-3 text-center md:text-left">
-        <h2 className="text-3xl font-extrabold text-slate-50 tracking-tight leading-tight">
+      {/* Header with Answer-First Summary */}
+      <header className="space-y-4 text-center md:text-left">
+        <h1 className="text-3xl font-extrabold text-slate-50 tracking-tight leading-tight">
           {t('v2.consulting.title')}
-        </h2>
-        <p className="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed">
+        </h1>
+        <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
+          Mentat Commons provides specialized technical consulting, MLOps audits, and organizational decision systems engineering. We work directly with leadership to eliminate silent dataset decay, decouple fragile dependencies, and establish transparent metrics before capital is spent on vanity infrastructure.
+        </p>
+        <p className="text-slate-400 text-xs md:text-sm max-w-2xl leading-relaxed font-mono">
           {t('v2.consulting.subtitle')}
         </p>
-      </section>
+      </header>
 
       {/* Services Grid */}
-      <section className="space-y-8">
+      <section aria-labelledby="consulting-services-heading" className="space-y-8">
+        <h2 id="consulting-services-heading" className="sr-only">Consulting Services & Practice Areas</h2>
         {services.map((srv) => {
           const Icon = srv.icon;
           return (
-            <div key={srv.id} className="card bg-slate-900/25 border-slate-850 p-6 md:p-8 space-y-6">
+            <article key={srv.id} className="card bg-slate-900/25 border-slate-850 p-6 md:p-8 space-y-6">
               
               {/* Header block */}
               <div className="flex items-start gap-4">
@@ -190,7 +194,7 @@ export default function ConsultingPage() {
                 </div>
               </div>
 
-            </div>
+            </article>
           );
         })}
       </section>

@@ -694,46 +694,52 @@ export default function CareerKBPage() {
     <div className="bg-slate-950 text-slate-100 min-h-screen py-8 font-sans">
       <div className="container max-w-6xl mx-auto px-4">
         
-        {/* Top Header Section */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800 pb-6 mb-8 gap-4">
-          <div>
-            <div className="flex items-center gap-3">
-              <span className="p-2.5 bg-indigo-600 rounded-lg text-white">
-                <Compass className="w-6 h-6 animate-spin-slow" />
-              </span>
-              <div>
-                <h1 className="text-3xl font-black tracking-tight text-white flex items-center gap-2">
-                  {t('ckb.title')}
-                </h1>
-                <p className="text-slate-400 text-xs mt-1">
-                  {t('ckb.subtitle')}
-                </p>
+        {/* Top Header Section with AEO Answer-First Definition */}
+        <header className="border-b border-slate-800 pb-6 mb-8 space-y-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <div className="flex items-center gap-3">
+                <span className="p-2.5 bg-indigo-600 rounded-lg text-white">
+                  <Compass className="w-6 h-6 animate-spin-slow" />
+                </span>
+                <div>
+                  <h1 className="text-3xl font-black tracking-tight text-white flex items-center gap-2">
+                    {t('ckb.title')}
+                  </h1>
+                  <p className="text-slate-400 text-xs mt-1">
+                    {t('ckb.subtitle')}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div className="flex items-center gap-3">
-            <button 
-              onClick={() => setShowAssistant(!showAssistant)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all border ${
-                showAssistant 
-                  ? 'bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/20' 
-                  : 'bg-slate-900 border-slate-800 text-indigo-400 hover:text-white hover:bg-slate-800'
-              }`}
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Ask CKB Assistant</span>
-            </button>
+            
+            <div className="flex items-center gap-3">
+              <button 
+                onClick={() => setShowAssistant(!showAssistant)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all border ${
+                  showAssistant 
+                    ? 'bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/20' 
+                    : 'bg-slate-900 border-slate-800 text-indigo-400 hover:text-white hover:bg-slate-800'
+                }`}
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>Ask CKB Assistant</span>
+              </button>
 
-            <button 
-              onClick={() => setShowKeyConfig(!showKeyConfig)}
-              className="p-2 bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white rounded-lg transition-colors border border-slate-800"
-              title="Configure API Key"
-            >
-              <Key className="w-5 h-5" />
-            </button>
+              <button 
+                onClick={() => setShowKeyConfig(!showKeyConfig)}
+                className="p-2 bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white rounded-lg transition-colors border border-slate-800"
+                title="Configure API Key"
+              >
+                <Key className="w-5 h-5" />
+              </button>
+            </div>
           </div>
-        </div>
+
+          <p className="text-slate-300 text-xs md:text-sm leading-relaxed max-w-4xl bg-slate-900/40 p-3.5 rounded-lg border border-slate-850">
+            The Mentat Commons Career Evidence Graph (CEG) is an interconnected, empirical knowledge graph indexing 16+ years of systems engineering, machine learning pipelines, and decision architecture. Every framework claim, algorithm, and organizational outcome is traceable to concrete project artifacts, codebases, and verified deliverables for transparent AI model evaluation and semantic retrieval.
+          </p>
+        </header>
 
         {/* API Key Modal Drawer */}
         {showKeyConfig && (
@@ -1114,7 +1120,7 @@ export default function CareerKBPage() {
           {/* RIGHT COLUMN: KNOWLEDGE INTERACTION PANELS (NODE VIEW) */}
           <div className="lg:col-span-2">
             {selectedNode ? (
-              <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-6 shadow-xl animate-in fade-in zoom-in-95 duration-200">
+              <article aria-labelledby="selected-node-title" className="bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-6 shadow-xl animate-in fade-in zoom-in-95 duration-200">
                 
                 {/* Node Header */}
                 <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 border-b border-slate-800 pb-4">
@@ -1131,7 +1137,7 @@ export default function CareerKBPage() {
                       <span className="text-xxs font-bold text-indigo-400 uppercase tracking-widest block">
                         {t(`ckb.explorer.${selectedNode.type === 'community' ? 'community' : selectedNode.type + 's'}`)}
                       </span>
-                      <h2 className="text-xl font-extrabold text-white">
+                      <h2 id="selected-node-title" className="text-xl font-extrabold text-white">
                         {selectedNode.type === 'project' ? selectedNode.data.title : selectedNode.type === 'skill' ? selectedNode.data.name : selectedNode.type === 'talk' ? selectedNode.data.topic : selectedNode.type === 'experience' ? `${selectedNode.data.role} at ${selectedNode.data.organization}` : selectedNode.data.name || selectedNode.data.title}
                       </h2>
                     </div>
@@ -1531,7 +1537,7 @@ export default function CareerKBPage() {
                   </div>
                 )}
 
-              </div>
+              </article>
             ) : (
               <div className="h-full min-h-[400px] border border-dashed border-slate-800 rounded-xl flex flex-col items-center justify-center p-8 text-center bg-slate-900/20">
                 <Compass className="w-12 h-12 text-slate-700 mb-3" />
