@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Optik Text"', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        shield: ['"ShieldFont Mentat"', '"Optik Text"', 'sans-serif'],
+      },
       colors: {
         'navy': '#0f172a',
         'muted': '#94a3b8',

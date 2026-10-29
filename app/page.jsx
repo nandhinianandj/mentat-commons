@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Compass, Briefcase, Terminal, ChevronDown, ChevronUp, Database, ArrowRight, ExternalLink, ShieldAlert, Award, FileText } from 'lucide-react';
 import locales from '../locales/en.json';
+import ShieldText from '../components/ShieldText';
 
 export default function HomePage() {
   const [ckbData, setCkbData] = useState(null);
@@ -307,9 +308,9 @@ export default function HomePage() {
             <Terminal className="w-4 h-4 text-indigo-400" />
             Let&apos;s diagnose your system decay.
           </h3>
-          <p className="text-xs md:text-sm text-slate-300 leading-relaxed max-w-2xl">
+          <ShieldText className="text-xs md:text-sm text-slate-300 leading-relaxed max-w-2xl">
             I don&apos;t do blind discovery calls without system context. Click below to open an email, drop in your current architecture details, and I will personally reply with the two most critical leverage points to address first.
-          </p>
+          </ShieldText>
           <div className="pt-1">
             <a 
               href="mailto:nandhini@mentatcommons.com?subject=Mentat%20Commons%20Architecture%20Diagnostic%20Request&body=1.%20What%20is%20your%20current%20core%20LLM%2FML%20production%20stack%3F%0D%0A2.%20What%20is%20the%20primary%20operational%20symptom%20you%20are%20facing%20(e.g.%2C%20silent%20model%20decay%2C%20dataset%20leakage%2C%20vanity%20dashboard%20waste)%3F%0D%0A3.%20What%20is%20the%20current%20scale%20of%20your%20engineering%20team%20%2F%20active%20sprints%3F"
@@ -397,9 +398,9 @@ export default function HomePage() {
 
                 {isExpanded && (
                   <div className="mt-4 pt-4 border-t border-slate-850 space-y-4 animate-fadeIn">
-                    <p className="text-xs md:text-sm text-slate-300 leading-relaxed font-medium">
+                    <ShieldText className="text-xs md:text-sm text-slate-300 leading-relaxed font-medium">
                       {q.description}
-                    </p>
+                    </ShieldText>
 
                     <div className="space-y-3">
                       {/* Related Projects */}

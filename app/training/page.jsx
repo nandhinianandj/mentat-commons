@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Compass, Briefcase, Terminal, ArrowRight, ExternalLink, ShieldCheck, HeartHandshake, BookOpen } from 'lucide-react';
 import locales from '../../locales/en.json';
+import ShieldText from '../../components/ShieldText';
 
 export default function ConsultingPage() {
   const [ckbData, setCkbData] = useState(null);
@@ -102,9 +103,9 @@ export default function ConsultingPage() {
         <h1 className="text-3xl font-extrabold text-slate-50 tracking-tight leading-tight">
           {t('v2.consulting.title')}
         </h1>
-        <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
+        <ShieldText className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
           Mentat Commons provides specialized technical consulting, MLOps audits, and organizational decision systems engineering. We work directly with leadership to eliminate silent dataset decay, decouple fragile dependencies, and establish transparent metrics before capital is spent on vanity infrastructure.
-        </p>
+        </ShieldText>
         <p className="text-slate-400 text-xs md:text-sm max-w-2xl leading-relaxed font-mono">
           {t('v2.consulting.subtitle')}
         </p>
@@ -127,9 +128,9 @@ export default function ConsultingPage() {
                   <h3 className="text-lg font-bold text-slate-100 leading-snug">
                     {srv.title}
                   </h3>
-                  <p className="text-xs text-slate-400 leading-relaxed font-medium">
+                  <ShieldText className="text-xs text-slate-400 leading-relaxed font-medium">
                     {srv.description}
-                  </p>
+                  </ShieldText>
                 </div>
               </div>
 
@@ -145,7 +146,7 @@ export default function ConsultingPage() {
                       className="bg-slate-950/40 p-3 rounded-lg border border-slate-850/60 text-xs text-slate-300 leading-relaxed flex gap-2"
                     >
                       <span className="text-rose-500 font-bold">•</span>
-                      <span>{prob}</span>
+                      <ShieldText as="span">{prob}</ShieldText>
                     </li>
                   ))}
                 </ul>

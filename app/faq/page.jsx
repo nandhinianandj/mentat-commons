@@ -1,6 +1,7 @@
 import React from 'react';
 import locales from '../../locales/en.json';
 import { HelpCircle, ChevronRight, MessageSquare, Terminal } from 'lucide-react';
+import ShieldText from '../../components/ShieldText';
 
 export default function FAQPage() {
   const faqList = locales.faq || [];
@@ -98,7 +99,7 @@ export default function FAQPage() {
                   itemType="https://schema.org/Answer" 
                   className="mt-4 pt-4 border-t border-slate-900/60 text-slate-300 text-xs md:text-sm leading-relaxed font-normal"
                 >
-                  <p itemProp="text">{item.a}</p>
+                  <ShieldText itemProp="text">{item.a}</ShieldText>
                 </div>
               </details>
             </article>

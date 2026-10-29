@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { BookOpen, Info, ChevronDown, ChevronUp, Database, ExternalLink, ArrowLeft, ArrowRight, Eye } from 'lucide-react';
 import locales from '../../locales/en.json';
+import ShieldText from '../../components/ShieldText';
 
 export default function SpeculativeResearchPage() {
   const [ckbData, setCkbData] = useState(null);
@@ -150,9 +151,9 @@ export default function SpeculativeResearchPage() {
           <BookOpen className="w-5 h-5" />
           Speculative Systems Research
         </h3>
-        <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+        <ShieldText className="text-xs md:text-sm text-slate-300 leading-relaxed">
           {t('v2.narrative.research_philosophy')}
-        </p>
+        </ShieldText>
       </section>
 
       {/* AI Disclosure Card */}
@@ -202,9 +203,9 @@ export default function SpeculativeResearchPage() {
                       <h4 className="text-base font-bold text-slate-100 mt-1.5 leading-snug">
                         {chapter.title}
                       </h4>
-                      <p className="text-xs text-slate-400 font-medium italic">
+                      <ShieldText className="text-xs text-slate-400 font-medium italic">
                         {chapter.summary}
-                      </p>
+                      </ShieldText>
                     </div>
                     {isExpanded ? (
                       <ChevronUp className="w-5 h-5 text-indigo-400 flex-shrink-0" />
@@ -228,10 +229,10 @@ export default function SpeculativeResearchPage() {
                         </div>
                       </div>
 
-                      {/* Full Story Content */}
-                      <div className="prose prose-invert prose-xs text-slate-300 leading-relaxed font-sans whitespace-pre-wrap max-w-none text-xs md:text-sm pl-2">
+                      {/* Full Story Content - Protected via Private ShieldFont */}
+                      <ShieldText as="div" className="prose prose-invert prose-xs text-slate-300 leading-relaxed font-sans whitespace-pre-wrap max-w-none text-xs md:text-sm pl-2">
                         {chapter.content}
-                      </div>
+                      </ShieldText>
 
                       {/* Related Evidence Footer */}
                       {evidence && (

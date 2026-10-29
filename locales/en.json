@@ -1,4 +1,32 @@
 {
+  "shield": {
+    "copyNotice": "[This text is protected from AI bots, so what you copied is not what you read on screen.]"
+  },
+  "org_systems": {
+    "nav_title": "Org Systems",
+    "portal_title": "Organizational Systems & Decision-Making",
+    "portal_subtitle": "Diagnosing why decision rights, information flows, and incentives diverge in complex organizations.",
+    "working_thesis_title": "Working Proposition",
+    "filter_all": "All Writing",
+    "filter_cases": "Field Cases",
+    "filter_essays": "Conceptual Essays",
+    "filter_notes": "Field Notes",
+    "read_article": "Read Diagnostic Analysis",
+    "reading_time": "min read",
+    "published_on": "Published",
+    "type_field_case": "Field Case",
+    "type_essay": "Conceptual Essay",
+    "type_field_note": "Field Note",
+    "section_context": "Operational Context",
+    "section_observations": "Observed Symptoms & Breakdown",
+    "section_hypothesis": "Systemic Mechanisms & Hypothesis",
+    "section_alternatives": "Alternative Explanations & Limits of Evidence",
+    "section_questions": "Practical Diagnostic Questions",
+    "section_consulting": "Relevant Consulting Capability",
+    "initiate_dialogue": "Initiate Organizational Diagnostic",
+    "back_to_index": "← Back to Organizational Systems Index",
+    "empty_filter": "No articles match the selected filter."
+  },
   "ckb": {
     "nav_title": "Career KB",
     "title": "Career Knowledge Base & RAG",
@@ -151,8 +179,17 @@
     "about": {
       "title": "About Nandhini Anand Jeyahar",
       "subtitle": "Interdisciplinary background spanning computer vision, cognitive science, and systems facilitation.",
+      "overview": "Mentat Commons is an independent AI Strategy, Machine Learning, and Decision Systems consultancy founded by Nandhini Anand Jeyahar. Combining 16+ years of systems architecture, cognitive science, and human facilitation, the studio designs fault-tolerant data pipelines, decision-action trees, and model monitoring frameworks for enterprise engineering organizations worldwide.",
       "bio_p1": "My journey started with a fascination for genetic algorithms and machine vision. Over two decades, it has evolved into a deep practice of systems thinking, data engineering, and group dynamics.",
-      "bio_p2": "I work with teams who want to make better decisions. Sometimes that means writing optimized C++ scene detection code, sometimes it means auditing dataset leakage, and sometimes it means facilitating applied theater circles."
+      "bio_p2": "I work with teams who want to make better decisions. Sometimes that means writing optimized C++ scene detection code, sometimes it means auditing dataset leakage, and sometimes it means facilitating applied theater circles.",
+      "m1_title": "Early Vision & Thread Profiling",
+      "m1_desc": "Scoping machine vision quality inspections for screw thread profiles; early algorithms in C.",
+      "m2_title": "Cognitive Science & AGI Studies",
+      "m2_desc": "M.Tech rejections redirected to a Master's in Cognitive Science; thesis in NLP. Deep dive into transhumanism and dynamical models.",
+      "m3_title": "Industrial Data Science Roles",
+      "m3_desc": "Five years in business-to-data-science bridge positions, learning how organizations distort metric systems.",
+      "m4_title": "Systems Redesign & Applied Improv",
+      "m4_desc": "Combining model monitoring, edge computing, MLOps, and Applied Theater for restorative coordination."
     },
     "portfolio": {
       "title": "Evidence Portfolio & Case Studies",

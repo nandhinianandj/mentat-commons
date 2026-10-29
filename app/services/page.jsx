@@ -1,8 +1,7 @@
-"use client";
-
 import React from 'react';
 import locales from '../../locales/en.json';
 import { ArrowRight, Settings, Brain, Layers, Cpu, Server, Database, BookOpen, Users, Award, Shield } from 'lucide-react';
+import ShieldText from '../../components/ShieldText';
 
 const serviceIcons = {
   "ai-strategy": Brain,
@@ -78,9 +77,9 @@ export default function ServicesPage() {
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-100 tracking-tight">
           Professional Services & Offerings
         </h1>
-        <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
+        <ShieldText className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
           Mentat Commons provides evidence-backed engineering, training, and strategic leadership. We specialize in bringing rigor to machine learning setups, preventing silent dataset decay, and making organizational decision nodes transparent.
-        </p>
+        </ShieldText>
       </header>
 
       <section aria-labelledby="services-catalog-heading" className="space-y-6">
@@ -98,7 +97,7 @@ export default function ServicesPage() {
                     <h3 className="text-lg font-bold text-slate-100">{s.title}</h3>
                   </div>
                   <p className="text-xs text-indigo-300 font-semibold uppercase tracking-wider">{s.tagline}</p>
-                  <p className="text-slate-400 text-xs md:text-sm leading-relaxed">{s.description}</p>
+                  <ShieldText className="text-slate-400 text-xs md:text-sm leading-relaxed">{s.description}</ShieldText>
                 </div>
                 <div className="pt-2">
                   <a

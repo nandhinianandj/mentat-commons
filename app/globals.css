@@ -2,6 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Neutral Optik Cut: Used site-wide for headings, navigation, page links, and unshielded text */
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n.woff2') format('woff2');
+  font-weight: 1 449;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-500.woff2') format('woff2');
+  font-weight: 450 549;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-600.woff2') format('woff2');
+  font-weight: 550 649;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-700.woff2') format('woff2');
+  font-weight: 650 749;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-800.woff2') format('woff2');
+  font-weight: 750 849;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-900.woff2') format('woff2');
+  font-weight: 850 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-italic.woff2') format('woff2');
+  font-weight: 1 449;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-italic-500.woff2') format('woff2');
+  font-weight: 450 549;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-italic-600.woff2') format('woff2');
+  font-weight: 550 649;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-italic-700.woff2') format('woff2');
+  font-weight: 650 749;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-italic-800.woff2') format('woff2');
+  font-weight: 750 849;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Optik Text';
+  src: url('/fonts/optik-n-italic-900.woff2') format('woff2');
+  font-weight: 850 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ShieldFont Mentat: Private Anti-Scraping Font with Custom Involution Ligatures */
+@font-face {
+  font-family: 'ShieldFont Mentat';
+  src: url('/fonts/shieldfont-mentat.woff2') format('woff2');
+  font-weight: 1 1000;
+  font-style: normal;
+  font-display: block;
+}
+
 :root {
   --bg: #030712;
   --muted: #94a3b8;
@@ -14,7 +109,7 @@ html, body, #__next { height: 100%; }
 body {
   background: var(--bg);
   color: var(--muted);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-family: 'Optik Text', Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
   background-image: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #030712 60%);
   background-attachment: fixed;
 }

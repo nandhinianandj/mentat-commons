@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import ShieldText from '../../components/ShieldText';
 import { 
   Search, 
   Briefcase, 
@@ -1412,17 +1413,17 @@ export default function CareerKBPage() {
                       </div>
                       <div>
                         <span className="text-xxs font-bold uppercase text-slate-500 tracking-wider block">Abstract</span>
-                        <p className="text-xs text-slate-300 mt-1 bg-slate-950 p-3 rounded border border-slate-850 leading-relaxed italic">{selectedNode.data.abstract || selectedNode.data.summary}</p>
+                        <ShieldText className="text-xs text-slate-300 mt-1 bg-slate-950 p-3 rounded border border-slate-850 leading-relaxed italic">{selectedNode.data.abstract || selectedNode.data.summary}</ShieldText>
                       </div>
                       {selectedNode.data.problem && selectedNode.data.problem !== selectedNode.data.summary && (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div className="bg-slate-950 p-3 rounded border border-slate-850">
                             <span className="text-xxs font-bold text-slate-500 uppercase">Problem Scoped</span>
-                            <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.problem}</p>
+                            <ShieldText className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.problem}</ShieldText>
                           </div>
                           <div className="bg-slate-950 p-3 rounded border border-slate-850">
                             <span className="text-xxs font-bold text-slate-500 uppercase">Context / Scoping</span>
-                            <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.context}</p>
+                            <ShieldText className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.context}</ShieldText>
                           </div>
                         </div>
                       )}
@@ -1441,13 +1442,13 @@ export default function CareerKBPage() {
                       {selectedNode.data.lessons && selectedNode.data.lessons !== 'Refer to post content for technical insights.' && (
                         <div>
                           <span className="text-xxs font-bold uppercase text-slate-500 tracking-wider block font-mono text-indigo-400">Lessons Learned</span>
-                          <p className="text-xs text-slate-300 mt-1 bg-slate-950/40 p-3 rounded border border-slate-850/60 leading-relaxed">{selectedNode.data.lessons}</p>
+                          <ShieldText className="text-xs text-slate-300 mt-1 bg-slate-950/40 p-3 rounded border border-slate-850/60 leading-relaxed">{selectedNode.data.lessons}</ShieldText>
                         </div>
                       )}
                       {selectedNode.data.content && (
                         <div>
                           <span className="text-xxs font-bold uppercase text-slate-500 tracking-wider block">Outline & Key Assertions</span>
-                          <p className="text-xs text-slate-400 mt-1 leading-relaxed whitespace-pre-wrap">{selectedNode.data.content}</p>
+                          <ShieldText className="text-xs text-slate-400 mt-1 leading-relaxed whitespace-pre-wrap">{selectedNode.data.content}</ShieldText>
                         </div>
                       )}
                       {selectedNode.data.situation && (
@@ -1456,19 +1457,19 @@ export default function CareerKBPage() {
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="bg-slate-950 p-3 rounded border border-slate-850">
                               <span className="text-xxs font-bold text-slate-500 uppercase">Situation</span>
-                              <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.situation}</p>
+                              <ShieldText className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.situation}</ShieldText>
                             </div>
                             <div className="bg-slate-950 p-3 rounded border border-slate-850">
                               <span className="text-xxs font-bold text-slate-500 uppercase">Task</span>
-                              <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.task}</p>
+                              <ShieldText className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.task}</ShieldText>
                             </div>
                             <div className="bg-slate-950 p-3 rounded border border-slate-850">
                               <span className="text-xxs font-bold text-slate-500 uppercase">Action</span>
-                              <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.action}</p>
+                              <ShieldText className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.action}</ShieldText>
                             </div>
                             <div className="bg-slate-950 p-3 rounded border border-slate-850">
                               <span className="text-xxs font-bold text-slate-500 uppercase">Result</span>
-                              <p className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.result}</p>
+                              <ShieldText className="text-xs text-slate-300 mt-1 leading-relaxed">{selectedNode.data.result}</ShieldText>
                             </div>
                           </div>
                           {selectedNode.data.tradeoffs && (

@@ -1,6 +1,7 @@
 import React from 'react';
 import locales from '../../../locales/en.json';
-import { ArrowLeft, CheckCircle2, Clock, Cpu, HelpCircle, Briefcase, ChevronRight } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Clock, HelpCircle, Briefcase, ChevronRight } from 'lucide-react';
+import ShieldText from '../../../components/ShieldText';
 
 export async function generateStaticParams() {
   const services = locales.services || {};
@@ -23,7 +24,7 @@ export default function ServiceDetailPage({ params }) {
     );
   }
 
-  // Schema definitions
+  // Schema definitions - SEO indexing intact
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -49,7 +50,7 @@ export default function ServiceDetailPage({ params }) {
         "@type": "UnitPriceSpecification",
         "priceCurrency": "INR",
         "price": service.pricing.starting_from.replace(/[^0-9]/g, ''),
-        "description": `Starting From ${service.pricing.starting_from} (Typical range: ${service.pricing.typical_range})`
+        "unitText": "Engagement Sprint"
       }
     }
   };
@@ -91,7 +92,7 @@ export default function ServiceDetailPage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Navigation and Metadata */}
+      {/* Navigation and Metadata - Unshielded for SEO and navigation */}
       <div>
         <a 
           href="/services" 
@@ -115,12 +116,12 @@ export default function ServiceDetailPage({ params }) {
         </div>
       </div>
 
-      {/* Service Core Description */}
+      {/* Service Core Description - Shielded */}
       <section className="bg-slate-900/30 border border-slate-900 rounded-xl p-6 md:p-8 space-y-4">
         <h2 className="text-lg font-bold text-slate-200">What is this service?</h2>
-        <p className="text-slate-300 text-sm md:text-base leading-relaxed font-normal">
+        <ShieldText className="text-slate-300 text-sm md:text-base leading-relaxed font-normal">
           {service.description}
-        </p>
+        </ShieldText>
       </section>
 
       {/* Who is this for & Pricing Summary */}
@@ -130,9 +131,9 @@ export default function ServiceDetailPage({ params }) {
             <HelpCircle className="w-4 h-4 text-indigo-400" />
             Who is this for?
           </h3>
-          <p className="text-slate-300 text-xs md:text-sm leading-relaxed">
+          <ShieldText className="text-slate-300 text-xs md:text-sm leading-relaxed">
             {service.for}
-          </p>
+          </ShieldText>
         </div>
 
         <div className="card bg-slate-950/20 p-6 space-y-3 border-indigo-950/50">
@@ -158,7 +159,7 @@ export default function ServiceDetailPage({ params }) {
               <span className="w-5 h-5 bg-red-950/30 border border-red-900/40 text-red-400 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-mono font-bold mt-0.5">
                 !
               </span>
-              <p className="text-slate-300 text-xs md:text-sm leading-relaxed">{prob}</p>
+              <ShieldText className="text-slate-300 text-xs md:text-sm leading-relaxed">{prob}</ShieldText>
             </div>
           ))}
         </div>
@@ -172,7 +173,7 @@ export default function ServiceDetailPage({ params }) {
             {service.deliverables.map((del, idx) => (
               <div key={idx} className="flex gap-2.5 items-start">
                 <CheckCircle2 className="w-4 h-4 text-indigo-400 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-300 text-xs md:text-sm">{del}</span>
+                <ShieldText as="span" className="text-slate-300 text-xs md:text-sm">{del}</ShieldText>
               </div>
             ))}
           </div>
@@ -202,7 +203,7 @@ export default function ServiceDetailPage({ params }) {
               <span className="w-5 h-5 bg-emerald-950/30 border border-emerald-900/40 text-emerald-400 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-mono font-bold mt-0.5">
                 ✓
               </span>
-              <p className="text-slate-300 text-xs md:text-sm leading-relaxed">{out}</p>
+              <ShieldText className="text-slate-300 text-xs md:text-sm leading-relaxed">{out}</ShieldText>
             </div>
           ))}
         </div>
@@ -214,9 +215,9 @@ export default function ServiceDetailPage({ params }) {
           <Briefcase className="w-5 h-5 text-indigo-400" />
           Next Steps & Engagement
         </h3>
-        <p className="text-slate-300 text-xs md:text-sm leading-relaxed">
+        <ShieldText className="text-slate-300 text-xs md:text-sm leading-relaxed">
           {service.next_steps}
-        </p>
+        </ShieldText>
         <div className="pt-2">
           <a
             href="/contact"

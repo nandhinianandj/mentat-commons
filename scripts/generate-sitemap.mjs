@@ -27,7 +27,8 @@ const STATIC_PAGES = [
   '/axis2',
   '/axis2/writing',
   '/axis2/theatre-facilitation',
-  '/axis2/applied-improv'
+  '/axis2/applied-improv',
+  '/organizational-systems'
 ];
 
 async function generateSitemap() {
@@ -106,6 +107,22 @@ async function generateSitemap() {
           }
         });
       });
+    }
+
+    // 4. Read Organizational Systems for published case & essay routes
+    try {
+      const orgSystemsFile = path.join(process.cwd(), 'data', 'organizational_systems.json');
+      const orgContent = await fs.readFile(orgSystemsFile, 'utf-8');
+      const orgData = JSON.parse(orgContent);
+      if (orgData.items && Array.isArray(orgData.items)) {
+        orgData.items.forEach(item => {
+          if (item.publication_status === 'published' && item.slug) {
+            urls.push(`${BASE_URL}/organizational-systems/${item.slug}`);
+          }
+        });
+      }
+    } catch (err) {
+      console.warn('Warning: Could not read organizational_systems.json for sitemap:', err.message);
     }
 
     // Sort and remove duplicates just in case

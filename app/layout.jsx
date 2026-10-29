@@ -62,6 +62,7 @@ export default function RootLayout({ children }) {
                 <a className="header-link text-xs font-semibold" href="/services">Services</a>
                 <a className="header-link text-xs font-semibold" href="/portfolio">Portfolio</a>
                 <a className="header-link text-xs font-semibold" href="/training">Consulting</a>
+                <a className="header-link text-xs font-semibold" href="/organizational-systems">Org Systems</a>
                 <a className="header-link text-xs font-semibold" href="/narrative">Narrative Research</a>
                 <a className="header-link text-xs font-semibold" href="/faq">FAQ</a>
                 <a className="header-link text-xs font-semibold" href="/career">Career Explorer</a>
@@ -75,6 +76,11 @@ export default function RootLayout({ children }) {
             <p>© 2026 Mentat Commons — Bene Data Collective • Mentat Theatre • Desert Intelligence • Sietch Protocol</p>
           </div>
         </footer>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){if(typeof document==='undefined')return;document.addEventListener('copy',function(e){var sel=window.getSelection();if(!sel||sel.rangeCount===0)return;var node=sel.anchorNode;var el=node&&node.nodeType===3?node.parentElement:node;var shielded=el&&el.closest?el.closest('[data-typeface]'):null;if(shielded){var notice=shielded.getAttribute('data-typeface-clip-say');if(notice&&e.clipboardData){e.clipboardData.setData('text/plain',notice);e.preventDefault();}}});})();`
+          }}
+        />
         <Analytics />
       </body>
     </html>
